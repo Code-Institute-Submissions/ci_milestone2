@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Noto+Serif:100,200,300,400,500,600,700");
+* {
+  font-size: 10px;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+p,
+a {
+  font-size: 1.6rem;
+}
+
+body,
+footer {
+  font-family: "Roboto", sans-serif;
+}
+/*# sourceMappingURL=style.css.map */
