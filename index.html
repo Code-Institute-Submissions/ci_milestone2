@@ -32,7 +32,28 @@
                 <div class="col">
                     Main section <br>
                     Search bar <br>
-                    Filters: Diet labels: “balanced”, “high-protein”, “high-fiber”, “low-fat”, “low-carb”, “low-sodium”<br>
+                    <form id="recipe-form">
+                        <input type="text" name="search-bar" id="recipe-form__search-bar"><br>
+                        <input type="checkbox" id="balanced" name="balanced" value="balanced">
+                        <label for="balanced"> Balanced</label><br>
+                        <input type="checkbox" id="high-protein" name="high-protein" value="high-protein">
+                        <label for="high-protein"> High-protein</label><br>
+                        <input type="checkbox" id="high-fibre" name="high-fibre" value="high-fibre">
+                        <label for="high-fibre"> High-fibre</label><br>
+                        <input type="checkbox" id="low-fat" name="low-fat" value="low-fat">
+                        <label for="low-fat"> Low-fat</label><br>
+                        <input type="checkbox" id="low-carb" name="low-carb" value="low-carb">
+                        <label for="low-carb"> Low carb</label><br>
+                        <input type="checkbox" id="low-sodium" name="low-sodium" value="low-sodium">
+                        <label for="low-sodium"> Low sodium</label><br>
+                        <button type="button" id="search">Search</button>
+                    </form>
+                    <div id="content"></div>
+                    <div id="error-handling"></div>
+
+                    
+                    Filters: Diet labels: “balanced”, “high-protein”, “high-fiber”, “low-fat”, “low-carb”,
+                    “low-sodium”<br>
                     Results
                 </div>
             </div>
@@ -44,7 +65,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    Need some inspiration section <br> 
+                    Need some inspiration section <br>
                     Pre-set filters: <br>
                     - carb recipes <br>
                     - Rich protein recipes <br>
@@ -58,6 +79,7 @@
     <footer>
         Footer
     </footer>
+    <script src="assets/js/main.js"></script>
     <!-- JS Bootstrap links -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -68,7 +90,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
-    <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
