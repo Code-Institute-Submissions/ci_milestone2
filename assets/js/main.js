@@ -20,28 +20,49 @@ let appId = 'ba5b7a21',
     apiKey = 'd1d3afcdc37dd030c29294267aaedbc8';
 
 
-// Function to get value from checked checkbox
+// Function to get value from checked checkbox. Code adapted from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_checkbox_order
 
-    function check() {
-        if (document.getElementsByName("health-labels").checked = true) {
-            let checkBoxHealth
-        };
+function checkBoxDietLabel() {
+    let checkBoxDiet = document.forms[0];
+    let i;
+    let checkBoxDietValue = ""
+    let checkBoxDietValueArray = [];
+
+    for (i = 0; i < checkBoxDiet.length; i++) {
+        if (checkBoxDiet[i].checked) {
+            // checkBoxDietValue = checkBoxDietValue + checkBoxDiet[i].value;
+            checkBoxDietValueArray.push(checkBoxDiet[i].value);
+        }
     }
+    console.log(checkBoxDietValueArray);
+
+    // Checking if there's any checkbox checked. If 1 return value, if 2 still have to work on 
+    if (checkBoxDietValueArray.length === 0) {
+        return ""
+    }
+    else if (checkBoxDietValueArray.length === 1) {
+        return `&diet=${checkBoxDietValueArray[0]}`
+    } else {
+        console.log('more than one value ticked');
+        //BUG
+    }
+}
 
 // Function to get data from Edamam Recipe API
 
 async function searchRecipe() {
     let searchValue = document.querySelector("#recipe-form__search-bar").value;
-    let response = await fetch(`https://api.edamam.com/search?app_id=${appId}&app_key=${apiKey}&q=${searchValue}`)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        useApiData(data);
-    })
-    .catch(err => {
-        errorHandling.innerHTML = "<p>Oops something went wrong, try again.</p>"
-        console.log(err);
-    });    
+    let dietLabels = checkBoxDietLabel();
+    let response = await fetch(`https://api.edamam.com/search?app_id=${appId}&app_key=${apiKey}&q=${searchValue}${dietLabels}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            useApiData(data);
+        })
+        .catch(err => {
+            errorHandling.innerHTML = "<p>Oops something went wrong, try again.</p>"
+            console.log(err);
+        });
 }
 
 // Using the data
