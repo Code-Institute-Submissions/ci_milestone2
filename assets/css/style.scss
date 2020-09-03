@@ -12,10 +12,33 @@ h2 {
 
 p,
 a {
-    font-size: 1.6rem;
+    font-size: 2rem;
 }
 
 body,
 footer {
     font-family: "Roboto", sans-serif;
 }
+
+// ------------------------------- Media queries - Screen sizes variables
+
+$mobile-width: 30rem; // 480px is 30rem
+$tablet-width: 48rem; // 768px is 48rem
+$desktop-width: 64rem; // 1024px is 64rem
+
+// ------------------------------- Recipe cards
+
+.recipe-cards {
+    .card {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+    }
+
+}
+
+@media (min-width: $desktop-width) {
+    .card {
+    }
+}
+

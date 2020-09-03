@@ -9,11 +9,17 @@ h2 {
 
 p,
 a {
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 
 body,
 footer {
   font-family: "Roboto", sans-serif;
+}
+
+.recipe-cards .card {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 3rem;
 }
 /*# sourceMappingURL=style.css.map */

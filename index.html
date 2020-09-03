@@ -33,30 +33,54 @@
                     Main section <br>
                     Search bar <br>
                     <form id="recipe-form">
+                        <!-- Search bar -->
                         <input type="text" name="search-bar" id="recipe-form__search-bar"><br>
-                        <input type="checkbox" id="balanced" name="balanced" value="balanced">
+                        <!-- Check boxes -->
+                        <input type="checkbox" id="balanced" name="health-labels" value="balanced">
                         <label for="balanced"> Balanced</label><br>
-                        <input type="checkbox" id="high-protein" name="high-protein" value="high-protein">
+                        <input type="checkbox" id="high-protein" name="health-labels" value="high-protein">
                         <label for="high-protein"> High-protein</label><br>
-                        <input type="checkbox" id="high-fibre" name="high-fibre" value="high-fibre">
+                        <input type="checkbox" id="high-fibre" name="health-labels" value="high-fibre">
                         <label for="high-fibre"> High-fibre</label><br>
-                        <input type="checkbox" id="low-fat" name="low-fat" value="low-fat">
+                        <input type="checkbox" id="low-fat" name="health-labels" value="low-fat">
                         <label for="low-fat"> Low-fat</label><br>
-                        <input type="checkbox" id="low-carb" name="low-carb" value="low-carb">
+                        <input type="checkbox" id="low-carb" name="health-labels" value="low-carb">
                         <label for="low-carb"> Low carb</label><br>
-                        <input type="checkbox" id="low-sodium" name="low-sodium" value="low-sodium">
+                        <input type="checkbox" id="low-sodium" name="health-labels" value="low-sodium">
                         <label for="low-sodium"> Low sodium</label><br>
+                        <!-- Submit button -->
                         <button type="button" id="search">Search</button>
                     </form>
-                    <div id="content"></div>
-                    <div id="error-handling"></div>
-
-                    
-                    Filters: Diet labels: “balanced”, “high-protein”, “high-fiber”, “low-fat”, “low-carb”,
-                    “low-sodium”<br>
-                    Results
                 </div>
             </div>
+            <div class="container recipe-cards">
+                <div class="row justify-content-between" id="content">
+                    <!-- card layout in case I need for design purposes<div class="col-12 col-md-6 col-xl-3 col-lg-3">
+                        <div class="card">
+                            <img src="https://www.edamam.com/web-img/611/6115695e2a59b2e9f904846c8d450318.jpg"
+                                class="card-img-top" alt="Recipe image">
+                            <div class="card-body">
+                                <h5 class="card-title" id="card-title">Whatever</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Calories: 856</li>
+                                <li class="list-group-item">Ingredients used: 7</li>
+                                <li class="list-group-item">Health labels:
+                                    Vegan,Vegetarian,Peanut-Free,Tree-Nut-Free,Alcohol-Free
+                                </li>
+                            </ul>
+                            <a href="http://notwithoutsalt.com/dinner-in-15-harissa-chickpeas-with-spinach/"
+                                target="_blank" class="btn btn-primary">See Recipe</a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div id="error-handling"></div>
+        Filters: Diet labels: “balanced”, “high-protein”, “high-fiber”, “low-fat”, “low-carb”,
+        “low-sodium”<br>
+        Results
+
         </div>
     </section>
     <!-- End main search bar -->
