@@ -20,31 +20,32 @@ let appId = 'ba5b7a21',
     apiKey = 'd1d3afcdc37dd030c29294267aaedbc8';
 
 
-// Function to get value from checked checkbox. Code adapted from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_checkbox_order
+// Function to get value from checked checkbox. First for loop adapted from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_checkbox_order
 
-function checkBoxDietLabel() {
-    let checkBoxDiet = document.forms[0];
+function checkboxDietLabel() {
+    let checkboxDiet = document.forms[0];
     let i;
-    let checkBoxDietValue = ""
-    let checkBoxDietValueArray = [];
+    let checkboxDietValueArray = [];
 
-    for (i = 0; i < checkBoxDiet.length; i++) {
-        if (checkBoxDiet[i].checked) {
-            // checkBoxDietValue = checkBoxDietValue + checkBoxDiet[i].value;
-            checkBoxDietValueArray.push(checkBoxDiet[i].value);
+    for (i = 0; i < checkboxDiet.length; i++) {
+        if (checkboxDiet[i].checked) {
+            checkboxDietValueArray.push(checkboxDiet[i].value);
         }
     }
-    console.log(checkBoxDietValueArray);
+    console.log(checkboxDietValueArray);
 
     // Checking if there's any checkbox checked. If 1 return value, if 2 still have to work on 
-    if (checkBoxDietValueArray.length === 0) {
-        return ""
+    if (checkboxDietValueArray.length === 0) {
+        return "";
     }
-    else if (checkBoxDietValueArray.length === 1) {
-        return `&diet=${checkBoxDietValueArray[0]}`
+    else if (checkboxDietValueArray.length === 1) {
+        return `&diet=${checkboxDietValueArray[0]}`;
     } else {
-        console.log('more than one value ticked');
-        //BUG
+        let checkboxDietValue = ""
+        for (let j = 0; j < checkboxDietValueArray.length; j++) {
+            checkboxDietValue += `&diet=${checkboxDietValueArray[j]}`
+            }
+        return checkboxDietValue;
     }
 }
 
@@ -52,7 +53,7 @@ function checkBoxDietLabel() {
 
 async function searchRecipe() {
     let searchValue = document.querySelector("#recipe-form__search-bar").value;
-    let dietLabels = checkBoxDietLabel();
+    let dietLabels = checkboxDietLabel();
     let response = await fetch(`https://api.edamam.com/search?app_id=${appId}&app_key=${apiKey}&q=${searchValue}${dietLabels}`)
         .then(response => response.json())
         .then(data => {
@@ -65,7 +66,7 @@ async function searchRecipe() {
         });
 }
 
-// Using the data
+// Using the data from the API
 
 function useApiData(data) {
     for (let i = 0; i < 8; i++) {
@@ -80,8 +81,8 @@ function useApiData(data) {
         <ul class="list-group list-group-flush">
             <li class="list-group-item">Calories: ${parseInt(data.hits[i].recipe.calories)}</li>
             <li class="list-group-item">Ingredients used: ${data.hits[i].recipe.ingredients.length}</li>
-            <li class="list-group-item">Health labels: ${data.hits[i].recipe.healthLabels}
-            </li>
+            <li class="list-group-item">Health labels: ${data.hits[i].recipe.healthLabels}</li>
+            <li class="list-group-item">Diet labels: ${data.hits[i].recipe.dietLabels}</li>
         </ul>
         <a href="${data.hits[i].recipe.url}" target="_blank" class="btn btn-primary">See Recipe</a>
         </div>
