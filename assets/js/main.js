@@ -20,13 +20,14 @@ let appId = 'ba5b7a21',
     apiKey = 'd1d3afcdc37dd030c29294267aaedbc8';
 
 
-// Function to get value from checked checkbox. First for loop adapted from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_checkbox_order
+// Function to get value from checked checkbox. 
 
 function checkboxDietLabel() {
     let checkboxDiet = document.forms[0];
     let i;
     let checkboxDietValueArray = [];
 
+    //For loop adapted from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_checkbox_order
     for (i = 0; i < checkboxDiet.length; i++) {
         if (checkboxDiet[i].checked) {
             checkboxDietValueArray.push(checkboxDiet[i].value);
@@ -34,7 +35,7 @@ function checkboxDietLabel() {
     }
     console.log(checkboxDietValueArray);
 
-    // Checking if there's any checkbox checked. If 1 return value, if 2 still have to work on 
+    // Checking if there's any checkbox checked. If yes, append values to the API URL.
     if (checkboxDietValueArray.length === 0) {
         return "";
     }
