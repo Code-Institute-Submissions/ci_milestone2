@@ -1,27 +1,22 @@
 
 // -----------------------------------------------  Selectors
-
 const searchButton = document.querySelector("#search");
 const recipeCards = document.querySelector("#content");
 const errorHandling = document.querySelector("#error-handling");
 
 
 // ----------------------------------------------- Event Listeners
-
 searchButton.addEventListener("click", () => {
     console.log('Button pressed')
     searchRecipe();
 })
 
 // ----------------------------------------------- Recipe
-
-
 let appId = 'ba5b7a21',
     apiKey = 'd1d3afcdc37dd030c29294267aaedbc8';
 
 
 // Function to get value from checked checkbox. 
-
 function checkboxDietLabel() {
     let checkboxDiet = document.forms[0];
     let i;
@@ -51,7 +46,6 @@ function checkboxDietLabel() {
 }
 
 // Function to get data from Edamam Recipe API
-
 async function searchRecipe() {
     let searchValue = document.querySelector("#recipe-form__search-bar").value;
     let dietLabels = checkboxDietLabel();
@@ -68,7 +62,6 @@ async function searchRecipe() {
 }
 
 // Using the data from the API
-
 function useApiData(data) {
     for (let i = 0; i < 8; i++) {
         recipeCards.innerHTML += `

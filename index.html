@@ -16,7 +16,33 @@
 <body>
 
     <header>
-        <!-- Start logo header -->
+        <!-- Start Nav -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><img src="assets/images/logo/icon-green.png" alt="Icon logo What's for dinner" id="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">What's for Dinner?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inspiration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <!-- End Nav -->
+        <!-- Start home banner -->
         <div class="home-banner">
             <figure>
                 <img src="assets/images/img-header-right.png" class="home-banner__img-right"
@@ -28,49 +54,19 @@
             </figure>
         </div>
         </div>
-        <!-- End logo header -->
-
-        <!-- Start Nav -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#"><h1 class="home-banner__logo">What's for Dinner?</h1>
-                <hr class="block-divider__header--tick">
-                <hr class="block-divider__header--thin"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">What's for Dinner?</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Inspiration</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                  </li>
-
-              </ul>
-            </div>
-          </nav>
-
-        <!-- End Nav -->
     </header>
-
+    <!-- End home banner -->
     <!-- Start Search bar -->
     <section id="search-bar">
-        <div class="container">
-            <div class="row">
+        <div class="container main-container">
+            <div class="row justify-content-center">
+                <h1 class="main-container__heading">What's for Dinner?</h1>
+            </div>
+            <div class="row justify-content-center">
                 <div class="col">
-                    Main section <br>
-                    Search bar <br>
                     <form id="recipe-form">
-                        <!-- Search bar -->
                         <input type="text" name="search-bar" id="recipe-form__search-bar"><br>
-                        <!-- Check boxes -->
+                        
                         <input type="checkbox" id="balanced" name="health-labels" value="balanced">
                         <label for="balanced"> Balanced <span class="text-muted">Protein/Fat/Carb values in 15/35/50
                                 ratio</span></label><br>
@@ -83,7 +79,7 @@
                         <input type="checkbox" id="low-carb" name="health-labels" value="low-carb">
                         <label for="low-carb"> Low carb <span class="text-muted">Less than 20% of total calories from
                                 carbs</span></label><br>
-                        <!-- Submit button -->
+                        
                         <button type="button" id="search">Search</button>
                     </form>
                 </div>
@@ -135,6 +131,18 @@
         </div>
 
         <!-- End inspiration -->
+    <!-- Start nutritional information -->
+    <section id="nutritional-info">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    Nutrional info section <br>
+                </div>
+            </div>
+        </div>
+
+        <!-- End nutritional information -->
+
         <footer>
             Footer
         </footer>
