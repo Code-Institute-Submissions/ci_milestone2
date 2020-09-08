@@ -18,7 +18,8 @@
     <header>
         <!-- Start Nav -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#"><img src="assets/images/logo/icon-green.png" alt="Icon logo What's for dinner" id="logo"></a>
+            <a class="navbar-brand" href="#"><img src="assets/images/logo/icon-green.png"
+                    alt="Icon logo What's for dinner" id="logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -57,40 +58,50 @@
     </header>
     <!-- End home banner -->
     <!-- Start Search bar -->
-    <section id="search-bar">
-        <div class="container main-container">
-            <div class="row justify-content-center">
-                <h1 class="main-container__heading">What's for Dinner?</h1>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col">
-                    <form id="recipe-form">
-                        <input type="text" name="search-bar" id="recipe-form__search-bar"><br>
-                        
-                        <input type="checkbox" id="balanced" name="health-labels" value="balanced">
-                        <label for="balanced"> Balanced <span class="text-muted">Protein/Fat/Carb values in 15/35/50
-                                ratio</span></label><br>
-                        <input type="checkbox" id="high-protein" name="health-labels" value="high-protein">
-                        <label for="high-protein"> High-protein <span class="text-muted">More than 50% of total calories
-                                from proteins</span></label><br>
-                        <input type="checkbox" id="low-fat" name="health-labels" value="low-fat">
-                        <label for="low-fat"> Low-fat <span class="text-muted">Less than 15% of total calories from
-                                fat</span></label><br>
-                        <input type="checkbox" id="low-carb" name="health-labels" value="low-carb">
-                        <label for="low-carb"> Low carb <span class="text-muted">Less than 20% of total calories from
-                                carbs</span></label><br>
-                        
-                        <button type="button" id="search">Search</button>
-                    </form>
+    <main>
+        <section id="search-bar">
+            <div class="container main-container">
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <h1 class="main-container__heading">What's for Dinner?</h1>
+                        <p>Your ultimate source for insipiration <br> and nutrional information.</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <form id="recipe-form">
+                            <div class="search-bar-wrapper">
+                                <i class="fas fa-search" id="recipe-form__search-icon"></i>
+                                <input type="text" name="search-bar" id="recipe-form__search-bar"
+                                    placeholder="Find a recipe">
+                                <i class="fas fa-times-circle" id="recipe-form__clear-icon"></i>
+                            </div>
+                            <input type="checkbox" id="balanced" name="health-labels" value="balanced">
+                            <label for="balanced"> Balanced <span class="text-muted">Protein/Fat/Carb values in 15/35/50
+                                    ratio</span></label><br>
+                            <input type="checkbox" id="high-protein" name="health-labels" value="high-protein">
+                            <label for="high-protein"> High-protein <span class="text-muted">More than 50% of total
+                                    calories
+                                    from proteins</span></label><br>
+                            <input type="checkbox" id="low-fat" name="health-labels" value="low-fat">
+                            <label for="low-fat"> Low-fat <span class="text-muted">Less than 15% of total calories from
+                                    fat</span></label><br>
+                            <input type="checkbox" id="low-carb" name="health-labels" value="low-carb">
+                            <label for="low-carb"> Low carb <span class="text-muted">Less than 20% of total calories
+                                    from
+                                    carbs</span></label><br>
+
+                            <button type="button" id="search">Search</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- End Search bar -->
-    <!-- Start Recipe Cards -->
-    <div class="container recipe-cards">
-        <div class="row justify-content-between" id="content">
-            <!-- card layout in case I need for design purposes<div class="col-12 col-md-6 col-xl-3 col-lg-3">
+        </section>
+        <!-- End Search bar -->
+        <!-- Start Recipe Cards -->
+        <div class="container recipe-cards">
+            <div class="row justify-content-between" id="content">
+                <!-- card layout in case I need for design purposes<div class="col-12 col-md-6 col-xl-3 col-lg-3">
                         <div class="card">
                             <img src="https://www.edamam.com/web-img/611/6115695e2a59b2e9f904846c8d450318.jpg"
                                 class="card-img-top" alt="Recipe image">
@@ -108,55 +119,56 @@
                                 target="_blank" class="btn btn-primary">See Recipe</a>
                         </div>
                     </div> -->
-        </div>
-    </div>
-    <!-- End Recipe Cards -->
-    <!-- JS function searchRecipe() contains the error message displayed -->
-    <div id="error-handling"></div>
-    </section>
-    <!-- End main search bar -->
-    <!-- Start inspiration -->
-    <section id="inspiration">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    Need some inspiration section <br>
-                    Pre-set filters: <br>
-                    - carb recipes <br>
-                    - Rich protein recipes <br>
-                    - Well balanced recipes<br>
-                    - Low calory recipes<br>
-                </div>
             </div>
         </div>
-
-        <!-- End inspiration -->
-    <!-- Start nutritional information -->
-    <section id="nutritional-info">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    Nutrional info section <br>
+        <!-- End Recipe Cards -->
+        <!-- JS function searchRecipe() contains the error message displayed -->
+        <div id="error-handling"></div>
+        </section>
+        <!-- End main search bar -->
+        <!-- Start inspiration -->
+        <section id="inspiration">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        Need some inspiration section <br>
+                        Pre-set filters: <br>
+                        - carb recipes <br>
+                        - Rich protein recipes <br>
+                        - Well balanced recipes<br>
+                        - Low calory recipes<br>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- End nutritional information -->
-
-        <footer>
-            Footer
-        </footer>
-        <script src="assets/js/main.js"></script>
-        <!-- JS Bootstrap links -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-            crossorigin="anonymous"></script>
+            <!-- End inspiration -->
+            <!-- Start nutritional information -->
+            <section id="nutritional-info">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            Nutrional info section <br>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End nutritional information -->
+    </main>
+    <footer>
+        Footer
+        <p>© Copyright 2020. Developed by Stefanie Cruz.</p>
+    </footer>
+    <script src="assets/js/main.js"></script>
+    <!-- JS Bootstrap links -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
 
 </body>
 
