@@ -218,6 +218,14 @@ $desktop-width: 64rem; // 1024px is 64rem
     }
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: $colour-2 !important;
+}
+
 
 // ------------------------------- Recipe cards
 .recipe-cards {

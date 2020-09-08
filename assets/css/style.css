@@ -190,6 +190,15 @@ footer {
   }
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition: background-color 5000s;
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #4a4a4a !important;
+}
+
 .recipe-cards .card {
   width: 70%;
   margin: 0 auto;
