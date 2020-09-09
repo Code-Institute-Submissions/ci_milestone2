@@ -142,11 +142,12 @@ footer {
   height: 4rem;
   padding: 2px 23px 2px 30px;
   outline: 0;
+  margin-top: 3rem;
 }
 
 #recipe-form__search-icon {
   position: absolute;
-  top: 1.5rem;
+  top: 4.5rem;
   left: 1rem;
   width: 1.6rem;
   color: #015a06;
@@ -154,7 +155,7 @@ footer {
 
 #recipe-form__clear-icon {
   position: absolute;
-  top: 1.5rem;
+  top: 4.5rem;
   right: 0.5rem;
   width: 1.6rem;
   cursor: pointer;
@@ -162,10 +163,28 @@ footer {
   visibility: hidden;
 }
 
+.recipe-form-checkbox {
+  margin-top: 3rem;
+}
+
+.recipe-form-checkbox label {
+  font-size: 1.6rem;
+  color: #015a06;
+}
+
+.recipe-form-checkbox input {
+  margin-right: 1rem;
+}
+
+.recipe-form-checkbox__labels {
+  text-align: center;
+}
+
 @media (min-width: 30rem) {
   #recipe-form__search-bar {
     width: 80%;
     margin: 0 auto;
+    margin-top: 3rem;
   }
   #recipe-form__search-icon {
     left: 8rem;
@@ -197,6 +216,64 @@ input:-webkit-autofill:active {
   -webkit-transition: background-color 5000s;
   transition: background-color 5000s;
   -webkit-text-fill-color: #4a4a4a !important;
+}
+
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.25em;
+  height: 1.25em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '\2713\0020';
+  position: absolute;
+  top: .15em;
+  left: .15em;
+  font-size: 1.3em;
+  line-height: 0.8;
+  color: #015a06;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial;
+}
+
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .recipe-cards .card {

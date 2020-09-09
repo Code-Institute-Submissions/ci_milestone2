@@ -55,10 +55,12 @@
             </figure>
         </div>
         </div>
+        <!-- End home banner -->
     </header>
-    <!-- End home banner -->
-    <!-- Start Search bar -->
+
+
     <main>
+        <!-- Start Search bar -->
         <section id="search-bar">
             <div class="container main-container">
                 <div class="row justify-content-center">
@@ -76,22 +78,28 @@
                                     placeholder="Find a recipe">
                                 <i class="fas fa-times-circle" id="recipe-form__clear-icon"></i>
                             </div>
-                            <input type="checkbox" id="balanced" name="health-labels" value="balanced">
-                            <label for="balanced"> Balanced <span class="text-muted">Protein/Fat/Carb values in 15/35/50
-                                    ratio</span></label><br>
-                            <input type="checkbox" id="high-protein" name="health-labels" value="high-protein">
-                            <label for="high-protein"> High-protein <span class="text-muted">More than 50% of total
-                                    calories
-                                    from proteins</span></label><br>
-                            <input type="checkbox" id="low-fat" name="health-labels" value="low-fat">
-                            <label for="low-fat"> Low-fat <span class="text-muted">Less than 15% of total calories from
-                                    fat</span></label><br>
-                            <input type="checkbox" id="low-carb" name="health-labels" value="low-carb">
-                            <label for="low-carb"> Low carb <span class="text-muted">Less than 20% of total calories
-                                    from
-                                    carbs</span></label><br>
+                            <div class="row recipe-form-checkbox">
+                                <div class="col-6 recipe-form-checkbox__labels">
+                                    <input type="checkbox" id="balanced" name="health-labels" value="balanced">
+                                    <label for="balanced"> Balanced</label><br>
+                                </div>
+                                <div class="col-6 recipe-form-checkbox__labels">
+                                    <input type="checkbox" id="low-fat" name="health-labels" value="low-fat">
+                                    <label for="low-fat"> Low Fat</label><br>
+                                </div>
+                                <div class="col-6 recipe-form-checkbox__labels">
+                                    <input type="checkbox" id="high-protein" name="health-labels" value="high-protein">
+                                    <label for="high-protein"> High Protein</label><br>
+                                </div>
 
-                            <button type="button" id="search">Search</button>
+                                <div class="col-6 recipe-form-checkbox__labels">
+                                    <input type="checkbox" id="low-carb" name="health-labels" value="low-carb">
+                                    <label for="low-carb"> Low carb</label><br>
+                                </div>
+                                <div class="col-12 recipe-form-checkbox__search-button">
+                                    <button type="button" id="search">Search</button>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -99,9 +107,10 @@
         </section>
         <!-- End Search bar -->
         <!-- Start Recipe Cards -->
-        <div class="container recipe-cards">
-            <div class="row justify-content-between" id="content">
-                <!-- card layout in case I need for design purposes<div class="col-12 col-md-6 col-xl-3 col-lg-3">
+        <section id="recipe-cards">
+            <div class="container recipe-cards">
+                <div class="row justify-content-between" id="content">
+                    <!-- card layout in case I need for design purposes<div class="col-12 col-md-6 col-xl-3 col-lg-3">
                         <div class="card">
                             <img src="https://www.edamam.com/web-img/611/6115695e2a59b2e9f904846c8d450318.jpg"
                                 class="card-img-top" alt="Recipe image">
@@ -119,8 +128,9 @@
                                 target="_blank" class="btn btn-primary">See Recipe</a>
                         </div>
                     </div> -->
+                </div>
             </div>
-        </div>
+        </section>
         <!-- End Recipe Cards -->
         <!-- JS function searchRecipe() contains the error message displayed -->
         <div id="error-handling"></div>
