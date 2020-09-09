@@ -9,7 +9,7 @@ const searchBar = document.querySelector("#recipe-form__search-bar");
 // ----------------------------------------------- Event Listeners
 searchButton.addEventListener("click", () => {
     console.log('Button pressed')
-    searchRecipe();
+    recipeAPI();
 });
 
 //Event listeners taken from https://www.mikedane.com/web-development/css/styling-search-bar/
@@ -26,7 +26,7 @@ clearIcon.addEventListener("click", () => {
     clearIcon.style.visibility = "hidden";
   });
 
-// ----------------------------------------------- Recipe
+// ----------------------------------------------- Recipe API
 let appId = 'ba5b7a21',
     apiKey = 'd1d3afcdc37dd030c29294267aaedbc8';
 
@@ -60,15 +60,15 @@ function checkboxDietLabel() {
     }
 }
 
-// Function to get data from Edamam Recipe API
-async function searchRecipe() {
+// Get data from Recipe API
+async function recipeAPI() {
     let searchValue = document.querySelector("#recipe-form__search-bar").value;
     let dietLabels = checkboxDietLabel();
     let response = await fetch(`https://api.edamam.com/search?app_id=${appId}&app_key=${apiKey}&q=${searchValue}${dietLabels}`)
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            useApiData(data);
+            recipeAPIData(data);
         })
         .catch(err => {
             errorHandling.innerHTML = "<p>Oops something went wrong, try again.</p>"
@@ -76,8 +76,8 @@ async function searchRecipe() {
         });
 }
 
-// Using the data from the API
-function useApiData(data) {
+// Use data from Recipe API
+function recipeAPIData(data) {
     for (let i = 0; i < 8; i++) {
         recipeCards.innerHTML += `
     <div class="col-12 col-md-6 col-xl-3 col-lg-3">
@@ -101,3 +101,4 @@ function useApiData(data) {
 
 }
 
+//Bootstrap tooltip

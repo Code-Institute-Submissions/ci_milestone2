@@ -79,25 +79,25 @@
                                 <i class="fas fa-times-circle" id="recipe-form__clear-icon"></i>
                             </div>
                             <div class="row recipe-form-checkbox">
-                                <div class="col-6 recipe-form-checkbox__labels">
+                                <div class="col-6 col-xl-3 recipe-form-checkbox__labels">
                                     <input type="checkbox" id="balanced" name="health-labels" value="balanced">
-                                    <label for="balanced"> Balanced</label><br>
+                                    <label for="balanced" data-toggle="tooltip" title="Protein/Fat/Carb values in 15/35/50 ratio">Balanced</label><br>
                                 </div>
-                                <div class="col-6 recipe-form-checkbox__labels">
+                                <div class="col-6 col-xl-3 recipe-form-checkbox__labels">
                                     <input type="checkbox" id="low-fat" name="health-labels" value="low-fat">
-                                    <label for="low-fat"> Low Fat</label><br>
+                                    <label for="low-fat" data-toggle="tooltip" title="Less than 15% of total calories from fat">Low Fat</label><br>
                                 </div>
-                                <div class="col-6 recipe-form-checkbox__labels">
+                                <div class="col-6 col-xl-3 recipe-form-checkbox__labels">
                                     <input type="checkbox" id="high-protein" name="health-labels" value="high-protein">
-                                    <label for="high-protein"> High Protein</label><br>
+                                    <label for="high-protein" data-toggle="tooltip" title="More than 50% of total calories from protein">High Protein</label><br>
                                 </div>
 
-                                <div class="col-6 recipe-form-checkbox__labels">
+                                <div class="col-6 col-xl-3 recipe-form-checkbox__labels">
                                     <input type="checkbox" id="low-carb" name="health-labels" value="low-carb">
-                                    <label for="low-carb"> Low carb</label><br>
+                                    <label for="low-carb" data-toggle="tooltip" title="Less than 20% of total calories from carbs">Low carb</label><br>
                                 </div>
-                                <div class="col-12 recipe-form-checkbox__search-button">
-                                    <button type="button" id="search">Search</button>
+                                <div class="col-12 recipe-form-checkbox__search-wrapper">
+                                    <button type="button" id="search" class="recipe-form-checkbox__search-button">Search</button>
                                 </div>
                             </div>
                         </form>
