@@ -310,8 +310,24 @@ input:-webkit-autofill:active {
   border-color: #015a06;
 }
 
+.carousel-indicators {
+  margin-bottom: 0;
+}
+
 .card__main {
   width: 75%;
+}
+
+#recipe-cards__inspiration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .inspiration-container {

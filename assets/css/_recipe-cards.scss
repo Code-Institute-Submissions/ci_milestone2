@@ -28,8 +28,18 @@
         background-color: $colour-1;
         border-color: $colour-1;
     }
+
+}
+
+.carousel-indicators {
+    margin-bottom: 0;
 }
 
 .card__main {
     width: 75%;
 }
+
+#recipe-cards__inspiration {
+    @include flexbox
+}
+

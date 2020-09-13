@@ -21,3 +21,13 @@ $normal-text-size: 1.6rem;
 $mobile-width: 30rem; // 480px is 30rem
 $tablet-width: 48rem; // 768px is 48rem
 $desktop-width: 64rem; // 1024px is 64rem
+
+//
+// Mixins
+//
+
+@mixin flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
