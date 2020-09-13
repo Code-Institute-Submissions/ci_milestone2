@@ -1,0 +1,43 @@
+//
+// Nav
+//
+
+.navbar {
+    padding-top: 1rem;
+    z-index: 999;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: $colour-1;
+
+    &:hover {
+        text-decoration: underline;
+        color: $colour-1;
+    }
+}
+
+.navbar-light .navbar-toggler {
+    border-color: $colour-1;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("../images/toggler-icon.svg");
+}
+
+#logo {
+    height: 3rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: $mobile-width) {
+    #logo {
+        height: 4rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .navbar-expand-lg .navbar-collapse {
+        justify-content: flex-end;
+    }
+}

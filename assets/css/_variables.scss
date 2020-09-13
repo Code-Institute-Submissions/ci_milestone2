@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700|Playfair+Display:100,200,300,400,500,600,700");
+
+//
+// Variables
+//
+
+//Colours
+$colour-1: #015a06;
+$colour-2: #4a4a4a;
+$colour-3: #5a0155;
+$white: white;
+
+//Fonts
+$title: "Playfair Display", serif;
+$normal-text: "Lato", sans-serif;
+
+//Font sizes
+$normal-text-size: 1.6rem;
+
+//Screen sizes
+$mobile-width: 30rem; // 480px is 30rem
+$tablet-width: 48rem; // 768px is 48rem
+$desktop-width: 64rem; // 1024px is 64rem

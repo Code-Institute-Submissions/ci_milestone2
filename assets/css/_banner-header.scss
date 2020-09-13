@@ -1,0 +1,40 @@
+//
+// Banner header (food plates)
+//
+
+.home-banner {
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: bottom;
+    background-color: $white;
+    z-index: 10;
+
+    img {
+        position: absolute;
+    }
+
+    &__img-right {
+        right: 0;
+        top: -3rem;
+        width: 10rem;
+    }
+
+    &__img-left {
+        left: 0;
+        top: -3rem;
+        width: 10rem;
+    }
+}
+
+@media (min-width: $mobile-width) {
+    .home-banner {
+        &__img-right {
+            width: 12rem;
+        }
+
+        &__img-left {
+            width: 12rem;
+        }
+    }
+}

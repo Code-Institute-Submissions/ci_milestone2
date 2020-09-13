@@ -13,8 +13,9 @@
     <title>What's for Dinner?</title>
 </head>
 
-<body>
+<!--  onload="recipeAPIInspiration()" -->
 
+<body>
     <header>
         <!-- Start Nav -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -81,23 +82,28 @@
                             <div class="row recipe-form-checkbox">
                                 <div class="col-6 col-xl-3 recipe-form-checkbox__labels">
                                     <input type="checkbox" id="balanced" name="health-labels" value="balanced">
-                                    <label for="balanced" data-toggle="tooltip" title="Protein/Fat/Carb values in 15/35/50 ratio">Balanced</label><br>
+                                    <label for="balanced" data-toggle="tooltip"
+                                        title="Protein/Fat/Carb values in 15/35/50 ratio">Balanced</label><br>
                                 </div>
                                 <div class="col-6 col-xl-3 recipe-form-checkbox__labels">
                                     <input type="checkbox" id="low-fat" name="health-labels" value="low-fat">
-                                    <label for="low-fat" data-toggle="tooltip" title="Less than 15% of total calories from fat">Low Fat</label><br>
+                                    <label for="low-fat" data-toggle="tooltip"
+                                        title="Less than 15% of total calories from fat">Low Fat</label><br>
                                 </div>
                                 <div class="col-6 col-xl-3 recipe-form-checkbox__labels">
                                     <input type="checkbox" id="high-protein" name="health-labels" value="high-protein">
-                                    <label for="high-protein" data-toggle="tooltip" title="More than 50% of total calories from protein">High Protein</label><br>
+                                    <label for="high-protein" data-toggle="tooltip"
+                                        title="More than 50% of total calories from protein">High Protein</label><br>
                                 </div>
 
                                 <div class="col-6 col-xl-3 recipe-form-checkbox__labels">
                                     <input type="checkbox" id="low-carb" name="health-labels" value="low-carb">
-                                    <label for="low-carb" data-toggle="tooltip" title="Less than 20% of total calories from carbs">Low carb</label><br>
+                                    <label for="low-carb" data-toggle="tooltip"
+                                        title="Less than 20% of total calories from carbs">Low carb</label><br>
                                 </div>
                                 <div class="col-12 recipe-form-checkbox__search-wrapper">
-                                    <button type="button" id="search" class="recipe-form-checkbox__search-button">Search</button>
+                                    <button type="button" id="search"
+                                        class="recipe-form-checkbox__search-button">Search</button>
                                 </div>
                             </div>
                         </form>
@@ -109,9 +115,9 @@
         <!-- Start Recipe Cards -->
         <section id="recipe-cards">
             <div class="container recipe-cards">
-                <div class="row justify-content-between" id="content">
-                    <!-- card layout in case I need for design purposes<div class="col-12 col-md-6 col-xl-3 col-lg-3">
-                        <div class="card">
+                <div class="row justify-content-between" id="recipe-cards__main">
+                    <div class="col-12 col-md-6 col-xl-3 col-lg-3">
+                        <div class="card card__main">
                             <img src="https://www.edamam.com/web-img/611/6115695e2a59b2e9f904846c8d450318.jpg"
                                 class="card-img-top" alt="Recipe image">
                             <div class="card-body">
@@ -127,7 +133,7 @@
                             <a href="http://notwithoutsalt.com/dinner-in-15-harissa-chickpeas-with-spinach/"
                                 target="_blank" class="btn btn-primary">See Recipe</a>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -137,18 +143,47 @@
         </section>
         <!-- End main search bar -->
         <!-- Start inspiration -->
-        <section id="inspiration">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        Need some inspiration section <br>
-                        Pre-set filters: <br>
-                        - carb recipes <br>
-                        - Rich protein recipes <br>
-                        - Well balanced recipes<br>
-                        - Low calory recipes<br>
+        <section id="inspiration-section">
+            <!-- Block divider taken from https://leap.mediumra.re/ -->
+            <div class="block-divider">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%"
+                    height="96px" viewBox="0 0 100 100" version="1.1" preserveAspectRatio="none" class="injected-svg">
+                    <path
+                        d="M0,0 C16.6666667,66 33.3333333,99 50,99 C66.6666667,99 83.3333333,66 100,0 L100,100 L0,100 L0,0 Z">
+                    </path>
+                </svg>
+            </div>
+            <div class="container-fluid inspiration-container">
+                <h2>Need some inspiration?</h2>
+                <h3>Boost your immune system</h3>
+
+
+
+                <div class="container">
+                    <div class="row" id="recipe-cards__inspiration">
+                        <div class="col-12 col-md-6 col-xl-3 col-lg-3">
+                            <div class="card card__inspiration">
+                                <img src="https://www.edamam.com/web-img/36b/36be4fd2cbb2dafacf722da53d7de6da.jpg"
+                                    class="card-img-top" alt="Recipe image">
+                                <div class="card-body">
+                                    <h5 class="card-title" id="card-title">Easy Mango-Blackberry Smoothie Recipe</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><span>Calories: </span>274</li>
+                                    <li class="list-group-item"><span>Ingredients used: </span>3</li>
+                                    <li class="list-group-item"><span>Health labels:
+                                        </span>Vegetarian,Peanut-Free,Tree-Nut-Free,Alcohol-Free,Immuno-Supportive</li>
+                                </ul>
+                                <a href="http://www.seriouseats.com/recipes/2014/01/easy-mango-blackberry-kefir-smoothie-recipe.html"
+                                    target="_blank" class="btn btn-primary">See Recipe</a>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <h3>Protein rich recipes</h3>
+                <h3>Balanced recipes</h3>
+                <h3>Low carolie recipes</h3>
             </div>
 
             <!-- End inspiration -->
@@ -166,7 +201,7 @@
     </main>
     <footer>
         Footer
-        <p>© Copyright 2020. Developed by Stefanie Cruz.</p>
+        <p>© Stefanie Cruz 2020</p>
     </footer>
     <script src="assets/js/main.js"></script>
     <!-- JS Bootstrap links -->

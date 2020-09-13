@@ -1,0 +1,35 @@
+//
+// Recipe cards
+//
+
+.card {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    font-family: $normal-text;
+    color: $colour-2;
+
+    .card-title {
+        font-size: 1.7rem;
+        color: $colour-1;
+        font-weight: 700;
+    }
+
+    span {
+        font-size: $normal-text-size;
+        font-weight: 700;
+    }
+
+    li {
+        font-size: $normal-text-size;
+    }
+
+    .btn {
+        font-size: $normal-text-size;
+        background-color: $colour-1;
+        border-color: $colour-1;
+    }
+}
+
+.card__main {
+    width: 75%;
+}
