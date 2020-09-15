@@ -5,7 +5,7 @@ const recipeCards = document.querySelector("#recipe-cards__main");
 const errorHandling = document.querySelector("#error-handling");
 const clearIcon = document.querySelector("#recipe-form__clear-icon");
 const searchBar = document.querySelector("#recipe-form__search-bar");
-const recipeCardsInspiration = document.querySelector("#recipe-cards__inspiration");
+const recipeCardsInspiration = document.querySelectorAll("#recipe-cards__inspiration");
 
 
 // ----------------------------------------------- Event Listeners
@@ -121,22 +121,16 @@ async function recipeAPIInspiration() {
 
 function recipeAPIDataInspiration(data) {
     for (let i = 0; i < 10; i++) {
-        recipeCardsInspiration.innerHTML += `
+        recipeCardsInspiration[i].innerHTML += `
         <div class="col-12 col-md-6 col-xl-3 col-lg-3">
-            <div class="card">
+        <div class="inspiration-container__card">
             <img src="${data.hits[i].recipe.image}"
                 class="card-img-top" alt="Recipe image">
-            <div class="card-body">
-                <h5 class="card-title" id="card-title">${data.hits[i].recipe.label}</h5>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><span>Calories: </span> ${parseInt(data.hits[i].recipe.calories)}</li>
-                <li class="list-group-item"><span>Ingredients used: </span> ${data.hits[i].recipe.ingredients.length}</li>
-                <li class="list-group-item"><span>Health labels: </span> ${data.hits[i].recipe.healthLabels}</li>
-                <li class="list-group-item"><span>Diet labels: </span> ${data.hits[i].recipe.dietLabels}</li>
-            </ul>
-            <a href="${data.hits[i].recipe.url}" target="_blank" class="btn btn-primary">See Recipe</a>
-            </div>
-        </div>`
+            <h5>${data.hits[i].recipe.label}</h5>
+            <a href="${data.hits[i].recipe.url}"
+                target="_blank">SEE RECIPE</a>
+        </div>
+    </div>
+        `
     };
 }

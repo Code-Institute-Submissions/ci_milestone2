@@ -93,9 +93,7 @@
     }
 
     &__search-wrapper {
-        align-items: center;
-        justify-content: center;
-        display: flex;
+        @include flexbox;
         padding-top: 5rem;
     }
 

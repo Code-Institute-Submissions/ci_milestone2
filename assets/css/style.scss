@@ -4,6 +4,7 @@
 @import './banner-header';
 @import './recipe-cards';
 @import './inspiration-section';
+@import './carousel';
 
 //
 // General Styling
@@ -26,4 +27,12 @@ a {
 body,
 footer {
     font-family: $normal-text;
+}
+
+//
+// Dividers
+//
+
+hr {
+    color: $colour-2;
 }

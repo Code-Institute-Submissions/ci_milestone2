@@ -132,15 +132,15 @@
 }
 
 .recipe-form-checkbox__search-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding-top: 5rem;
 }
 
@@ -290,44 +290,28 @@ input:-webkit-autofill:active {
 }
 
 .card .card-title {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: #015a06;
   font-weight: 700;
 }
 
 .card span {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 700;
 }
 
 .card li {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .card .btn {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   background-color: #015a06;
   border-color: #015a06;
 }
 
-.carousel-indicators {
-  margin-bottom: 0;
-}
-
 .card__main {
   width: 75%;
-}
-
-#recipe-cards__inspiration {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .inspiration-container {
@@ -340,13 +324,15 @@ input:-webkit-autofill:active {
   color: white;
   text-align: center;
   padding-top: 5rem;
+  font-weight: 500;
 }
 
 .inspiration-container h3 {
-  color: white;
+  color: #292929;
   text-align: center;
   padding: 4rem 0;
   font-size: 2rem;
+  font-weight: 700;
 }
 
 .block-divider svg {
@@ -356,6 +342,115 @@ input:-webkit-autofill:active {
 
 .block-divider svg path {
   fill: rgba(1, 90, 6, 0.8);
+}
+
+.inspiration-container__card {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  background-color: #347b37;
+}
+
+.inspiration-container__card img {
+  border-radius: 50%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.inspiration-container__card h5 {
+  font-size: 1.5rem;
+  color: white;
+  padding: 1rem 0;
+}
+
+.inspiration-container__card a {
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: underline;
+  letter-spacing: 0.2rem;
+  padding-bottom: 2rem;
+}
+
+.carousel {
+  position: relative;
+  height: 29rem;
+  margin: 0 auto;
+}
+
+.carousel__track-container {
+  background-color: red;
+  height: 100%;
+  position: relative;
+}
+
+.carousel__track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+}
+
+.carousel__button i {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.carousel__button--right {
+  right: 0;
+}
+
+.carousel__button--left {
+  left: 0;
+  z-index: 1;
+}
+
+.carousel__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem 0;
+}
+
+.carousel__indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: rgba(74, 74, 74, 0.4);
+  margin: 0 0.8rem;
+}
+
+.carousel .current-slide {
+  background-color: #4a4a4a;
 }
 
 * {
@@ -375,5 +470,9 @@ a {
 body,
 footer {
   font-family: "Lato", sans-serif;
+}
+
+hr {
+  color: #4a4a4a;
 }
 /*# sourceMappingURL=style.css.map */

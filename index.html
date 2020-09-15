@@ -8,7 +8,6 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <title>What's for Dinner?</title>
 </head>
@@ -124,9 +123,9 @@
                                 <h5 class="card-title" id="card-title">Whatever</h5>
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Calories: 856</li>
-                                <li class="list-group-item">Ingredients used: 7</li>
-                                <li class="list-group-item">Health labels:
+                                <li class="list-group-item"><span>Calories: </span> 856</li>
+                                <li class="list-group-item"><span>Ingredients used: </span> 7</li>
+                                <li class="list-group-item"><span>Health labels: </span>
                                     Vegan,Vegetarian,Peanut-Free,Tree-Nut-Free,Alcohol-Free
                                 </li>
                             </ul>
@@ -156,91 +155,78 @@
             <div class="container-fluid inspiration-container">
                 <h2>Need some inspiration?</h2>
                 <h3>Boost your immune system</h3>
-                <div id="my-carousel" class="carousel slide container" data-ride="carousel">
-                    <div class="row">
-                        <!-- Indicators -->
-                        <ul class="carousel-indicators">
-                            <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#my-carousel" data-slide-to="1"></li>
-                            <li data-target="#my-carousel" data-slide-to="2"></li>
-                        </ul>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div id="recipe-cards__inspiration">
-                                    <div class="col-12 col-md-6 col-xl-3 col-lg-3">
-                                        <div class="card card__inspiration">
-                                            <img src="https://www.edamam.com/web-img/36b/36be4fd2cbb2dafacf722da53d7de6da.jpg"
-                                                class="card-img-top" alt="Recipe image">
-                                            <div class="card-body">
-                                                <h5 class="card-title" id="card-title">Easy Mango-Blackberry Smoothie
-                                                    Recipe</h5>
-                                            </div>
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item"><span>Calories: </span>274</li>
-                                                <li class="list-group-item"><span>Ingredients used: </span>3</li>
-                                                <li class="list-group-item"><span>Health labels:
-                                                    </span>Vegetarian,Peanut-Free,Tree-Nut-Free,Alcohol-Free,Immuno-Supportive
-                                                </li>
-                                            </ul>
-                                            <a href="http://www.seriouseats.com/recipes/2014/01/easy-mango-blackberry-kefir-smoothie-recipe.html"
-                                                target="_blank" class="btn btn-primary">See Recipe</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div id="recipe-cards__inspiration">
-                                    <div class="col-12 col-md-6 col-xl-3 col-lg-3">
-                                        <div class="card card__inspiration">
-                                            <img src="https://www.edamam.com/web-img/36b/36be4fd2cbb2dafacf722da53d7de6da.jpg"
-                                                class="card-img-top" alt="Recipe image">
-                                            <div class="card-body">
-                                                <h5 class="card-title" id="card-title">Another recipe</h5>
-                                            </div>
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item"><span>Calories: </span>274</li>
-                                                <li class="list-group-item"><span>Ingredients used: </span>3</li>
-                                                <li class="list-group-item"><span>Health labels:
-                                                    </span>Vegetarian,Peanut-Free,Tree-Nut-Free,Alcohol-Free,Immuno-Supportive
-                                                </li>
-                                            </ul>
-                                            <a href="http://www.seriouseats.com/recipes/2014/01/easy-mango-blackberry-kefir-smoothie-recipe.html"
-                                                target="_blank" class="btn btn-primary">See Recipe</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Left and right controls -->
-                        <a class="carousel-control-prev" href="#my-carousel" data-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </a>
-                        <a class="carousel-control-next" href="#my-carousel" data-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </a>
-                    </div>
-                </div>
-                <h3>Protein rich recipes</h3>
-                <h3>Balanced recipes</h3>
-                <h3>Low carolie recipes</h3>
-            </div>
-
-
-            <!-- End inspiration -->
-            <!-- Start nutritional information -->
-            <section id="nutritional-info">
                 <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            Nutrional info section <br>
+                    <div id="my-carousel" class="carousel slide container" data-ride="carousel">
+                        <div class="row">
+                            <ul class="carousel-indicators">
+                                <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#my-carousel" data-slide-to="1"></li>
+                                <li data-target="#my-carousel" data-slide-to="2"></li>
+                                <li data-target="#my-carousel" data-slide-to="3"></li>
+                                <li data-target="#my-carousel" data-slide-to="4"></li>
+                                <li data-target="#my-carousel" data-slide-to="5"></li>
+                                <li data-target="#my-carousel" data-slide-to="6"></li>
+                                <li data-target="#my-carousel" data-slide-to="7"></li>
+                                <li data-target="#my-carousel" data-slide-to="8"></li>
+                                <li data-target="#my-carousel" data-slide-to="9"></li>
+                                <li data-target="#my-carousel" data-slide-to="10"></li>
+                            </ul>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div id="recipe-cards__inspiration"></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div id="recipe-cards__inspiration"></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div id="recipe-cards__inspiration"></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div id="recipe-cards__inspiration"></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div id="recipe-cards__inspiration"></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div id="recipe-cards__inspiration"></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div id="recipe-cards__inspiration"></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div id="recipe-cards__inspiration"></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div id="recipe-cards__inspiration"></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div id="recipe-cards__inspiration"></div>
+                                </div>
+                                <a class="carousel-control-prev" href="#my-carousel" data-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#my-carousel" data-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </a>
+                            </div>
                         </div>
                     </div>
+                    <h3>Protein rich recipes</h3>
+                    <h3>Balanced recipes</h3>
+                    <h3>Low carolie recipes</h3>
                 </div>
-            </section>
-            <!-- End nutritional information -->
+                <!-- End inspiration -->
+                <!-- Start nutritional information -->
+                <section id="nutritional-info">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                Nutrional info section <br>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End nutritional information -->
     </main>
     <footer>
         Footer
@@ -257,7 +243,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
-
 </body>
 
 </html>

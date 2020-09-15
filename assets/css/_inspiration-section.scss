@@ -11,20 +11,20 @@
         color: $white;
         text-align: center;
         padding-top: 5rem;
+        font-weight: 500;
     }
 
     h3 {
-        color: $white;
+        color: $colour-3;
         text-align: center;
         padding: 4rem 0;
         font-size: 2rem;
+        font-weight: 700;
     }
 }
 
 .block-divider {
-
     svg {
-
         background: 0 0 !important;
         height: 6vw;
     

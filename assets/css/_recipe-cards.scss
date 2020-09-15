@@ -1,5 +1,5 @@
 //
-// Recipe cards
+// Recipe cards - main section - search bar
 //
 
 .card {
@@ -9,37 +9,33 @@
     color: $colour-2;
 
     .card-title {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         color: $colour-1;
         font-weight: 700;
     }
 
     span {
-        font-size: $normal-text-size;
+        font-size: 1.4rem;
         font-weight: 700;
     }
 
     li {
-        font-size: $normal-text-size;
+        font-size: 1.4rem;
     }
 
     .btn {
-        font-size: $normal-text-size;
+        font-size: 1.4rem;
         background-color: $colour-1;
         border-color: $colour-1;
     }
 
 }
 
-.carousel-indicators {
-    margin-bottom: 0;
-}
-
 .card__main {
     width: 75%;
 }
 
-#recipe-cards__inspiration {
-    @include flexbox
-}
+
+
+
 
