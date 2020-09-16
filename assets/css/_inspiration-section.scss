@@ -35,3 +35,75 @@
     
 }
 
+.inspiration-container__card {
+    text-align: center;
+
+    img {
+        border-radius: 50%;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    h5 {
+        font-size: 1.5rem;
+        color: $white;
+        padding: 1rem 0;
+    }
+
+    a {
+        color: $white;
+        font-size: 1.3rem;
+        text-decoration: underline;
+        letter-spacing: 0.2rem;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.carousel-indicators {
+    margin-top: 2rem;
+}
+
+.carousel-control-next {
+    padding-left: 2rem;
+}
+
+.carousel-control-prev {
+    padding-right: 2rem;
+}
+
+// Solution for carousel to display in row instead of column taken from https://www.codeply.com/go/UBE4KZIeSJ
+
+@media (max-width: 992px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 992px) {
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(16.6%);
+    }
+    
+    .carousel-inner .carousel-item-left.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-16.6%);
+    }
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+    transform: translateX(0);
+}
+
