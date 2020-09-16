@@ -60,17 +60,34 @@
     }
 }
 
-.carousel-indicators {
-    margin-top: 2rem;
+.carousel {
+    margin: 2rem 0 5rem 0;
+
+    .carousel-indicators {
+        padding-top: 5rem;
+        bottom: -6rem;
+    
+        li {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+    
+    }
+
+    .carousel-control-next {
+        padding-left: 2rem;
+    }
+    
+    .carousel-control-prev {
+        padding-right: 2rem;
+    }
 }
 
-.carousel-control-next {
-    padding-left: 2rem;
-}
 
-.carousel-control-prev {
-    padding-right: 2rem;
-}
+
+
 
 // Solution for carousel to display in row instead of column taken from https://www.codeply.com/go/UBE4KZIeSJ
 

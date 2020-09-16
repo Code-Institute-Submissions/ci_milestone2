@@ -1,4 +1,4 @@
-// Animation carousel taken from https://www.codeply.com/go/UBE4KZIeSJ
+// Animation carousel taken from https://www.codeply.com/go/UBE4KZIeSJ, original from https://stackoverflow.com/questions/20007610/bootstrap-carousel-multiple-frames-at-once
 
 // $('#myCarousel').carousel({
 //     interval: 10000
