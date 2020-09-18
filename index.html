@@ -13,8 +13,6 @@
     <title>What's for Dinner?</title>
 </head>
 
-<!--  onload="recipeAPIInspiration()" -->
-
 <body>
     <header>
         <!-- Start Nav -->
@@ -146,144 +144,134 @@
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%"
                     height="96px" viewBox="0 0 100 100" version="1.1" preserveAspectRatio="none" class="injected-svg">
                     <path
-                        d="M0,0 C16.6666667,66 33.3333333,99 50,99 C66.6666667,99 83.3333333,66 100,0 L100,100 L0,100 L0,0 Z">
+                        d="M0,0 C16.6666667,66 33.3333333,99 50,99 
+                        C66.6666667,99 83.3333333,66 100,0 
+                        L100,100 L0,100 L0,0 Z">
                     </path>
                 </svg>
             </div>
             <div class="container-fluid inspiration-container">
                 <h2>Need some inspiration?</h2>
-                <h3>Boost your immune system</h3>
-                <!-- Start carousel -->
-                <div id="carousel" class="carousel slide container" data-ride="carousel">
+                <h3>Ideas to boost your immune system</h3>
+                <p>There are several factors that contribute to a stronger immune system, and one of them is food! In times of infectious diseases, every little helps.</p>
+                <!-- Start immuno supportive recipes carousel -->
+                <div id="carousel-immunity" class="carousel slide container" data-ride="carousel">
                     <div class="row">
                         <ul class="carousel-indicators">
-                            <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel" data-slide-to="1"></li>
-                            <li data-target="#carousel" data-slide-to="2"></li>
-                            <li data-target="#carousel" data-slide-to="3"></li>
-                            <li data-target="#carousel" data-slide-to="4"></li>
-                            <li data-target="#carousel" data-slide-to="5"></li>
-                            <li data-target="#carousel" data-slide-to="6"></li>
-                            <li data-target="#carousel" data-slide-to="7"></li>
-                            <li data-target="#carousel" data-slide-to="8"></li>
-                            <li data-target="#carousel" data-slide-to="9"></li>
-                            <li data-target="#carousel" data-slide-to="10"></li>
+                            <li data-target="#carousel-immunity" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-immunity" data-slide-to="1"></li>
+                            <li data-target="#carousel-immunity" data-slide-to="2"></li>
+                            <li data-target="#carousel-immunity" data-slide-to="3"></li>
+                            <li data-target="#carousel-immunity" data-slide-to="4"></li>
+                            <li data-target="#carousel-immunity" data-slide-to="5"></li>
+                            <li data-target="#carousel-immunity" data-slide-to="6"></li>
+                            <li data-target="#carousel-immunity" data-slide-to="7"></li>
+                            <li data-target="#carousel-immunity" data-slide-to="8"></li>
+                            <li data-target="#carousel-immunity" data-slide-to="9"></li>
+                            <li data-target="#carousel-immunity" data-slide-to="10"></li>
                         </ul>
                         <div class="carousel-inner">
-                            <div class="carousel-item">
-                                <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card"
-                                    id="recipe-cards__inspiration">
-                                    <img src="https://www.edamam.com/web-img/36b/36be4fd2cbb2dafacf722da53d7de6da.jpg"
-                                        class="card-img-top" alt="Recipe image">
-                                    <h5>Easy Mango-Blackberry Smoothie Recipe</h5>
-                                    <a href="http://www.seriouseats.com/recipes/2014/01/easy-mango-blackberry-kefir-smoothie-recipe.html"
-                                        target="_blank">SEE RECIPE</a>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card"
-                                    id="recipe-cards__inspiration">
-                                    <img src="https://www.edamam.com/web-img/585/585064d750d123eeefb28b4c5be960a4"
-                                        class="card-img-top" alt="Recipe image">
-                                    <h5>Crispy Frizzled Artichokes recipes</h5>
-                                    <a href="https://smittenkitchen.com/2015/06/crispy-frizzled-artichokes/"
-                                        target="_blank">SEE RECIPE</a>
-                                </div>
-                            </div>
-                            <div class="carousel-item active">
-                                <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card"
-                                    id="recipe-cards__inspiration">
-                                    <img src="https://www.edamam.com/web-img/d32/d32b4dc2e7bd9d4d1a24bbced0c89143.jpg"
-                                        class="card-img-top" alt="Recipe image">
-                                    <h5>Lemon Confit</h5>
-                                    <a href="http://ruhlman.com/2011/03/lemon-confit/" target="_blank">SEE
-                                        RECIPE</a>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card"
-                                    id="recipe-cards__inspiration">
-                                    <img src="https://www.edamam.com/web-img/3cb/3cbca745062064c3bbd561a951d9b8c0.jpg"
-                                        class="card-img-top" alt="Recipe image">
-                                    <h5>Yuzu Kosho</h5>
-                                    <a href="http://norecipes.com/blog/2011/10/30/yuzu-kosho-yuzu-chili-paste/"
-                                        target="_blank">SEE RECIPE</a>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card"
-                                    id="recipe-cards__inspiration">
-                                    <img src="https://www.edamam.com/web-img/c62/c622cd31686ae7c69d8b45810514f979.jpg"
-                                        class="card-img-top" alt="Recipe image">
-                                    <h5>Watermelon And Peach Fresh Fruit Cake</h5>
-                                    <a href="http://notwithoutsalt.com/2014/05/30/watermelon-peach-fresh-fruit-cake/"
-                                        target="_blank">SEE RECIPE</a>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card"
-                                    id="recipe-cards__inspiration">
-
-                                    <img src="https://www.edamam.com/web-img/802/802a90b13c074adaf3a50d4eb682d7a2.jpg"
-                                        class="card-img-top" alt="Recipe image">
-                                    <h5>Candied Ginger</h5>
-                                    <a href="http://www.davidlebovitz.com/2008/12/candied-ginger/" target="_blank">SEE
-                                        RECIPE</a>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card"
-                                    id="recipe-cards__inspiration">
-                                    <img src="https://www.edamam.com/web-img/e02/e02f49833cb4fe7936f8c0ca81a76164.jpg"
-                                        class="card-img-top" alt="Recipe image">
-                                    <h5>Salt-Crusted Baby Potatoes Recipe</h5>
-                                    <a href="http://www.101cookbooks.com/archives/000494.html" target="_blank">SEE
-                                        RECIPE</a>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card"
-                                    id="recipe-cards__inspiration">
-                                    <img src="https://www.edamam.com/web-img/541/541e2f2ecffb75708f1615abc923d537.jpg"
-                                        class="card-img-top" alt="Recipe image">
-                                    <h5>Squid Ink Pasta With Stilton Blue And Fresh Figs</h5>
-                                    <a href="http://www.tarteletteblog.com/2013/09/recipegluten-free-squid-in-pasta-with.html"
-                                        target="_blank">SEE RECIPE</a>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card"
-                                    id="recipe-cards__inspiration">
-                                    <img src="https://www.edamam.com/web-img/c69/c6922ad323db66d90b7d2c8d3c9cd3c4.jpg"
-                                        class="card-img-top" alt="Recipe image">
-                                    <h5>Pressure-Cooker Octopus Recipe</h5>
-                                    <a href="http://www.seriouseats.com/recipes/2016/06/pressure-cooker-octopus-recipe.html"
-                                        target="_blank">SEE RECIPE</a>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card"
-                                    id="recipe-cards__inspiration">
-                                    <img src="https://www.edamam.com/web-img/fcd/fcd723587b6945f35a9865d4b867d81b.jpg"
-                                        class="card-img-top" alt="Recipe image">
-                                    <h5>Kale Chips</h5>
-                                    <a href="http://www.davidlebovitz.com/2013/06/kale-chips-recipe/"
-                                        target="_blank">SEE RECIPE</a>
-                                </div>
-                            </div>
+                            <div class="carousel-item active" id="recipe-cards__immunity"></div>
+                            <div class="carousel-item" id="recipe-cards__immunity"></div>
+                            <div class="carousel-item" id="recipe-cards__immunity"></div>
+                            <div class="carousel-item" id="recipe-cards__immunity"></div>
+                            <div class="carousel-item" id="recipe-cards__immunity"></div>
+                            <div class="carousel-item" id="recipe-cards__immunity"></div>
+                            <div class="carousel-item" id="recipe-cards__immunity"></div>
+                            <div class="carousel-item" id="recipe-cards__immunity"></div>
+                            <div class="carousel-item" id="recipe-cards__immunity"></div>
+                            <div class="carousel-item" id="recipe-cards__immunity"></div>
                         </div>
-                        <a class="carousel-control-prev" href="#carousel" data-slide="prev">
+                        <a class="carousel-control-prev" href="#carousel-immunity" data-slide="prev">
                             <span><i class="fas fa-chevron-circle-left"></i></span>
                         </a>
-                        <a class="carousel-control-next" href="#carousel" data-slide="next">
+                        <a class="carousel-control-next" href="#carousel-immunity" data-slide="next">
                             <span><i class="fas fa-chevron-circle-right"></i></span>
                         </a>
                     </div>
                 </div>
-                <!-- End carousel -->
-                <h3>Protein rich recipes</h3>
-                <h3>Balanced recipes</h3>
-                <h3>Low carolie recipes</h3>
+                <!-- End immuno supportive recipes carousel -->
+                <hr>
+                <h3>Well-balanced recipes</h3>
+                <p>Creating a balanced meal is key to ensuring that you are nourished, satisfied and energized. To achieve this, your plate should always contain carbs, protein and fat.</p>
+                <!-- Start protein rich recipes carousel -->
+                <div id="carousel-balanced" class="carousel slide container" data-ride="carousel">
+                    <div class="row">
+                        <ul class="carousel-indicators">
+                            <li data-target="#carousel-balanced" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-balanced" data-slide-to="1"></li>
+                            <li data-target="#carousel-balanced" data-slide-to="2"></li>
+                            <li data-target="#carousel-balanced" data-slide-to="3"></li>
+                            <li data-target="#carousel-balanced" data-slide-to="4"></li>
+                            <li data-target="#carousel-balanced" data-slide-to="5"></li>
+                            <li data-target="#carousel-balanced" data-slide-to="6"></li>
+                            <li data-target="#carousel-balanced" data-slide-to="7"></li>
+                            <li data-target="#carousel-balanced" data-slide-to="8"></li>
+                            <li data-target="#carousel-balanced" data-slide-to="9"></li>
+                            <li data-target="#carousel-balanced" data-slide-to="10"></li>
+                        </ul>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" id="recipe-cards__protein"></div>
+                            <div class="carousel-item" id="recipe-cards__protein"></div>
+                            <div class="carousel-item" id="recipe-cards__protein"></div>
+                            <div class="carousel-item" id="recipe-cards__protein"></div>
+                            <div class="carousel-item" id="recipe-cards__protein"></div>
+                            <div class="carousel-item" id="recipe-cards__protein"></div>
+                            <div class="carousel-item" id="recipe-cards__protein"></div>
+                            <div class="carousel-item" id="recipe-cards__protein"></div>
+                            <div class="carousel-item" id="recipe-cards__protein"></div>
+                            <div class="carousel-item" id="recipe-cards__protein"></div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel-balanced" data-slide="prev">
+                            <span><i class="fas fa-chevron-circle-left"></i></span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel-balanced" data-slide="next">
+                            <span><i class="fas fa-chevron-circle-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <hr>
+                <!-- End protein rich recipes carousel -->
+                <h3>Vegetarian friendly recipes</h3>
+                <p>Eating a low-fat, plant-based diet may help give the immune system a boost. Research shows that Vegetarians have a more effective immune system than nonvegetarians.</p> 
+                <!-- Source: https://www.pcrm.org/news/blog/foods-boost-immune-system -->
+                <!-- Start veggie friendly recipes carousel -->
+                <div id="carousel-veggie" class="carousel slide container" data-ride="carousel">
+                    <div class="row">
+                        <ul class="carousel-indicators">
+                            <li data-target="#carousel-veggie" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-veggie" data-slide-to="1"></li>
+                            <li data-target="#carousel-veggie" data-slide-to="2"></li>
+                            <li data-target="#carousel-veggie" data-slide-to="3"></li>
+                            <li data-target="#carousel-veggie" data-slide-to="4"></li>
+                            <li data-target="#carousel-veggie" data-slide-to="5"></li>
+                            <li data-target="#carousel-veggie" data-slide-to="6"></li>
+                            <li data-target="#carousel-veggie" data-slide-to="7"></li>
+                            <li data-target="#carousel-veggie" data-slide-to="8"></li>
+                            <li data-target="#carousel-veggie" data-slide-to="9"></li>
+                            <li data-target="#carousel-veggie" data-slide-to="10"></li>
+                        </ul>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" id="recipe-cards__veggie"></div>
+                            <div class="carousel-item" id="recipe-cards__veggie"></div>
+                            <div class="carousel-item" id="recipe-cards__veggie"></div>
+                            <div class="carousel-item" id="recipe-cards__veggie"></div>
+                            <div class="carousel-item" id="recipe-cards__veggie"></div>
+                            <div class="carousel-item" id="recipe-cards__veggie"></div>
+                            <div class="carousel-item" id="recipe-cards__veggie"></div>
+                            <div class="carousel-item" id="recipe-cards__veggie"></div>
+                            <div class="carousel-item" id="recipe-cards__veggie"></div>
+                            <div class="carousel-item" id="recipe-cards__veggie"></div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel-veggie" data-slide="prev">
+                            <span><i class="fas fa-chevron-circle-left"></i></span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel-veggie" data-slide="next">
+                            <span><i class="fas fa-chevron-circle-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- End veggie friendly recipes carousel -->
             </div>
         </section>
         <!-- End inspiration -->
@@ -305,6 +293,7 @@
     </footer>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/carousel.js"></script>
+    <!-- <script src="assets/js/onload.js"></script> -->
     <!-- JS Bootstrap links -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

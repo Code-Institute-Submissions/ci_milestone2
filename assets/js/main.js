@@ -5,8 +5,9 @@ const recipeCards = document.querySelector("#recipe-cards__main");
 const errorHandling = document.querySelector("#error-handling");
 const clearIcon = document.querySelector("#recipe-form__clear-icon");
 const searchBar = document.querySelector("#recipe-form__search-bar");
-const recipeCardsInspiration = document.querySelectorAll("#recipe-cards__inspiration");
-
+const recipeCardsImmunity = document.querySelectorAll("#recipe-cards__immunity");
+const recipeCardsProtein = document.querySelectorAll("#recipe-cards__protein");
+const recipeCardsVeggie = document.querySelectorAll("#recipe-cards__veggie");
 
 // ----------------------------------------------- Event Listeners
 searchButton.addEventListener("click", () => {
@@ -28,10 +29,9 @@ clearIcon.addEventListener("click", () => {
     clearIcon.style.visibility = "hidden";
 });
 
-// ----------------------------------------------- Recipe API
+// ----------------------------------------------- Main Section - Search bar
 let appId = 'ba5b7a21',
     apiKey = 'd1d3afcdc37dd030c29294267aaedbc8';
-
 
 // Function to get value from checked checkbox. 
 function checkboxDietLabel() {
@@ -47,7 +47,7 @@ function checkboxDietLabel() {
     }
     console.log(checkboxDietValueArray);
 
-    // Checking if there's any checkbox checked. If yes, append values to the API URL.
+    // Checking if there's any checkbox ticked. If yes, append values to the API URL.
     if (checkboxDietValueArray.length === 0) {
         return "";
     }
@@ -62,7 +62,7 @@ function checkboxDietLabel() {
     }
 }
 
-// Get data from Recipe API
+// Get data from Recipe API: Search bar
 async function recipeAPI() {
     let searchValue = document.querySelector("#recipe-form__search-bar").value;
     let dietLabels = checkboxDietLabel();
@@ -78,12 +78,12 @@ async function recipeAPI() {
         });
 }
 
-// Recipe API data for main section - search bar
+// Recipe API data: Search bar
 function recipeAPIDataSearchBar(data) {
     for (let i = 0; i < 8; i++) {
         recipeCards.innerHTML += `
     <div class="col-12 col-md-6 col-xl-3 col-lg-3">
-        <div class="card">
+        <div class="card card__main">
         <img src="${data.hits[i].recipe.image}"
             class="card-img-top" alt="Recipe image">
         <div class="card-body">
@@ -93,7 +93,6 @@ function recipeAPIDataSearchBar(data) {
             <li class="list-group-item">Calories: ${parseInt(data.hits[i].recipe.calories)}</li>
             <li class="list-group-item">Ingredients used: ${data.hits[i].recipe.ingredients.length}</li>
             <li class="list-group-item">Health labels: ${data.hits[i].recipe.healthLabels}</li>
-            <li class="list-group-item">Diet labels: ${data.hits[i].recipe.dietLabels}</li>
         </ul>
         <a href="${data.hits[i].recipe.url}" target="_blank" class="btn btn-primary">See Recipe</a>
         </div>
@@ -102,14 +101,14 @@ function recipeAPIDataSearchBar(data) {
     };
 }
 
-
-// Get data from Recipe API for inspiration section
-async function recipeAPIInspiration() {
+// ----------------------------------------------- Inspiration Section
+//Get data from Recipe API: Imunno Supportive filter
+async function recipeAPIImmunity() {
     let response = await fetch(`https://api.edamam.com/search?app_id=${appId}&app_key=${apiKey}&q=&health=immuno-supportive`)
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            recipeAPIDataInspiration(data);
+            recipeAPIDataImmunity(data);
         })
         .catch(err => {
             errorHandling.innerHTML = "<p>Oops something went wrong, please reload the page.</p>"
@@ -117,20 +116,71 @@ async function recipeAPIInspiration() {
         });
 }
 
-// Recipe API data for inspiration section
-
-function recipeAPIDataInspiration(data) {
+// Recipe API data: Imunno Supportive filter
+function recipeAPIDataImmunity(data) {
     for (let i = 0; i < 10; i++) {
-        recipeCardsInspiration[i].innerHTML += `
-        <div class="col-12 col-md-6 col-xl-3 col-lg-3">
-        <div class="inspiration-container__card">
-            <img src="${data.hits[i].recipe.image}"
-                class="card-img-top" alt="Recipe image">
+        recipeCardsImmunity[i].innerHTML += `
+        <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card">
+            <img src="${data.hits[i].recipe.image}" class="card-img-top" alt="Recipe image">
             <h5>${data.hits[i].recipe.label}</h5>
-            <a href="${data.hits[i].recipe.url}"
-                target="_blank">SEE RECIPE</a>
+            <a href="${data.hits[i].recipe.url}" target="_blank">SEE RECIPE</a>
         </div>
-    </div>
+        `
+    };
+}
+
+
+// Get data from Recipe API: Balanced filter
+async function recipeAPIBalanced() {
+    let response = await fetch(`https://api.edamam.com/search?app_id=${appId}&app_key=${apiKey}&q=&diet=balanced`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            recipeAPIDataBalanced(data);
+        })
+        .catch(err => {
+            errorHandling.innerHTML = "<p>Oops something went wrong, please reload the page.</p>"
+            console.log(err);
+        });
+}
+
+// Recipe API data: High protein filter
+function recipeAPIDataBalanced(data) {
+    for (let i = 0; i < 10; i++) {
+        recipeCardsProtein[i].innerHTML += `
+        <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card">
+            <img src="${data.hits[i].recipe.image}" class="card-img-top" alt="Recipe image">
+            <h5>${data.hits[i].recipe.label}</h5>
+            <a href="${data.hits[i].recipe.url}" target="_blank">SEE RECIPE</a>
+        </div>
+        `
+    };
+}
+
+// Get data from Recipe API: Veggie filter
+async function recipeAPIVeggie() {
+    let response = await fetch(`https://api.edamam.com/search?app_id=${appId}&app_key=${apiKey}&q=&health=vegetarian`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            recipeAPIDataVeggie(data);
+        })
+        .catch(err => {
+            errorHandling.innerHTML = "<p>Oops something went wrong, please reload the page.</p>"
+            console.log(err);
+        });
+}
+
+
+// Recipe API data: Veggie filter
+function recipeAPIDataVeggie(data) {
+    for (let i = 0; i < 10; i++) {
+        recipeCardsVeggie[i].innerHTML += `
+        <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card">
+            <img src="${data.hits[i].recipe.image}" class="card-img-top" alt="Recipe image">
+            <h5>${data.hits[i].recipe.label}</h5>
+            <a href="${data.hits[i].recipe.url}" target="_blank">SEE RECIPE</a>
+        </div>
         `
     };
 }
