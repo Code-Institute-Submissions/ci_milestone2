@@ -3,8 +3,6 @@
 //
 
 .inspiration-container {
-    height: 120rem;
-
     &__wrapper {
         background-color: $white;
         padding: 4rem 0;
@@ -33,14 +31,12 @@
 
         h3 {
             color: $colour-1;
-            // text-align: center;
             padding: 4rem 0 1rem 0;
             font-size: 2rem;
             font-weight: 700;
         }
     
         p {
-            // text-align: center;
             padding-bottom: 4rem;
             margin: 0 auto;
             color: $colour-2;
@@ -53,22 +49,7 @@
         &__wrapper {
             max-width: 70%; 
         }
-
     }
-
-
-}
-
-.block-divider {
-    svg {
-        background: 0 0 !important;
-        height: 6vw;
-    
-        path {
-            fill: rgba($colour-1, 0.8);
-        }
-    }
-    
 }
 
 .inspiration-container__card {
@@ -83,13 +64,14 @@
 
     h5 {
         font-size: 1.5rem;
-        color: $white;
+        color: $colour-2;
         padding: 1rem 0;
+        font-weight: 400;
     }
 
     a {
-        color: $white;
-        font-size: 1.3rem;
+        color: $colour-2;
+        font-size: 1rem;
         text-decoration: underline;
         letter-spacing: 0.2rem;
         padding-bottom: 2rem;
@@ -105,7 +87,7 @@
 
 .carousel {
     margin-top: 2rem;
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
 
     .carousel-indicators {
         padding-top: 5rem;
@@ -122,12 +104,12 @@
 
     .carousel-control-next {
         padding-left: 2rem;
-        opacity: 1;
+        opacity: 0.4;
     }
     
     .carousel-control-prev {
         padding-right: 2rem;
-        opacity: 1;
+        opacity: 0.4;
     }
 
     span > i {
@@ -148,8 +130,14 @@
     }
 }
 
-// Solution of carousel to display in a row instead of column taken from https://www.codeply.com/go/UBE4KZIeSJ. I have made a few adaptations.
+hr {
+    background-color: rgba($colour-2, 0.1);
+    width: 4rem;
+    height: 0.1rem;
+    margin: 0 auto;
+}
 
+// Solution of carousel to display in a row instead of column taken from https://www.codeply.com/go/UBE4KZIeSJ. I have made a few adaptations.
 .carousel-inner .carousel-item.active,
 .carousel-inner .carousel-item-next,
 .carousel-inner .carousel-item-prev {

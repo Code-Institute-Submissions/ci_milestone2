@@ -72,10 +72,6 @@
         margin-right: 1rem;
     }
 
-    &__labels {
-        left: 3rem
-    }
-
     &__search-button {
         background-color: $colour-1;
         width: 10rem;
@@ -95,6 +91,10 @@
     &__search-wrapper {
         @include flexbox;
         padding-top: 5rem;
+    }
+
+    label {
+        left: 20%;
     }
 
 }
@@ -168,8 +168,8 @@
     }
 
     .recipe-form-checkbox {
-        &__labels {
-            left: 15%;
+        label {
+            left: 35%;
         }
     }
 }
