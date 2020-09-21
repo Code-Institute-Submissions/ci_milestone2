@@ -6,7 +6,7 @@ const errorHandling = document.querySelector("#error-handling");
 const clearIcon = document.querySelector("#recipe-form__clear-icon");
 const searchBar = document.querySelector("#recipe-form__search-bar");
 const recipeCardsImmunity = document.querySelectorAll("#recipe-cards__immunity");
-const recipeCardsProtein = document.querySelectorAll("#recipe-cards__protein");
+const recipeCardsBalanced = document.querySelectorAll("#recipe-cards__balanced");
 const recipeCardsVeggie = document.querySelectorAll("#recipe-cards__veggie");
 
 // ----------------------------------------------- Event Listeners
@@ -33,7 +33,7 @@ clearIcon.addEventListener("click", () => {
 let appId = 'ba5b7a21',
     apiKey = 'd1d3afcdc37dd030c29294267aaedbc8';
 
-// Function to get value from checked checkbox. 
+// Function to get value from ticked checkbox. 
 function checkboxDietLabel() {
     let checkboxDiet = document.forms[0];
     let i;
@@ -81,23 +81,34 @@ async function recipeAPI() {
 // Recipe API data: Search bar
 function recipeAPIDataSearchBar(data) {
     for (let i = 0; i < 8; i++) {
-        recipeCards.innerHTML += `
-    <div class="col-12 col-md-6 col-xl-3 col-lg-3">
-        <div class="card card__main">
-        <img src="${data.hits[i].recipe.image}"
-            class="card-img-top" alt="Recipe image">
-        <div class="card-body">
-            <h5 class="card-title" id="card-title">${data.hits[i].recipe.label}</h5>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Calories: ${parseInt(data.hits[i].recipe.calories)}</li>
-            <li class="list-group-item">Ingredients used: ${data.hits[i].recipe.ingredients.length}</li>
-            <li class="list-group-item">Health labels: ${data.hits[i].recipe.healthLabels}</li>
-        </ul>
-        <a href="${data.hits[i].recipe.url}" target="_blank" class="btn btn-primary">See Recipe</a>
-        </div>
-    </div>
-        `
+        if (typeof(data.hits[i]) != undefined) {
+            if (data.hits[0].recipe.healthLabels > 1) {
+                let healthLabels;
+                for (let j = 0; j < 8; j++) {
+                    healthLabels += `<span class="badge badge-pill badge-success">${data.hits[i].recipe.healthLabels}</span>                    `
+                }
+            }
+            recipeCards.innerHTML += `
+            <div class="col-12 col-md-6 col-xl-3 col-lg-3">
+                <div class="card card__main">
+                <img src="${data.hits[i].recipe.image}"
+                    class="card-img-top" alt="Recipe image">
+                <div class="card-body">
+                    <h5 class="card-title" id="card-title">${data.hits[i].recipe.label}</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Calories: ${parseInt(data.hits[i].recipe.calories)}</li>
+                    <li class="list-group-item">Ingredients used: ${data.hits[i].recipe.ingredients.length}</li>
+                    <li class="list-group-item">Health labels: ${healthLabels}</li>
+                </ul>
+                <a href="${data.hits[i].recipe.url}" target="_blank" class="btn btn-primary">See Recipe</a>
+                </div>
+            </div>
+                `
+        } else {
+            `"<p>We couldn't find any results with this search. Please change the search term.</p>"`
+        }
+        
     };
 }
 
@@ -144,10 +155,10 @@ async function recipeAPIBalanced() {
         });
 }
 
-// Recipe API data: High protein filter
+// Recipe API data: Well Balanced filter
 function recipeAPIDataBalanced(data) {
     for (let i = 0; i < 10; i++) {
-        recipeCardsProtein[i].innerHTML += `
+        recipeCardsBalanced[i].innerHTML += `
         <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card">
             <img src="${data.hits[i].recipe.image}" class="card-img-top" alt="Recipe image">
             <h5>${data.hits[i].recipe.label}</h5>

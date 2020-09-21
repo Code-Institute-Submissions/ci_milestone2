@@ -163,18 +163,13 @@
             right: 7.5rem;
             visibility: hidden;
         }
-
-
     }
-
     .recipe-form-checkbox {
         label {
             left: 35%;
         }
     }
 }
-
-
 
 @media (min-width: $desktop-width) {
     #recipe-form {
@@ -193,11 +188,9 @@
             visibility: hidden;
         }
     }
-
     .recipe-form-checkbox {
         &__labels {
             left: 0;
-            text-align: center;
         }
     }
 }

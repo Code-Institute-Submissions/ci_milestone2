@@ -235,7 +235,6 @@
   }
   .recipe-form-checkbox__labels {
     left: 0;
-    text-align: center;
   }
 }
 
@@ -494,6 +493,22 @@ hr {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.nutrition-container {
+  background-color: #015a06;
+}
+
+.nutrition-container h2 {
+  color: white;
+}
+
+.nutrition-container p {
+  color: white;
+}
+
+.nutrition-container textarea {
+  font-size: 1.6rem;
 }
 
 * {
