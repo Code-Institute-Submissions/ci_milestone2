@@ -317,8 +317,8 @@ input:-webkit-autofill:active {
   background-color: white;
   padding: 4rem 0;
   margin: -8rem 0 2rem;
-  border-left: 4px solid rgba(1, 90, 6, 0.95);
-  border-bottom: 4px solid rgba(1, 90, 6, 0.3);
+  border-left: 0.4rem solid rgba(1, 90, 6, 0.95);
+  border-bottom: 0.4rem solid rgba(1, 90, 6, 0.3);
 }
 
 .inspiration-container__wrapper h2 {
@@ -495,20 +495,77 @@ hr {
   justify-content: center;
 }
 
+.dark-layer {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nutrition-wrapper {
+  background: url("/assets/images/soo-ann-woon-unsplash.jpg") fixed center;
+}
+
 .nutrition-container {
-  background-color: #015a06;
+  background-color: white;
+  width: 95%;
 }
 
 .nutrition-container h2 {
-  color: white;
+  color: #292929;
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  padding: 5rem 0 3rem 0;
 }
 
 .nutrition-container p {
-  color: white;
+  color: #292929;
+  font-size: 1.6rem;
+  padding: 0 0 2rem 0;
 }
 
 .nutrition-container textarea {
   font-size: 1.6rem;
+}
+
+.nutrition-container label {
+  color: #292929;
+  font-size: 1.2rem;
+}
+
+.nutrition-container__search-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 3rem 0;
+}
+
+.nutrition-container button {
+  background-color: #015a06;
+  border: 0.1rem solid white;
+  width: 10rem;
+  height: 4rem;
+  font-size: 1.6rem;
+  border-radius: 1rem;
+  outline: 0;
+  color: white;
+  cursor: pointer;
+}
+
+.nutrition-container button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.block-divider-top {
+  height: 6rem;
+}
+
+.block-divider-bottom {
+  height: 5rem;
 }
 
 * {

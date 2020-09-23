@@ -1,21 +1,20 @@
+//
+// ----------- Main Section - Search bar
+//
 
-// -----------------------------------------------  Selectors
+//Selectors
 const searchButton = document.querySelector("#search");
 const recipeCards = document.querySelector("#recipe-cards__main");
 const errorHandling = document.querySelector("#error-handling");
 const clearIcon = document.querySelector("#recipe-form__clear-icon");
 const searchBar = document.querySelector("#recipe-form__search-bar");
-const recipeCardsImmunity = document.querySelectorAll("#recipe-cards__immunity");
-const recipeCardsBalanced = document.querySelectorAll("#recipe-cards__balanced");
-const recipeCardsVeggie = document.querySelectorAll("#recipe-cards__veggie");
 
-// ----------------------------------------------- Event Listeners
+//Event Listener
 searchButton.addEventListener("click", () => {
-    console.log('Button pressed')
     recipeAPI();
 });
 
-//Event listeners taken from https://www.mikedane.com/web-development/css/styling-search-bar/
+//Event listeners for the clear icon to be visible in the search bar. Taken from https://www.mikedane.com/web-development/css/styling-search-bar/
 searchBar.addEventListener("keyup", () => {
     if (searchBar.value && clearIcon.style.visibility != "visible") {
         clearIcon.style.visibility = "visible";
@@ -29,9 +28,6 @@ clearIcon.addEventListener("click", () => {
     clearIcon.style.visibility = "hidden";
 });
 
-// ----------------------------------------------- Main Section - Search bar
-let appId = 'ba5b7a21',
-    apiKey = 'd1d3afcdc37dd030c29294267aaedbc8';
 
 // Function to get value from ticked checkbox. 
 function checkboxDietLabel() {
@@ -66,7 +62,7 @@ function checkboxDietLabel() {
 async function recipeAPI() {
     let searchValue = document.querySelector("#recipe-form__search-bar").value;
     let dietLabels = checkboxDietLabel();
-    let response = await fetch(`https://api.edamam.com/search?app_id=${appId}&app_key=${apiKey}&q=${searchValue}${dietLabels}`)
+    let response = await fetch(`https://api.edamam.com/search?app_id=ba5b7a21&app_key=d1d3afcdc37dd030c29294267aaedbc8&q=${searchValue}${dietLabels}`)
         .then(response => response.json())
         .then(data => {
             console.log(data);
@@ -80,14 +76,12 @@ async function recipeAPI() {
 
 // Recipe API data: Search bar
 function recipeAPIDataSearchBar(data) {
-    for (let i = 0; i < 8; i++) {
-        if (typeof(data.hits[i]) != undefined) {
-            if (data.hits[0].recipe.healthLabels > 1) {
-                let healthLabels;
-                for (let j = 0; j < 8; j++) {
-                    healthLabels += `<span class="badge badge-pill badge-success">${data.hits[i].recipe.healthLabels}</span>                    `
-                }
-            }
+    if (typeof (data.hits[i].recipe) != undefined) {
+        let healthLabels;
+        for (let j = 0; j < data.hits[0].recipe.healthLabels.length; j++)
+            healthLabels += `<span class="badge badge-pill badge-success">${data.hits[i].recipe.healthLabels}</span>                    `
+
+        for (let i = 0; i < 8; i++) {
             recipeCards.innerHTML += `
             <div class="col-12 col-md-6 col-xl-3 col-lg-3">
                 <div class="card card__main">
@@ -105,14 +99,23 @@ function recipeAPIDataSearchBar(data) {
                 </div>
             </div>
                 `
-        } else {
-            `"<p>We couldn't find any results with this search. Please change the search term.</p>"`
         }
-        
-    };
+    }
+    else {
+        `"<p>We couldn't find any results with this search. Please change the search term.</p>"`
+    }
 }
 
-// ----------------------------------------------- Inspiration Section
+
+//
+// ----------- Inspiration Section
+//
+
+//Selectors
+const recipeCardsImmunity = document.querySelectorAll("#recipe-cards__immunity");
+const recipeCardsBalanced = document.querySelectorAll("#recipe-cards__balanced");
+const recipeCardsVeggie = document.querySelectorAll("#recipe-cards__veggie");
+
 //Get data from Recipe API: Imunno Supportive filter
 async function recipeAPIImmunity() {
     let response = await fetch(`https://api.edamam.com/search?app_id=${appId}&app_key=${apiKey}&q=&health=immuno-supportive`)
@@ -194,4 +197,283 @@ function recipeAPIDataVeggie(data) {
         </div>
         `
     };
+}
+
+//
+// ----------- Nutritional Info Section
+//
+
+//Selectors
+const searchButtonNutrition = document.querySelector("#nutrition-container__search-button");
+const nutritionalInfoPerIngr = document.querySelector("#nutrition-container__response");
+const nutritionalInfoTable = document.querySelector("#nutrition-container__nutrition-table");
+const nutritionalInfoError = document.querySelector("#nutrition-container__error-message");
+
+
+
+// Nutritional info API call
+searchButtonNutrition.addEventListener("click", function () {
+    let arr = {
+        "ingr": document.querySelector("#nutrition-container__label").value.split(/\n|\r/)
+    };
+    fetch('https://api.edamam.com/api/nutrition-details?app_id=57fbc896&app_key=83257937fbf237c98e94e34056ea7388', {
+        method: 'post',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(arr)
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            nutritionalInfoAPIData(data);
+        })
+        .catch(err => {
+            nutritionalInfoError.innerHTML = "<p>Nutritional info API call error message. We had a problem analysing this. Please check the ingredient spelling or if you have entered a quantities for the ingredients.</p>"
+            console.log(err);
+        });
+});
+
+
+//Content inside the following function was taken from https://developer.edamam.com/edamam-nutrition-api-demo, with adaptations (removed jquery).
+function nutritionalInfoAPIData(data) {
+    let quantity, measure, weight, foodMatch, unit;
+    let totalCal, FAT, totalDailyFAT, FASAT, totalDailyFASAT, FATRN, CHOLE, totalDailyCHOLE, NA, totalDailyNA, CHOCDF, totalDailyCHOCDF, FIBTG, totalDailyFIBTG, SUGAR, SUGARadded, PROCNT, totalDailyPROCNT, VITD, totalDailyVITD, CA, totalDailyCA, FE, totalDailyFE, K, totalDailyK, err, table;
+
+    //Calories per ingredient
+    let html = `<div class="col-md-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Qty</th>
+                                <th>Unit</th>
+                                <th>Food</th>
+                                <th>Calories</th>
+                                <th>Weight</th>
+                            </tr>
+                        </thead>
+                <tbody></div>`;
+    if (data.ingredients != "") {
+        for (let i = 0; i < data.ingredients.length; i++) {
+            if (typeof (data.ingredients[i].parsed) != "undefined") {
+                if (typeof (data.ingredients[i].parsed[0].quantity) != "undefined") {
+                    quantity = data.ingredients[i].parsed[0].quantity;
+                    console.log(quantity);
+                } else { quantity = '-' };
+                if (typeof (data.ingredients[i].parsed[0].measure) != "undefined") {
+                    measure = data.ingredients[i].parsed[0].measure;
+                    console.log(measure);
+                } else { measure = '-' };
+                if (typeof (data.ingredients[i].parsed[0].foodMatch) != "undefined") {
+                    foodMatch = data.ingredients[i].parsed[0].foodMatch;
+                    console.log(foodMatch);
+                } else { foodMatch = '-' };
+                if (typeof (data.ingredients[i].parsed[0].weight) != "undefined") {
+                    weight = data.ingredients[i].parsed[0].weight;
+                    console.log(weight);
+                } else { weight = '-' };
+                if (typeof (data.ingredients[i].parsed[0].nutrients.ENERC_KCAL) != "undefined") {
+                    cal = data.ingredients[i].parsed[0].nutrients.ENERC_KCAL.quantity;
+                    console.log(cal);
+                    unit = data.ingredients[i].parsed[0].nutrients.ENERC_KCAL.unit;
+                    console.log(unit);
+                } else { cal = '-' };
+
+                html += `<tr>
+                             <th>${quantity}</th>
+                             <th>${measure}</th>
+                             <th>${foodMatch}</th>
+                             <th>${Math.round(cal * 10) / 10} ${unit}</th>
+                             <th>${Math.round(weight * 10) / 10} g</th>
+                          </tr>`;
+            } else {
+                err = '<span class="addition-e">We cannot calculate the nutrition for some ingredients. Please check the ingredient spelling or if you have entered a quantities for the ingredients.</span>';
+            }
+        }
+    }
+
+    //Nutritional facts table
+    if (typeof (data.totalNutrients.ENERC_KCAL) != "undefined") {
+        totalCal = Math.round(data.totalNutrients.ENERC_KCAL.quantity);
+    } else { totalCal = '0' };
+
+    if (typeof (data.totalNutrients.FAT) != "undefined") {
+        FAT = Math.round(data.totalNutrients.FAT.quantity * 10) / 10 + ' ' + data.totalNutrients.FAT.unit;
+    } else { FAT = '-' };
+    if (typeof (data.totalDaily.FAT) != "undefined") {
+        totalDailyFAT = Math.round(data.totalDaily.FAT.quantity) + ' ' + data.totalDaily.FAT.unit;
+    } else { totalDailyFAT = '-' };
+
+    if (typeof (data.totalNutrients.FASAT) != "undefined") {
+        FASAT = Math.round(data.totalNutrients.FASAT.quantity * 10) / 10 + ' ' + data.totalNutrients.FASAT.unit;
+    } else { FASAT = '-' };
+    if (typeof (data.totalDaily.FASAT) != "undefined") {
+        totalDailyFASAT = Math.round(data.totalDaily.FASAT.quantity) + ' ' + data.totalDaily.FASAT.unit;
+    } else { totalDailyFASAT = '-' };
+
+    if (typeof (data.totalNutrients.FATRN) != "undefined") {
+        FATRN = Math.round(data.totalNutrients.FATRN.quantity * 10) / 10 + ' ' + data.totalNutrients.FATRN.unit;
+    } else { FATRN = '-' };
+
+    if (typeof (data.totalNutrients.CHOLE) != "undefined") {
+        CHOLE = Math.round(data.totalNutrients.CHOLE.quantity * 10) / 10 + ' ' + data.totalNutrients.CHOLE.unit;
+    } else { CHOLE = '-' };
+    if (typeof (data.totalDaily.CHOLE) != "undefined") {
+        totalDailyCHOLE = Math.round(data.totalDaily.CHOLE.quantity) + ' ' + data.totalDaily.CHOLE.unit;
+    } else { totalDailyCHOLE = '-' };
+
+    if (typeof (data.totalNutrients.NA) != "undefined") {
+        NA = Math.round(data.totalNutrients.NA.quantity * 10) / 10 + ' ' + data.totalNutrients.NA.unit;
+    } else { NA = '-' };
+    if (typeof (data.totalDaily.NA) != "undefined") {
+        totalDailyNA = Math.round(data.totalDaily.NA.quantity) + ' ' + data.totalDaily.NA.unit;
+    } else { totalDailyNA = '-' };
+
+    if (typeof (data.totalNutrients.CHOCDF) != "undefined") {
+        CHOCDF = Math.round(data.totalNutrients.CHOCDF.quantity * 10) / 10 + ' ' + data.totalNutrients.CHOCDF.unit;
+    } else { CHOCDF = '-' };
+    if (typeof (data.totalDaily.CHOCDF) != "undefined") {
+        totalDailyCHOCDF = Math.round(data.totalDaily.CHOCDF.quantity) + ' ' + data.totalDaily.CHOCDF.unit;
+    } else { totalDailyCHOCDF = '-' };
+
+    if (typeof (data.totalNutrients.FIBTG) != "undefined") {
+        FIBTG = Math.round(data.totalNutrients.FIBTG.quantity * 10) / 10 + ' ' + data.totalNutrients.FIBTG.unit;
+    } else { FIBTG = '-' };
+    if (typeof (data.totalDaily.FIBTG) != "undefined") {
+        totalDailyFIBTG = Math.round(data.totalDaily.FIBTG.quantity) + ' ' + data.totalDaily.FIBTG.unit;
+    } else { totalDailyFIBTG = '-' };
+
+    if (typeof (data.totalNutrients.SUGAR) != "undefined") {
+        SUGAR = Math.round(data.totalNutrients.SUGAR.quantity * 10) / 10 + ' ' + data.totalNutrients.SUGAR.unit;
+    } else { SUGAR = '-' };
+
+    if (typeof (data.totalNutrients.SUGARadded) != "undefined") {
+        SUGARadded = Math.round(data.totalNutrients.SUGARadded.quantity * 10) / 10 + ' ' + data.totalNutrients.SUGARadded.unit;
+    } else { SUGARadded = '-' };
+
+    if (typeof (data.totalNutrients.PROCNT) != "undefined") {
+        PROCNT = Math.round(data.totalNutrients.PROCNT.quantity * 10) / 10 + ' ' + data.totalNutrients.PROCNT.unit;
+    } else { PROCNT = '-' };
+    if (typeof (data.totalDaily.PROCNT) != "undefined") {
+        totalDailyPROCNT = Math.round(data.totalDaily.PROCNT.quantity) + ' ' + data.totalDaily.PROCNT.unit;
+    } else { totalDailyPROCNT = '-' };
+
+    if (typeof (data.totalNutrients.VITD) != "undefined") {
+        VITD = Math.round(data.totalNutrients.VITD.quantity * 10) / 10 + ' ' + data.totalNutrients.VITD.unit;
+    } else { VITD = '-' };
+    if (typeof (data.totalDaily.VITD) != "undefined") {
+        totalDailyVITD = Math.round(data.totalDaily.VITD.quantity) + ' ' + data.totalDaily.VITD.unit;
+    } else { totalDailyVITD = '-' };
+
+    if (typeof (data.totalNutrients.CA) != "undefined") {
+        CA = Math.round(data.totalNutrients.CA.quantity * 10) / 10 + ' ' + data.totalNutrients.CA.unit;
+    } else { CA = '-' };
+    if (typeof (data.totalDaily.CA) != "undefined") {
+        totalDailyCA = Math.round(data.totalDaily.CA.quantity) + ' ' + data.totalDaily.CA.unit;
+    } else { totalDailyCA = '-' };
+
+    if (typeof (data.totalNutrients.FE) != "undefined") {
+        FE = Math.round(data.totalNutrients.FE.quantity * 10) / 10 + ' ' + data.totalNutrients.FE.unit;
+    } else { FE = '-' };
+    if (typeof (data.totalDaily.FE) != "undefined") {
+        totalDailyFE = Math.round(data.totalDaily.FE.quantity) + ' ' + data.totalDaily.FE.unit;
+    } else { totalDailyFE = '-' };
+
+    if (typeof (data.totalNutrients.K) != "undefined") {
+        K = Math.round(data.totalNutrients.K.quantity * 10) / 10 + ' ' + data.totalNutrients.K.unit;
+    } else { K = '-' };
+    if (typeof (data.totalDaily.K) != "undefined") {
+        totalDailyK = Math.round(data.totalDaily.K.quantity) + ' ' + data.totalDaily.K.unit;
+    } else { totalDailyK = '-' };
+
+    table = `<section class="performance-facts" id="performance-facts">
+                	<div class="performance-facts__header">
+                		<h1 class="performance-facts__title">Nutrition Facts</h1>
+                		<p><span id="lnumser">0</span> servings per container</p>
+                	</div>
+                	<table class="performance-facts__table">
+                		<thead>
+                			<tr>
+                				<th colspan="3" class="amps">Amount Per Serving</th>
+                			</tr>
+                		</thead>
+                		<tbody>
+                			<tr>
+                				<th colspan="2" id="lkcal-val-cal"><b>Calories</b></th>
+                				<td class="nob">${totalCal}</td>
+                			</tr>
+                			<tr class="thick-row">
+                				<td colspan="3" class="small-info"><b>% Daily Value*</b></td>
+                			</tr>
+                			<tr>
+                				<th colspan="2"><b>Total Fat</b> ${FAT}</th>
+                				<td><b>${totalDailyFAT}</b></td>
+                			</tr>
+                			<tr>
+                				<td class="blank-cell"></td>
+                				<th>Saturated Fat ${FASAT}</th>
+                				<td><b>${totalDailyFASAT}</b></td>
+                			</tr>
+                			<tr>
+                				<td class="blank-cell"></td>
+                				<th>Trans Fat ${FATRN}</th>
+                				<td></td>
+                			</tr>
+                			<tr>
+                				<th colspan="2"><b>Cholesterol</b> ${CHOLE}</th>
+                				<td><b>${totalDailyCHOLE}</b></td>
+                			</tr>
+                			<tr>
+                				<th colspan="2"><b>Sodium</b> ${NA}</th>
+                				<td><b>${totalDailyNA}</b></td>
+                			</tr>
+                			<tr>
+                				<th colspan="2"><b>Total Carbohydrate</b> ${CHOCDF}</th>
+                				<td><b>${totalDailyCHOCDF}</b></td>
+                			</tr>
+                			<tr>
+                				<td class="blank-cell"></td>
+                				<th>Dietary Fiber ${FIBTG}</th>
+                				<td><b>${totalDailyFIBTG}</b></td>
+                			</tr>
+                			<tr>
+                				<td class="blank-cell"></td>
+                				<th>Total Sugars ${SUGAR}</th>
+                				<td></td>
+                			</tr>
+                			<tr>
+                				<td class="blank-cell"></td>
+                				<th>Includes ${SUGARadded} Added Sugars</th>
+                				<td></td>
+                			</tr>
+                			<tr class="thick-end">
+                				<th colspan="2"><b>Protein</b> ${PROCNT}</th>
+                				<td><b>${totalDailyPROCNT}</b></td>
+                			</tr>
+                		</tbody>
+                	</table>
+                	<table class="performance-facts__table--grid">
+                		<tbody>
+                			<tr>		  
+                				<th>Vitamin D ${VITD}</th>
+                				<td><b>${totalDailyVITD}</b></td>
+                			</tr>
+                			<tr>
+                				<th>Calcium ${CA}</th>
+                				<td><b>${totalDailyCA}</b></td>
+                			</tr>
+                			<tr>
+                				<th>Iron ${FE}</th>
+                				<td><b>${totalDailyFE}</b></td>		  
+                			</tr>
+                			<tr class="thin-end">
+                				<th>Potassium ${K}</th>
+                				<td><b>${totalDailyK}</b></td>
+                			</tr>
+                		</tbody>
+                	</table>
+                	<p class="small-info" id="small-nutrition-info">*Percent Daily Values are based on a 2000 calorie diet</p>
+                </section>`;
+    nutritionalInfoPerIngr.innerHTML = html;
+    nutritionalInfoTable.innerHTML = table;
 }

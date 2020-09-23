@@ -2,19 +2,70 @@
 // Nutritional info Section
 //
 
+.dark-layer {
+    background-color: rgba(black, 0.5);
+}
+
+.nutrition-wrapper {
+    background: url("/assets/images/soo-ann-woon-unsplash.jpg") fixed center;
+}
+
+
 .nutrition-container {
-    background-color: $colour-1;
+    background-color: $white;
+    width: 95%;
 
     h2 {
-        color: $white;
+        color: $colour-3;
+        font-size: 3rem;
+        font-family: $title;
+        font-weight: 500;
+        padding: 5rem 0 3rem 0;
     }
 
     p {
-        color: $white;
+        color: $colour-3;
+        font-size: 1.6rem;
+        padding: 0 0 2rem 0;
     }
 
     textarea {
         font-size: 1.6rem;
     }
 
+    label {
+        color: $colour-3;
+        font-size: 1.2rem;
+    }
+    
+    &__search-button {
+        @include flexbox;
+        margin: 3rem 0;
+    }
+
+    button {
+        background-color: $colour-1;
+        border: 0.1rem solid $white;
+        width: 10rem;
+        height: 4rem;
+        font-size: 1.6rem;
+        border-radius: 1rem;
+        outline: 0;
+        color: $white;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba($white, 0.2);
+        }
+    }
+
 }
+
+.block-divider-top {
+    height: 6rem;
+}
+
+.block-divider-bottom {
+    height: 5rem;
+}
+
