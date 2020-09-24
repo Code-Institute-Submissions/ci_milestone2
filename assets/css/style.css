@@ -495,31 +495,41 @@ hr {
   justify-content: center;
 }
 
-.dark-layer {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.nutrition-wrapper {
-  background: url("/assets/images/soo-ann-woon-unsplash.jpg") fixed center;
-}
-
-.nutrition-container {
-  background-color: white;
-  width: 95%;
+.nutrition-image {
+  background: url("/assets/images/caju-gomes-unsplash.jpg") no-repeat center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  height: 20rem;
+  width: 100%;
 }
 
 .nutrition-container h2 {
-  color: #292929;
+  color: #015a06;
   font-size: 3rem;
   font-family: "Playfair Display", serif;
   font-weight: 500;
-  padding: 5rem 0 3rem 0;
+  padding-top: 5rem;
+}
+
+.nutrition-container h2::after {
+  top: 15%;
+  content: "";
+  position: absolute;
+  left: 1.5rem;
+  width: 5rem;
+  max-width: 20%;
+  height: 0.2rem;
+  background-color: #015a06;
 }
 
 .nutrition-container p {
   color: #292929;
   font-size: 1.6rem;
-  padding: 0 0 2rem 0;
+}
+
+.nutrition-container__heading {
+  padding: 6rem 0 4rem 0;
 }
 
 .nutrition-container textarea {
@@ -560,12 +570,16 @@ hr {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.block-divider-top {
-  height: 6rem;
-}
-
-.block-divider-bottom {
-  height: 5rem;
+@media (min-width: 64rem) {
+  .nutrition-container {
+    max-width: 80%;
+  }
+  .nutrition-container h2 {
+    padding-top: 8rem;
+  }
+  .nutrition-container h2::after {
+    top: 25%;
+  }
 }
 
 * {
