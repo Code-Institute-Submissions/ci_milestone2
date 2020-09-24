@@ -27,7 +27,6 @@
             max-width: 20%;
             height: 0.2rem;
             background-color: $colour-1;
-            
         }
     }
 
@@ -69,6 +68,29 @@
             background-color: rgba($white, 0.2);
         }
     }
+
+    h3 {
+        color: $colour-3;
+        padding: 4rem 0 1rem 0;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    &__check {
+        .d-flex {
+            margin-top: 0.25rem;
+        }
+
+        p {
+            margin-left: 1rem;
+        }
+
+        .fill {
+            fill: $colour-1;
+        }
+    }
+
+    
 }
 
 @media (min-width: $desktop-width) {
@@ -77,9 +99,9 @@
 
         h2 {
             padding-top: 8rem;
-    
+
             &::after {
-                top: 25%;                
+                top: 25%;
             }
         }
     }

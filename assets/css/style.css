@@ -570,6 +570,25 @@ hr {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.nutrition-container h3 {
+  color: #292929;
+  padding: 4rem 0 1rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.nutrition-container__check .d-flex {
+  margin-top: 0.25rem;
+}
+
+.nutrition-container__check p {
+  margin-left: 1rem;
+}
+
+.nutrition-container__check .fill {
+  fill: #015a06;
+}
+
 @media (min-width: 64rem) {
   .nutrition-container {
     max-width: 80%;
