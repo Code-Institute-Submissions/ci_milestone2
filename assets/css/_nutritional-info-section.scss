@@ -41,6 +41,10 @@
 
     textarea {
         font-size: 1.6rem;
+        background-color: rgba($colour-2, 0.2);
+        color: $colour-2;
+        border-radius: 0;
+        box-shadow: 0.5rem 0.5rem 1rem 0 rgba(0, 0, 0, 0.12);
     }
 
     label {
@@ -104,5 +108,15 @@
                 top: 25%;
             }
         }
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .nutrition-container {
+        max-width: 80%;
+    }
+
+    .nutrition-image {
+        height: 25rem;
     }
 }
