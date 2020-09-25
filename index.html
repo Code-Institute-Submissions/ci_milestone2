@@ -447,9 +447,14 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-12" id="nutrition-container__response">
-                        <div class="col-md-12">
-                            <table class="table">
+                    <div class="col-12 nutrition-container__ingredient-table">
+                        <div class="nutrition-container__heading-table">
+                            <img src="/assets/images/icons8-flour-of-rye-50.png" alt="Four of Rye icon" aria-hidden="true">
+                            <h4>Nutrional value per ingredient</h4>
+                            <p>This section shows a summary of the nutritional information for the ingredients entered separately</p>
+                        </div>
+                        <div id="nutrition-container__response"></div>
+                            <table class="table table-hover">
                                 <thead>
                                     <tr>
                                         <th>Qty</th>
@@ -476,15 +481,19 @@
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
                     </div>
-                    <div class="col-12" id="nutrition-container__nutrition-table">
-                        <section class="performance-facts" id="performance-facts">
-                            <div class="performance-facts__header">
-                                <h1 class="performance-facts__title">Nutrition Facts</h1>
-                                <p><span id="lnumser">0</span> servings per container</p>
+                    <div class="col-12">
+                        <div class="nutrition-container__heading-table">
+                            <img src="/assets/images/icons8-omlette-50.png" alt="Omelette plate icon" aria-hidden="true">
+                            <h4>Nutrional value for the dish</h4>
+                            <p>This section shows nutrional value of the ingredients altogether</p>
+                        </div>
+                        <div class="nutritional-values" id="nutrition-container__nutrition-table">
+                            <div class="nutritional-values__header">
+                                <h1 class="nutritional-values__title">Nutritional Value</h1>
+                                <!-- <p><span id="lnumser">0</span> servings per container</p> -->
                             </div>
-                            <table class="performance-facts__table">
+                            <table class="table nutritional-values__table table-hover table-sm">
                                 <thead>
                                     <tr>
                                         <th colspan="3" class="amps">Amount Per Serving</th>
@@ -492,20 +501,20 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th colspan="2" id="lkcal-val-cal"><b>Calories</b></th>
+                                        <th colspan="2" id="lkcal-val-cal"><span>Calories</span></th>
                                         <td class="nob">1774</td>
                                     </tr>
                                     <tr class="thick-row">
-                                        <td colspan="3" class="small-info"><b>% Daily Value*</b></td>
+                                        <td colspan="3" class="small-info"><span>% Daily Value*</span></td>
                                     </tr>
                                     <tr>
-                                        <th colspan="2"><b>Total Fat</b> 18.3 g</th>
-                                        <td><b>28 %</b></td>
+                                        <th colspan="2"><span>Total Fat</span> 18.3 g</th>
+                                        <td><span>28 %</span></td>
                                     </tr>
                                     <tr>
                                         <td class="blank-cell"></td>
                                         <th>Saturated Fat 2 g</th>
-                                        <td><b>10 %</b></td>
+                                        <td><span>10 %</span></td>
                                     </tr>
                                     <tr>
                                         <td class="blank-cell"></td>
@@ -513,21 +522,21 @@
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <th colspan="2"><b>Cholesterol</b> 0 mg</th>
-                                        <td><b>0 %</b></td>
+                                        <th colspan="2"><span>Cholesterol</span> 0 mg</th>
+                                        <td><span>0 %</span></td>
                                     </tr>
                                     <tr>
-                                        <th colspan="2"><b>Sodium</b> 70 mg</th>
-                                        <td><b>3 %</b></td>
+                                        <th colspan="2"><span>Sodium</span> 70 mg</th>
+                                        <td><span>3 %</span></td>
                                     </tr>
                                     <tr>
-                                        <th colspan="2"><b>Total Carbohydrate</b> 333.2 g</th>
-                                        <td><b>111 %</b></td>
+                                        <th colspan="2"><span>Total Carbohydrate</span> 333.2 g</th>
+                                        <td><span>111 %</span></td>
                                     </tr>
                                     <tr>
                                         <td class="blank-cell"></td>
                                         <th>Dietary Fiber 34.6 g</th>
-                                        <td><b>138 %</b></td>
+                                        <td><span>138 %</span></td>
                                     </tr>
                                     <tr>
                                         <td class="blank-cell"></td>
@@ -540,35 +549,34 @@
                                         <td></td>
                                     </tr>
                                     <tr class="thick-end">
-                                        <th colspan="2"><b>Protein</b> 70.9 g</th>
-                                        <td><b>142 %</b></td>
+                                        <th colspan="2"><span>Protein</span> 70.9 g</th>
+                                        <td><span>142 %</span></td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <table class="performance-facts__table--grid">
+                            <table class="table nutritional-values__table--grid table-hover table-sm">
                                 <tbody>
                                     <tr>
                                         <th>Vitamin D 0 µg</th>
-                                        <td><b>0 %</b></td>
+                                        <td><span>0 %</span></td>
                                     </tr>
                                     <tr>
                                         <th>Calcium 179.1 mg</th>
-                                        <td><b>18 %</b></td>
+                                        <td><span>18 %</span></td>
                                     </tr>
                                     <tr>
                                         <th>Iron 13.8 mg</th>
-                                        <td><b>77 %</b></td>
+                                        <td><span>77 %</span></td>
                                     </tr>
                                     <tr class="thin-end">
                                         <th>Potassium 2203.2 mg</th>
-                                        <td><b>47 %</b></td>
+                                        <td><span>47 %</span></td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <p class="small-info" id="small-nutrition-info">*Percent Daily Values are based on a
+                            <p id="small-nutrition-info">*Percent Daily Values are based on a
                                 2000 calorie diet</p>
-                        </section>
-
+                        </div>
                     </div>
                     <div class="col-12" id="nutrition-container__error-message"></div>
                 </div>
