@@ -615,38 +615,108 @@ hr {
   }
 }
 
-.nutrition-container__ingredient-table .table th {
-  font-size: 1.6rem;
-  font-weight: 500;
-}
-
-.nutrition-container__ingredient-table .table thead th {
-  font-weight: 700;
-}
-
-.nutrition-container__heading-table {
+.nutrition-container__heading-tables {
   margin: 2rem 0;
 }
 
-.nutrition-container__heading-table h4 {
+.nutrition-container__heading-tables h4 {
   font-size: 1.8rem;
   margin-top: 2rem;
   font-weight: 600;
   color: #015a06;
 }
 
-.nutrition-container__heading-table p {
+.nutrition-container__heading-tables p {
   color: rgba(41, 41, 41, 0.5);
 }
 
+.nutrition-container__ingredient-table {
+  margin-bottom: 3rem;
+}
+
+.nutrition-container__ingredient-table .table th {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #4a4a4a;
+}
+
+.nutrition-container__ingredient-table .table thead th {
+  font-weight: 700;
+}
+
+.nutritional-values {
+  border: 0.2rem solid rgba(74, 74, 74, 0.1);
+  padding: 1rem;
+}
+
+.nutritional-values h3 {
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1rem 0 0 0;
+}
+
 .nutritional-values__header {
-  border-bottom: 0.5rem solid #292929;
+  border-bottom: 0.3rem solid rgba(74, 74, 74, 0.1);
   padding: 0 0 0.25rem 0;
   margin: 0 0 0.5rem 0;
 }
 
+.nutritional-values .table th {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #4a4a4a;
+}
+
+.nutritional-values #nutritional-values__table-amount {
+  font-size: 1.2rem;
+}
+
+.nutritional-values #nutritional-values__table-cal th,
+.nutritional-values #nutritional-values__table-cal td {
+  font-size: 2.5rem;
+  color: #4a4a4a;
+}
+
 .nutritional-values span {
   font-weight: 700;
+  font-size: 1.6rem;
+  color: #4a4a4a;
+}
+
+.nutritional-values thead th, .nutritional-values thead td {
+  border: 0 none;
+}
+
+.nutritional-values td:last-child {
+  text-align: right;
+  padding-right: 1.7rem;
+}
+
+.nutritional-values #nutritional-values__table-daily {
+  font-size: 1.2rem;
+}
+
+.nutritional-values p {
+  font-size: 1.2rem;
+  text-align: center;
+  padding-top: 2rem;
+  color: #4a4a4a;
+}
+
+.nutritional-values .thick-row {
+  border-top: 0.2rem solid rgba(74, 74, 74, 0.1);
+}
+
+@media (min-width: 30rem) {
+  .nutritional-values {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+  .nutrition-container__ingredient-table {
+    max-width: 70%;
+    margin: 0 auto;
+  }
 }
 
 * {

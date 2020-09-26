@@ -209,8 +209,6 @@ const nutritionalInfoPerIngr = document.querySelector("#nutrition-container__res
 const nutritionalInfoTable = document.querySelector("#nutrition-container__nutrition-table");
 const nutritionalInfoError = document.querySelector("#nutrition-container__error-message");
 
-
-
 // Nutritional info API call
 searchButtonNutrition.addEventListener("click", function () {
     let arr = {
