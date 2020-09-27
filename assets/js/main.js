@@ -106,7 +106,6 @@ function recipeAPIDataSearchBar(data) {
     }
 }
 
-
 //
 // ----------- Inspiration Section
 //
@@ -142,7 +141,6 @@ function recipeAPIDataImmunity(data) {
         `
     };
 }
-
 
 // Get data from Recipe API: Balanced filter
 async function recipeAPIBalanced() {
@@ -185,7 +183,6 @@ async function recipeAPIVeggie() {
         });
 }
 
-
 // Recipe API data: Veggie filter
 function recipeAPIDataVeggie(data) {
     for (let i = 0; i < 10; i++) {
@@ -209,7 +206,7 @@ const nutritionalInfoPerIngr = document.querySelector("#nutrition-container__ing
 const nutritionalInfoTable = document.querySelector("#nutrition-container__nutrition-table");
 const nutritionalInfoError = document.querySelector("#nutrition-container__error-message");
 
-// Nutritional info API call
+//Nutritional info API call
 searchButtonNutrition.addEventListener("click", function () {
     let arr = {
         "ingr": document.querySelector("#nutrition-container__label").value.split(/\n|\r/)
@@ -231,7 +228,6 @@ searchButtonNutrition.addEventListener("click", function () {
             console.log(err);
         });
 });
-
 
 //Content inside the following function was taken from https://developer.edamam.com/edamam-nutrition-api-demo, with adaptations (removed jquery).
 function nutritionalInfoAPIData(data) {
@@ -474,4 +470,3 @@ function nutritionalInfoAPIData(data) {
     nutritionalInfoPerIngr.innerHTML = html;
     nutritionalInfoTable.innerHTML = table;
 }
-

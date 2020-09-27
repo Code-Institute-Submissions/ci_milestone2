@@ -26,18 +26,17 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#main-container">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">What's for Dinner?</a>
+                        <a class="nav-link" href="#inspiration-section">Discover</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Inspiration</a>
+                        <a class="nav-link" href="#nutritional-info">Nutritional Value</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
-
                 </ul>
             </div>
         </nav>
@@ -57,7 +56,7 @@
     </header>
     <main>
         <!-- Start Search bar -->
-        <section id="search-bar">
+        <section id="main-container">
             <div class="container main-container">
                 <div class="row justify-content-center">
                     <div class="col">
@@ -97,7 +96,7 @@
                                         title="Less than 20% of total calories from carbs">Low carb</label><br>
                                 </div>
                                 <div class="col-12 recipe-form-checkbox__search-wrapper">
-                                    <button type="button" id="search"
+                                    <button type="button" id="search" aria-label="Search recipe"
                                         class="recipe-form-checkbox__search-button">Search</button>
                                 </div>
                             </div>
@@ -133,7 +132,7 @@
             </div>
         </section>
         <!-- End Recipe Cards -->
-        <!-- JS function searchRecipe() contains the error message displayed -->
+        <!-- JS function searchRecipe() contains the error message displayed if anything goes wrong-->
         <div id="error-handling"></div>
         </section>
         <!-- End main search bar -->
@@ -442,7 +441,7 @@
                                 <textarea class="form-control" id="nutrition-container__label" rows="6">1 cup of rice, 
 1 oz chickpeas</textarea>
                                 <div class="col-12 nutrition-container__search-button">
-                                    <button type="button" id="nutrition-container__search-button">Search</button>
+                                    <button type="button" id="nutrition-container__search-button" aria-label="Search nutritional information">Search</button>
                                 </div>
                             </div>
                         </form>
@@ -478,8 +477,64 @@
         <!-- End nutritional information -->
     </main>
     <footer>
-        Footer
-        <p>© Stefanie Cruz 2020</p>
+        <div class="container-fluid no-gutters footer-container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="footer-container__logo">
+                        <img src="assets/images/logo/log-white.png" alt="Logo What's For Dinner">
+                    </div>
+                    <div class="footer-container__social-links">
+                        <ul class="list-inline footer-container__social-links--list">
+                            <li class="list-inline-item">
+                                <a target="_blank" href="https://www.facebook.com/">
+                                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                                    <span class="sr-only">Facebook link</span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a target="_blank" href="https://twitter.com/">
+                                    <i class="fab fa-twitter-square" aria-hidden="true"></i>
+                                    <span class="sr-only">Twitter link</span>
+                                </a>
+                            </li>
+    
+                            <li class="list-inline-item">
+                                <a target="_blank" href="https://youtube.com">
+                                    <i class="fab fa-youtube-square" aria-hidden="true"></i>
+                                    <span class="sr-only">Youtube link</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 footer-container__nav">
+                        <h4>Navigate</h4>
+                        <ul>
+                            <li class="footer-container__nav-item">
+                                <a href="#main-container">Home</a>
+                            </li>
+                            <li class="footer-container__nav-item">
+                                <a href="#inspiration-section">Discover</a>
+                            </li>
+                            <li class="footer-container__nav-item">
+                                <a href="#nutritional-info">Nutritional Value</a>
+                            </li>
+                            <li class="footer-container__nav-item">
+                                <a href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+            <div class="container-fluid footer-container__bottom">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="assets/images/icons8-watermelon-24.png" alt="Block divider icon" aria-hidden="true">
+                        <p>© Stefanie Cruz 2020</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </footer>
     <script src="assets/js/main.js"></script>
     <!-- <script src="assets/js/onload.js"></script> -->
