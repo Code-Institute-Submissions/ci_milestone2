@@ -1,6 +1,10 @@
 .footer-container {
     background-color: $colour-1;
-    padding: 7rem 0 3rem 0;
+    padding: 4rem 0 3rem 0;
+
+    .row {
+        margin: 0;
+    }
 
     &__logo {
         text-align: center;
@@ -71,10 +75,6 @@
         &__logo {
             text-align: right;
             padding-right: 5rem;
-
-            img {
-                max-width: 30%;
-            }
         }    
         
         &__social-links {
@@ -89,22 +89,10 @@
     }
 }
 
-@media (min-width: $tablet-width) {
-    .footer-container {
-        &__logo {
-            img {
-                max-width: 50%;
-            }
-        }    
-    }
-}
-
 @media (min-width: $desktop-width) {
-    .footer-container {
-        &__logo {
-            img {
-                max-width: 40%;
-            }
-        }    
-    }
+    .footer-container__logo {
+       img {
+        max-width: 23rem;
+       }
+    } 
 }

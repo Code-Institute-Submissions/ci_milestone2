@@ -723,7 +723,11 @@ hr {
 
 .footer-container {
   background-color: #015a06;
-  padding: 7rem 0 3rem 0;
+  padding: 4rem 0 3rem 0;
+}
+
+.footer-container .row {
+  margin: 0;
 }
 
 .footer-container__logo {
@@ -795,9 +799,6 @@ hr {
     text-align: right;
     padding-right: 5rem;
   }
-  .footer-container__logo img {
-    max-width: 30%;
-  }
   .footer-container__social-links {
     text-align: right;
     padding-right: 5rem;
@@ -808,15 +809,9 @@ hr {
   }
 }
 
-@media (min-width: 48rem) {
-  .footer-container__logo img {
-    max-width: 50%;
-  }
-}
-
 @media (min-width: 64rem) {
   .footer-container__logo img {
-    max-width: 40%;
+    max-width: 23rem;
   }
 }
 
