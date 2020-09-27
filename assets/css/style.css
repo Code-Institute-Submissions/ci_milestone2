@@ -504,6 +504,10 @@ hr {
   width: 100%;
 }
 
+.nutrition-container {
+  margin-bottom: 7rem;
+}
+
 .nutrition-container h2 {
   color: #015a06;
   font-size: 3rem;
@@ -572,7 +576,7 @@ hr {
 }
 
 .nutrition-container button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #292929;
 }
 
 .nutrition-container h3 {
@@ -595,9 +599,6 @@ hr {
 }
 
 @media (min-width: 64rem) {
-  .nutrition-container {
-    max-width: 80%;
-  }
   .nutrition-container h2 {
     padding-top: 8rem;
   }
@@ -607,9 +608,6 @@ hr {
 }
 
 @media (min-width: 48rem) {
-  .nutrition-container {
-    max-width: 80%;
-  }
   .nutrition-image {
     height: 25rem;
   }
@@ -725,7 +723,7 @@ hr {
 
 .footer-container {
   background-color: #015a06;
-  padding: 2rem 0;
+  padding: 7rem 0 3rem 0;
 }
 
 .footer-container__logo {
@@ -813,6 +811,12 @@ hr {
 @media (min-width: 48rem) {
   .footer-container__logo img {
     max-width: 50%;
+  }
+}
+
+@media (min-width: 64rem) {
+  .footer-container__logo img {
+    max-width: 40%;
   }
 }
 

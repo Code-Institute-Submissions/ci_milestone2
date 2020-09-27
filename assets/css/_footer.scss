@@ -1,6 +1,6 @@
 .footer-container {
     background-color: $colour-1;
-    padding: 2rem 0;
+    padding: 7rem 0 3rem 0;
 
     &__logo {
         text-align: center;
@@ -94,6 +94,16 @@
         &__logo {
             img {
                 max-width: 50%;
+            }
+        }    
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .footer-container {
+        &__logo {
+            img {
+                max-width: 40%;
             }
         }    
     }
