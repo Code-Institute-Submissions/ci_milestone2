@@ -725,7 +725,7 @@ hr {
 
 .footer-container {
   background-color: #015a06;
-  padding-top: 2rem;
+  padding: 2rem 0;
 }
 
 .footer-container__logo {
@@ -784,13 +784,12 @@ hr {
 }
 
 .footer-container__bottom img {
-  margin-top: 3rem;
+  margin: 4rem 0 1rem 0;
 }
 
 .footer-container__bottom p {
   color: white;
   font-size: 1.3rem;
-  margin: 2rem 0;
 }
 
 @media (min-width: 30rem) {
@@ -808,6 +807,12 @@ hr {
   .footer-container__nav {
     text-align: left;
     padding-left: 5rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .footer-container__logo img {
+    max-width: 50%;
   }
 }
 
