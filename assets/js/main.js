@@ -205,7 +205,7 @@ function recipeAPIDataVeggie(data) {
 
 //Selectors
 const searchButtonNutrition = document.querySelector("#nutrition-container__search-button");
-const nutritionalInfoPerIngr = document.querySelector("#nutrition-container__response");
+const nutritionalInfoPerIngr = document.querySelector("#nutrition-container__ingredient-table");
 const nutritionalInfoTable = document.querySelector("#nutrition-container__nutrition-table");
 const nutritionalInfoError = document.querySelector("#nutrition-container__error-message");
 
@@ -237,6 +237,9 @@ searchButtonNutrition.addEventListener("click", function () {
 function nutritionalInfoAPIData(data) {
     let quantity, measure, weight, foodMatch, unit;
     let totalCal, FAT, totalDailyFAT, FASAT, totalDailyFASAT, FATRN, CHOLE, totalDailyCHOLE, NA, totalDailyNA, CHOCDF, totalDailyCHOCDF, FIBTG, totalDailyFIBTG, SUGAR, SUGARadded, PROCNT, totalDailyPROCNT, VITD, totalDailyVITD, CA, totalDailyCA, FE, totalDailyFE, K, totalDailyK, err, table;
+    
+    //Display div that will hold the content returned by the Nutrition API 
+    document.getElementById("nutrition-container__tables").style.display = "block";
 
     //Calories per ingredient
     let html = `<div class="table table-hover">
@@ -384,88 +387,91 @@ function nutritionalInfoAPIData(data) {
         totalDailyK = Math.round(data.totalDaily.K.quantity) + ' ' + data.totalDaily.K.unit;
     } else { totalDailyK = '-' };
 
-    table = ` <div class="nutritional-values__header">
-                    <h3 class="nutritional-values__title">Nutritional Value</h3>
-                </div>
-                <table class="nutritional-values__table table table-hover table-sm">
-                    <thead>
-                        <tr>
-                            <th colspan="3" id="nutritional-values__table-amount">Amount Per Serving</th>
-                        </tr>
-                        <tr id="nutritional-values__table-cal">
-                            <th colspan="2" >Calories</th>
-                            <td>${totalCal}</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="thick-row">
-                            <td colspan="3" id="nutritional-values__table-daily">% Daily Value*</td>
-                        </tr>
-                        <tr>
-                            <th colspan="2"><span>Total Fat</span> ${FAT}</th>
-                            <td><span>${totalDailyFAT}</span></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <th>Saturated Fat ${FASAT}</th>
-                            <td><span>${totalDailyFASAT}</span></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <th>Trans Fat ${FATRN}</th>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2"><span>Cholesterol</span> ${CHOLE}</th>
-                            <td><span>${totalDailyCHOLE}</span></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2"><span>Sodium</span> ${NA}</th>
-                            <td><span>${totalDailyNA}</span></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2"><span>Total Carbohydrate</span> ${CHOCDF}</th>
-                            <td><span>${totalDailyCHOCDF}</span></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <th>Dietary Fiber ${FIBTG}</th>
-                            <td><span>${totalDailyFIBTG}</span></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <th>Total Sugars ${SUGAR}</th>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <th>Includes ${SUGARadded} Added Sugars</th>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2"><span>Protein</span> ${PROCNT}</th>
-                            <td><span>${totalDailyPROCNT}</span></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Vitamin D ${VITD}</th>
-                            <td><span>${totalDailyVITD}</span></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Calcium ${CA}</th>
-                            <td><span>${totalDailyCA}</span></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Iron ${FE}</th>
-                            <td><span>${totalDailyFE}</span></td>
-                        </tr>
-                        <tr >
-                            <th colspan="2">Potassium ${K}</th>
-                            <td><span>${totalDailyK}</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p class="nutritional-values__table-daily">*Percent Daily Values are based on a
-                    2000 calorie diet</p>`;
+    table = ` <div class="nutritional-values">
+                    <div class="nutritional-values__header">
+                        <h3 class="nutritional-values__title">Nutritional Value</h3>
+                    </div>
+                    <table class="nutritional-values__table table table-hover table-sm">
+                        <thead>
+                            <tr>
+                                <th colspan="3" id="nutritional-values__table-amount">Amount Per Serving</th>
+                            </tr>
+                            <tr id="nutritional-values__table-cal">
+                                <th colspan="2" >Calories</th>
+                                <td>${totalCal}</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="thick-row">
+                                <td colspan="3" id="nutritional-values__table-daily">% Daily Value*</td>
+                            </tr>
+                            <tr>
+                                <th colspan="2"><span>Total Fat</span> ${FAT}</th>
+                                <td><span>${totalDailyFAT}</span></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <th>Saturated Fat ${FASAT}</th>
+                                <td><span>${totalDailyFASAT}</span></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <th>Trans Fat ${FATRN}</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th colspan="2"><span>Cholesterol</span> ${CHOLE}</th>
+                                <td><span>${totalDailyCHOLE}</span></td>
+                            </tr>
+                            <tr>
+                                <th colspan="2"><span>Sodium</span> ${NA}</th>
+                                <td><span>${totalDailyNA}</span></td>
+                            </tr>
+                            <tr>
+                                <th colspan="2"><span>Total Carbohydrate</span> ${CHOCDF}</th>
+                                <td><span>${totalDailyCHOCDF}</span></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <th>Dietary Fiber ${FIBTG}</th>
+                                <td><span>${totalDailyFIBTG}</span></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <th>Total Sugars ${SUGAR}</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <th>Includes ${SUGARadded} Added Sugars</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th colspan="2"><span>Protein</span> ${PROCNT}</th>
+                                <td><span>${totalDailyPROCNT}</span></td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">Vitamin D ${VITD}</th>
+                                <td><span>${totalDailyVITD}</span></td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">Calcium ${CA}</th>
+                                <td><span>${totalDailyCA}</span></td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">Iron ${FE}</th>
+                                <td><span>${totalDailyFE}</span></td>
+                            </tr>
+                            <tr >
+                                <th colspan="2">Potassium ${K}</th>
+                                <td><span>${totalDailyK}</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="nutritional-values__table-daily">*Percent Daily Values are based on a
+                        2000 calorie diet</p>
+                </div>`;
     nutritionalInfoPerIngr.innerHTML = html;
     nutritionalInfoTable.innerHTML = table;
 }
+

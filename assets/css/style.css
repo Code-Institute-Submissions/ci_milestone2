@@ -630,6 +630,10 @@ hr {
   color: rgba(41, 41, 41, 0.5);
 }
 
+#nutrition-container__tables {
+  display: none;
+}
+
 .nutrition-container__ingredient-table {
   margin-bottom: 3rem;
 }
