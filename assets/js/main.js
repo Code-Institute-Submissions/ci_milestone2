@@ -117,7 +117,7 @@ const recipeCardsVeggie = document.querySelectorAll("#recipe-cards__veggie");
 
 //Get data from Recipe API: Imunno Supportive filter
 async function recipeAPIImmunity() {
-    let response = await fetch(`https://api.edamam.com/search?app_id=${appId}&app_key=${apiKey}&q=&health=immuno-supportive`)
+    let response = await fetch(`https://api.edamam.com/search?app_id=ba5b7a21&app_key=d1d3afcdc37dd030c29294267aaedbc8&q=&health=immuno-supportive`)
         .then(response => response.json())
         .then(data => {
             console.log(data);
@@ -133,12 +133,13 @@ async function recipeAPIImmunity() {
 function recipeAPIDataImmunity(data) {
     for (let i = 0; i < 10; i++) {
         recipeCardsImmunity[i].innerHTML += `
-        <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card">
-            <img src="${data.hits[i].recipe.image}" class="card-img-top" alt="Recipe image">
-            <h5>${data.hits[i].recipe.label}</h5>
-            <a href="${data.hits[i].recipe.url}" target="_blank">SEE RECIPE</a>
-        </div>
-        `
+        <div class="card inspiration-container__card">
+            <div class="card-body">
+                <img src="${data.hits[i].recipe.image}" class="card-img-top" alt="Recipe image">
+                <h5>${data.hits[i].recipe.label}</h5>
+                <a href="${data.hits[i].recipe.url}" target="_blank">SEE RECIPE</a>
+            </div>
+        </div>`
     };
 }
 

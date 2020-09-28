@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <title>What's for Dinner?</title>
 </head>
@@ -154,136 +155,47 @@
                             food!
                             In times of infectious diseases, every little helps.</p>
                     </div>
-                    <!-- Start carousel -->
-                    <div id="carousel-immunity" class="carousel slide container carousel-immunity" data-ride="carousel">
+                    <!-- Start Swiper -->
+                    <div class="container-fluid inspiration-container__swiper">
                         <div class="row">
-                            <ul class="carousel-indicators">
-                                <li data-target="#carousel-immunity" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-immunity" data-slide-to="1"></li>
-                                <li data-target="#carousel-immunity" data-slide-to="2"></li>
-                                <li data-target="#carousel-immunity" data-slide-to="3"></li>
-                                <li data-target="#carousel-immunity" data-slide-to="4"></li>
-                                <li data-target="#carousel-immunity" data-slide-to="5"></li>
-                                <li data-target="#carousel-immunity" data-slide-to="6"></li>
-                                <li data-target="#carousel-immunity" data-slide-to="7"></li>
-                                <li data-target="#carousel-immunity" data-slide-to="8"></li>
-                                <li data-target="#carousel-immunity" data-slide-to="9"></li>
-                                <li data-target="#carousel-immunity" data-slide-to="10"></li>
-                            </ul>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active carousel-immunity-item" id="recipe-cards__immunity">
-                                    <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card"
-                                        id="recipe-cards__inspiration">
-                                        <img src="https://www.edamam.com/web-img/585/585064d750d123eeefb28b4c5be960a4"
-                                            class="card-img-top" alt="Recipe image">
-                                        <h5>One</h5>
-                                        <a href="https://smittenkitchen.com/2015/06/crispy-frizzled-artichokes/"
-                                            target="_blank">SEE RECIPE</a>
+                            <div class="col">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" id="recipe-cards__immunity">
+                                            <!-- If I still need data to play around <div class="card inspiration-container__card">
+                                                <div class="card-body">
+                                                    <img src="https://www.edamam.com/web-img/585/585064d750d123eeefb28b4c5be960a4"
+                                                        class="card-img-top" alt="Recipe image">
+                                                    <h5>One</h5>
+                                                    <a href="https://smittenkitchen.com/2015/06/crispy-frizzled-artichokes/"
+                                                        target="_blank">SEE RECIPE</a>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                        <div class="swiper-slide" id="recipe-cards__immunity"></div>
+                                        <div class="swiper-slide" id="recipe-cards__immunity"></div>
+                                        <div class="swiper-slide" id="recipe-cards__immunity"></div>
+                                        <div class="swiper-slide" id="recipe-cards__immunity"></div>
+                                        <div class="swiper-slide" id="recipe-cards__immunity"></div>
+                                        <div class="swiper-slide" id="recipe-cards__immunity"></div>
+                                        <div class="swiper-slide" id="recipe-cards__immunity"></div>
+                                        <div class="swiper-slide" id="recipe-cards__immunity"></div>
+                                        <div class="swiper-slide" id="recipe-cards__immunity"></div>
                                     </div>
-                                </div>
-                                <div class="carousel-item carousel-immunity-item" id="recipe-cards__immunity">
-                                    <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card"
-                                        id="recipe-cards__inspiration">
-                                        <img src="https://www.edamam.com/web-img/585/585064d750d123eeefb28b4c5be960a4"
-                                            class="card-img-top" alt="Recipe image">
-                                        <h5>Two</h5>
-                                        <a href="https://smittenkitchen.com/2015/06/crispy-frizzled-artichokes/"
-                                            target="_blank">SEE RECIPE</a>
-                                    </div>
-                                </div>
-                                <div class="carousel-item carousel-immunity-item" id="recipe-cards__immunity">
-                                    <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card"
-                                        id="recipe-cards__inspiration">
-                                        <img src="https://www.edamam.com/web-img/585/585064d750d123eeefb28b4c5be960a4"
-                                            class="card-img-top" alt="Recipe image">
-                                        <h5>Three</h5>
-                                        <a href="https://smittenkitchen.com/2015/06/crispy-frizzled-artichokes/"
-                                            target="_blank">SEE RECIPE</a>
-                                    </div>
-                                </div>
-                                <div class="carousel-item carousel-immunity-item" id="recipe-cards__immunity">
-                                    <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card"
-                                        id="recipe-cards__inspiration">
-                                        <img src="https://www.edamam.com/web-img/585/585064d750d123eeefb28b4c5be960a4"
-                                            class="card-img-top" alt="Recipe image">
-                                        <h5>Four</h5>
-                                        <a href="https://smittenkitchen.com/2015/06/crispy-frizzled-artichokes/"
-                                            target="_blank">SEE RECIPE</a>
-                                    </div>
-                                </div>
-                                <div class="carousel-item carousel-immunity-item" id="recipe-cards__immunity">
-                                    <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card"
-                                        id="recipe-cards__inspiration">
-                                        <img src="https://www.edamam.com/web-img/585/585064d750d123eeefb28b4c5be960a4"
-                                            class="card-img-top" alt="Recipe image">
-                                        <h5>Five</h5>
-                                        <a href="https://smittenkitchen.com/2015/06/crispy-frizzled-artichokes/"
-                                            target="_blank">SEE RECIPE</a>
-                                    </div>
-                                </div>
-                                <div class="carousel-item carousel-immunity-item" id="recipe-cards__immunity">
-                                    <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card"
-                                        id="recipe-cards__inspiration">
-                                        <img src="https://www.edamam.com/web-img/585/585064d750d123eeefb28b4c5be960a4"
-                                            class="card-img-top" alt="Recipe image">
-                                        <h5>Six</h5>
-                                        <a href="https://smittenkitchen.com/2015/06/crispy-frizzled-artichokes/"
-                                            target="_blank">SEE RECIPE</a>
-                                    </div>
-                                </div>
-                                <div class="carousel-item carousel-immunity-item" id="recipe-cards__immunity">
-                                    <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card"
-                                        id="recipe-cards__inspiration">
-                                        <img src="https://www.edamam.com/web-img/585/585064d750d123eeefb28b4c5be960a4"
-                                            class="card-img-top" alt="Recipe image">
-                                        <h5>Seven</h5>
-                                        <a href="https://smittenkitchen.com/2015/06/crispy-frizzled-artichokes/"
-                                            target="_blank">SEE RECIPE</a>
-                                    </div>
-                                </div>
-                                <div class="carousel-item carousel-immunity-item" id="recipe-cards__immunity">
-                                    <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card"
-                                        id="recipe-cards__inspiration">
-                                        <img src="https://www.edamam.com/web-img/585/585064d750d123eeefb28b4c5be960a4"
-                                            class="card-img-top" alt="Recipe image">
-                                        <h5>Eight</h5>
-                                        <a href="https://smittenkitchen.com/2015/06/crispy-frizzled-artichokes/"
-                                            target="_blank">SEE RECIPE</a>
-                                    </div>
-                                </div>
-                                <div class="carousel-item carousel-immunity-item" id="recipe-cards__immunity">
-                                    <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card"
-                                        id="recipe-cards__inspiration">
-                                        <img src="https://www.edamam.com/web-img/585/585064d750d123eeefb28b4c5be960a4"
-                                            class="card-img-top" alt="Recipe image">
-                                        <h5>Nine</h5>
-                                        <a href="https://smittenkitchen.com/2015/06/crispy-frizzled-artichokes/"
-                                            target="_blank">SEE RECIPE</a>
-                                    </div>
-                                </div>
-                                <div class="carousel-item carousel-immunity-item" id="recipe-cards__immunity">
-                                    <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card"
-                                        id="recipe-cards__inspiration">
-                                        <img src="https://www.edamam.com/web-img/585/585064d750d123eeefb28b4c5be960a4"
-                                            class="card-img-top" alt="Recipe image">
-                                        <h5>Ten</h5>
-                                        <a href="https://smittenkitchen.com/2015/06/crispy-frizzled-artichokes/"
-                                            target="_blank">SEE RECIPE</a>
+                                    <!-- Arrows -->
+                                    <div class="d-flex justify-content-end">
+                                        <div class="swiper-button-prev" aria-label="Previous slide"
+                                            aria-disabled="false"><i class="fas fa-long-arrow-alt-left"></i></div>
+                                        <div class="swiper-button-next" aria-label="Next slide" aria-disabled="false"><i
+                                                class="fas fa-long-arrow-alt-right"></i></div>
                                     </div>
                                 </div>
                             </div>
-                            <a class="carousel-control-prev" href="#carousel-immunity" data-slide="prev">
-                                <span><i class="fas fa-chevron-circle-left"></i></span>
-                            </a>
-                            <a class="carousel-control-next" href="#carousel-immunity" data-slide="next">
-                                <span><i class="fas fa-chevron-circle-right"></i></span>
-                            </a>
                         </div>
                     </div>
-                    <!-- End carousel -->
+                    <!-- End Swiper -->
                 </article>
                 <!-- End immuno supportive recipes -->
-                <hr>
                 <!-- Start well balanced recipes -->
                 <article id="balanced-recipes">
                     <div class="inspiration-container__heading">
@@ -292,44 +204,35 @@
                             To
                             achieve this, your plate should always contain carbs, protein and fat.</p>
                     </div>
-                    <!-- Start Carousel -->
-                    <div id="carousel-balanced" class="carousel slide container carousel-balanced" data-ride="carousel">
+                    <!-- Start Swiper -->
+                    <div class="container-fluid inspiration-container__swiper">
                         <div class="row">
-                            <ul class="carousel-indicators">
-                                <li data-target="#carousel-balanced" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-balanced" data-slide-to="1"></li>
-                                <li data-target="#carousel-balanced" data-slide-to="2"></li>
-                                <li data-target="#carousel-balanced" data-slide-to="3"></li>
-                                <li data-target="#carousel-balanced" data-slide-to="4"></li>
-                                <li data-target="#carousel-balanced" data-slide-to="5"></li>
-                                <li data-target="#carousel-balanced" data-slide-to="6"></li>
-                                <li data-target="#carousel-balanced" data-slide-to="7"></li>
-                                <li data-target="#carousel-balanced" data-slide-to="8"></li>
-                                <li data-target="#carousel-balanced" data-slide-to="9"></li>
-                                <li data-target="#carousel-balanced" data-slide-to="10"></li>
-                            </ul>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active carousel-balanced-item" id="recipe-cards__balanced">
+                            <div class="col">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" id="recipe-cards__balanced"></div>
+                                        <div class="swiper-slide" id="recipe-cards__balanced"></div>
+                                        <div class="swiper-slide" id="recipe-cards__balanced"></div>
+                                        <div class="swiper-slide" id="recipe-cards__balanced"></div>
+                                        <div class="swiper-slide" id="recipe-cards__balanced"></div>
+                                        <div class="swiper-slide" id="recipe-cards__balanced"></div>
+                                        <div class="swiper-slide" id="recipe-cards__balanced"></div>
+                                        <div class="swiper-slide" id="recipe-cards__balanced"></div>
+                                        <div class="swiper-slide" id="recipe-cards__balanced"></div>
+                                        <div class="swiper-slide" id="recipe-cards__balanced"></div>
+                                    </div>
+                                    <!-- Arrows -->
+                                    <div class="d-flex justify-content-end">
+                                        <div class="swiper-button-prev" aria-label="Previous slide"
+                                            aria-disabled="false"><i class="fas fa-long-arrow-alt-left"></i></div>
+                                        <div class="swiper-button-next" aria-label="Next slide" aria-disabled="false"><i
+                                                class="fas fa-long-arrow-alt-right"></i></div>
+                                    </div>
                                 </div>
-                                <div class="carousel-item carousel-balanced-item" id="recipe-cards__balanced"></div>
-                                <div class="carousel-item carousel-balanced-item" id="recipe-cards__balanced"></div>
-                                <div class="carousel-item carousel-balanced-item" id="recipe-cards__balanced"></div>
-                                <div class="carousel-item carousel-balanced-item" id="recipe-cards__balanced"></div>
-                                <div class="carousel-item carousel-balanced-item" id="recipe-cards__balanced"></div>
-                                <div class="carousel-item carousel-balanced-item" id="recipe-cards__balanced"></div>
-                                <div class="carousel-item carousel-balanced-item" id="recipe-cards__balanced"></div>
-                                <div class="carousel-item carousel-balanced-item" id="recipe-cards__balanced"></div>
-                                <div class="carousel-item carousel-balanced-item" id="recipe-cards__balanced"></div>
                             </div>
-                            <a class="carousel-control-prev" href="#carousel-balanced" data-slide="prev">
-                                <span><i class="fas fa-chevron-circle-left"></i></span>
-                            </a>
-                            <a class="carousel-control-next" href="#carousel-balanced" data-slide="next">
-                                <span><i class="fas fa-chevron-circle-right"></i></span>
-                            </a>
                         </div>
                     </div>
-                    <!-- End Carousel -->
+                    <!-- End Swiper -->
                 </article>
                 <!-- End well balanced recipes -->
                 <hr>
@@ -338,47 +241,38 @@
                     <div class="inspiration-container__heading">
                         <h3>Vegetarian friendly recipes</h3>
                         <p>Eating a low-fat, plant-based diet may help give the immune system a boost. Research shows
-                            that
-                            Vegetarians have a more effective immune system than nonvegetarians.</p>
+                            that Vegetarians have a more effective immune system than nonvegetarians.</p>
                         <!-- Source: https://www.pcrm.org/news/blog/foods-boost-immune-system -->
                     </div>
-                    <!-- Start Carousel -->
-                    <div id="carousel-veggie" class="carousel slide container" data-ride="carousel">
+                     <!-- Start Swiper -->
+                     <div class="container-fluid inspiration-container__swiper">
                         <div class="row">
-                            <ul class="carousel-indicators">
-                                <li data-target="#carousel-veggie" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-veggie" data-slide-to="1"></li>
-                                <li data-target="#carousel-veggie" data-slide-to="2"></li>
-                                <li data-target="#carousel-veggie" data-slide-to="3"></li>
-                                <li data-target="#carousel-veggie" data-slide-to="4"></li>
-                                <li data-target="#carousel-veggie" data-slide-to="5"></li>
-                                <li data-target="#carousel-veggie" data-slide-to="6"></li>
-                                <li data-target="#carousel-veggie" data-slide-to="7"></li>
-                                <li data-target="#carousel-veggie" data-slide-to="8"></li>
-                                <li data-target="#carousel-veggie" data-slide-to="9"></li>
-                                <li data-target="#carousel-veggie" data-slide-to="10"></li>
-                            </ul>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active" id="recipe-cards__veggie"></div>
-                                <div class="carousel-item" id="recipe-cards__veggie"></div>
-                                <div class="carousel-item" id="recipe-cards__veggie"></div>
-                                <div class="carousel-item" id="recipe-cards__veggie"></div>
-                                <div class="carousel-item" id="recipe-cards__veggie"></div>
-                                <div class="carousel-item" id="recipe-cards__veggie"></div>
-                                <div class="carousel-item" id="recipe-cards__veggie"></div>
-                                <div class="carousel-item" id="recipe-cards__veggie"></div>
-                                <div class="carousel-item" id="recipe-cards__veggie"></div>
-                                <div class="carousel-item" id="recipe-cards__veggie"></div>
+                            <div class="col">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" id="recipe-cards__veggie"></div>
+                                        <div class="swiper-slide" id="recipe-cards__veggie"></div>
+                                        <div class="swiper-slide" id="recipe-cards__veggie"></div>
+                                        <div class="swiper-slide" id="recipe-cards__veggie"></div>
+                                        <div class="swiper-slide" id="recipe-cards__veggie"></div>
+                                        <div class="swiper-slide" id="recipe-cards__veggie"></div>
+                                        <div class="swiper-slide" id="recipe-cards__veggie"></div>
+                                        <div class="swiper-slide" id="recipe-cards__veggie"></div>
+                                        <div class="swiper-slide" id="recipe-cards__veggie"></div>
+                                        <div class="swiper-slide" id="recipe-cards__veggie"></div>
+                                    </div>
+                                    <!-- Arrows -->
+                                    <div class="d-flex justify-content-end">
+                                        <div class="swiper-button-prev" aria-label="Previous slide"
+                                            aria-disabled="false"><i class="fas fa-long-arrow-alt-left"></i></div>
+                                        <div class="swiper-button-next" aria-label="Next slide" aria-disabled="false"><i
+                                                class="fas fa-long-arrow-alt-right"></i></div>
+                                    </div>
+                                </div>
                             </div>
-                            <a class="carousel-control-prev" href="#carousel-veggie" data-slide="prev">
-                                <span><i class="fas fa-chevron-circle-left"></i></span>
-                            </a>
-                            <a class="carousel-control-next" href="#carousel-veggie" data-slide="next">
-                                <span><i class="fas fa-chevron-circle-right"></i></span>
-                            </a>
                         </div>
                     </div>
-                    <!-- End carousel -->
+                    <!-- End Swiper -->
                 </article>
             </div>
         </section>
@@ -441,7 +335,8 @@
                                 <textarea class="form-control" id="nutrition-container__label" rows="6">1 cup of rice, 
 1 oz chickpeas</textarea>
                                 <div class="col-12 nutrition-container__search-button">
-                                    <button type="button" id="nutrition-container__search-button" aria-label="Search nutritional information">Search</button>
+                                    <button type="button" id="nutrition-container__search-button"
+                                        aria-label="Search nutritional information">Search</button>
                                 </div>
                             </div>
                         </form>
@@ -497,7 +392,7 @@
                                     <span class="sr-only">Twitter link</span>
                                 </a>
                             </li>
-    
+
                             <li class="list-inline-item">
                                 <a target="_blank" href="https://youtube.com">
                                     <i class="fab fa-youtube-square" aria-hidden="true"></i>
@@ -508,38 +403,39 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 footer-container__nav">
-                        <h4>Navigate</h4>
-                        <ul>
-                            <li class="footer-container__nav-item">
-                                <a href="#main-container">Home</a>
-                            </li>
-                            <li class="footer-container__nav-item">
-                                <a href="#inspiration-section">Discover</a>
-                            </li>
-                            <li class="footer-container__nav-item">
-                                <a href="#nutritional-info">Nutritional Value</a>
-                            </li>
-                            <li class="footer-container__nav-item">
-                                <a href="contact.html">Contact</a>
-                            </li>
-                        </ul>
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li class="footer-container__nav-item">
+                            <a href="#main-container">Home</a>
+                        </li>
+                        <li class="footer-container__nav-item">
+                            <a href="#inspiration-section">Discover</a>
+                        </li>
+                        <li class="footer-container__nav-item">
+                            <a href="#nutritional-info">Nutritional Value</a>
+                        </li>
+                        <li class="footer-container__nav-item">
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="container-fluid footer-container__bottom">
                 <div class="row">
                     <div class="col-12">
-                        <img src="assets/images/icons/icons8-watermelon-24.png" alt="Block divider icon" aria-hidden="true">
+                        <img src="assets/images/icons/icons8-watermelon-24.png" alt="Block divider icon"
+                            aria-hidden="true">
                         <p>© Stefanie Cruz 2020</p>
                     </div>
                 </div>
             </div>
         </div>
-        
+
     </footer>
     <script src="assets/js/main.js"></script>
-    <!-- <script src="assets/js/onload.js"></script> -->
-    <script src="assets/js/carousel.js"></script>
-
+    <script src="assets/js/onload.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper.js"></script>
 
     <!-- JS Bootstrap links -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -551,6 +447,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+
 
 </body>
 

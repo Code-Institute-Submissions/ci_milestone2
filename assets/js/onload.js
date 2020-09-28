@@ -1,6 +1,6 @@
 function start() {
-    // recipeAPIImmunity();
-    recipeAPIBalanced();
+    //recipeAPIImmunity();
+    //recipeAPIBalanced();
     // recipeAPIVeggie();
   }
   window.onload = start;
