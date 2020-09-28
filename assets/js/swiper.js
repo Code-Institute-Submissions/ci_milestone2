@@ -1,7 +1,7 @@
 //Swiper from https://swiperjs.com/
 
   var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 3,
+    // slidesPerView: 3,
     spaceBetween: 30,
     loop: true,
     navigation: {

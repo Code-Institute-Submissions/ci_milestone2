@@ -145,7 +145,7 @@ function recipeAPIDataImmunity(data) {
 
 // Get data from Recipe API: Balanced filter
 async function recipeAPIBalanced() {
-    let response = await fetch(`https://api.edamam.com/search?app_id=${appId}&app_key=${apiKey}&q=&diet=balanced`)
+    let response = await fetch(`https://api.edamam.com/search?app_id=ba5b7a21&app_key=d1d3afcdc37dd030c29294267aaedbc8&q=&diet=balanced`)
         .then(response => response.json())
         .then(data => {
             console.log(data);
@@ -161,10 +161,12 @@ async function recipeAPIBalanced() {
 function recipeAPIDataBalanced(data) {
     for (let i = 0; i < 10; i++) {
         recipeCardsBalanced[i].innerHTML += `
-        <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card">
-            <img src="${data.hits[i].recipe.image}" class="card-img-top" alt="Recipe image">
-            <h5>${data.hits[i].recipe.label}</h5>
-            <a href="${data.hits[i].recipe.url}" target="_blank">SEE RECIPE</a>
+         <div class="card inspiration-container__card">
+            <div class="card-body">
+                <img src="${data.hits[i].recipe.image}" class="card-img-top" alt="Recipe image">
+                <h5>${data.hits[i].recipe.label}</h5>
+                <a href="${data.hits[i].recipe.url}" target="_blank">SEE RECIPE</a>
+            </div>
         </div>
         `
     };
@@ -172,7 +174,7 @@ function recipeAPIDataBalanced(data) {
 
 // Get data from Recipe API: Veggie filter
 async function recipeAPIVeggie() {
-    let response = await fetch(`https://api.edamam.com/search?app_id=${appId}&app_key=${apiKey}&q=&health=vegetarian`)
+    let response = await fetch(`https://api.edamam.com/search?app_id=ba5b7a21&app_key=d1d3afcdc37dd030c29294267aaedbc8&q=&health=vegetarian`)
         .then(response => response.json())
         .then(data => {
             console.log(data);
@@ -188,10 +190,12 @@ async function recipeAPIVeggie() {
 function recipeAPIDataVeggie(data) {
     for (let i = 0; i < 10; i++) {
         recipeCardsVeggie[i].innerHTML += `
-        <div class="col-12 col-md-6 col-xl-3 col-lg-3 inspiration-container__card">
-            <img src="${data.hits[i].recipe.image}" class="card-img-top" alt="Recipe image">
-            <h5>${data.hits[i].recipe.label}</h5>
-            <a href="${data.hits[i].recipe.url}" target="_blank">SEE RECIPE</a>
+        <div class="card inspiration-container__card">
+            <div class="card-body">
+                <img src="${data.hits[i].recipe.image}" class="card-img-top" alt="Recipe image">
+                <h5>${data.hits[i].recipe.label}</h5>
+                <a href="${data.hits[i].recipe.url}" target="_blank">SEE RECIPE</a>
+            </div>
         </div>
         `
     };
