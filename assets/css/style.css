@@ -780,6 +780,27 @@ input:-webkit-autofill:active {
   }
 }
 
+.contact-form-lead {
+  padding-top: 12rem;
+  margin-bottom: 5rem;
+}
+
+.contact-form-lead h1 {
+  text-align: center;
+  color: #015a06;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form-lead p {
+  color: #4a4a4a;
+  text-align: center;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
 * {
   font-size: 10px;
   margin: 0;
