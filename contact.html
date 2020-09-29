@@ -72,29 +72,29 @@
                         <form>
                             <div class="form-group">
                                 <div class="form-row">
-                                    <div class="col">
+                                    <div class="col-12">
                                         <label for="fname">Name</label>
                                         <input type="text" class="form-control" placeholder="John" id="fname">
                                     </div>
-                                    <div class="col">
+                                    <div class="col-12">
                                         <label for="lname">Surname</label>
                                         <input type="text" class="form-control" placeholder="Doe" id="lname">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="exampleFormControlInput1">Email address</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1"
+                                <label for="emailaddress">Email address</label>
+                                <input type="email" class="form-control" id="emailaddress"
                                     placeholder="name@example.com">
                             </div>
                             <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Example textarea</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <label for="contacttext">What do you have in mind?</label>
+                                <textarea class="form-control" id="contacttext" rows="3"></textarea>
                             </div>
                             <div class="form-group">
                                 <p>Would you like to hear from us?</p>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
                                     <label class="custom-control-label" for="customRadio1">Yes, I'd like to receive recipe ideas and nutrition tips.</label>
                                   </div>
                                   <div class="custom-control custom-radio">
@@ -105,19 +105,22 @@
                             <div class="form-group">
                                 <p>What are you interested in?</p>
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                    <label class="custom-control-label" for="customCheck1">Recipe ideas</label>
+                                    <input type="checkbox" class="custom-control-input" id="recipe">
+                                    <label class="custom-control-label" for="recipe">Recipe ideas</label>
                                 </div>
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                    <label class="custom-control-label" for="customCheck1">Nutrition tips</label>
+                                    <input type="checkbox" class="custom-control-input" id="nutrition">
+                                    <label class="custom-control-label" for="nutrition">Nutrition tips</label>
                                 </div>
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                    <label class="custom-control-label" for="customCheck1">Health advice</label>
+                                    <input type="checkbox" class="custom-control-input" id="health">
+                                    <label class="custom-control-label" for="health">Health advice</label>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <div class="col-12 contact-form-container__search-wrapper">
+                                <button type="submit" class="btn btn-primary" aria-label="Submit">Submit</button>
+                            </div>
+                            
                         </form>
                     </div>
                 </div>

@@ -797,8 +797,67 @@ input:-webkit-autofill:active {
 .contact-form-lead p {
   color: #4a4a4a;
   text-align: center;
-  max-width: 70%;
   margin: 0 auto;
+}
+
+.contact-form-container {
+  color: #292929;
+  margin-bottom: 2rem;
+}
+
+.contact-form-container label {
+  font-size: 1.6rem;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+  font-size: 1.6rem;
+  background-color: rgba(74, 74, 74, 0.2);
+  color: #4a4a4a;
+  border-radius: 0;
+}
+
+.contact-form-container__search-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem 0;
+}
+
+.contact-form-container__search-wrapper button {
+  background-color: #015a06;
+  width: 10rem;
+  height: 4rem;
+  font-size: 1.6rem;
+  border: 0;
+  border-radius: 1rem;
+  outline: 0;
+  color: white;
+  cursor: pointer;
+}
+
+.contact-form-container__search-wrapper button:hover {
+  background-color: rgba(1, 90, 6, 0.7);
+}
+
+.contact-form-container .form-group > p {
+  padding-top: 1rem;
+}
+
+@media (min-width: 30rem) {
+  .contact-form-lead p {
+    max-width: 70%;
+  }
+  form {
+    max-width: 90%;
+    margin: 0 auto;
+  }
 }
 
 * {
