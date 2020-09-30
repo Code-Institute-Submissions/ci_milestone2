@@ -860,6 +860,22 @@ input:-webkit-autofill:active {
   }
 }
 
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+  background-image: url();
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: white;
+  border-color: #015a06;
+  background-color: white;
+}
+
+#optin:checked ~ #label-radio::before {
+  color: white;
+  border-color: #015a06;
+  background-color: #015a06;
+}
+
 * {
   font-size: 10px;
   margin: 0;

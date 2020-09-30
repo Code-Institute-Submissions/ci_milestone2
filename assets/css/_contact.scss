@@ -73,3 +73,22 @@
         margin: 0 auto;
     }
 }
+
+//Remove default check icon from ticked checkbox 
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+    background-image: url();
+}
+
+//Change default colour and bg colour of ticked checkbox 
+.custom-control-input:checked~.custom-control-label::before {
+    color: $white;
+    border-color: $colour-1;
+    background-color: $white;
+}
+
+//Change default colour and bg colour of marked radio button
+#optin:checked~ #label-radio::before {
+    color: $white;
+    border-color: $colour-1;
+    background-color: $colour-1;
+}

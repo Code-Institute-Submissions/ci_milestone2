@@ -8,8 +8,6 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <title>What's for Dinner?</title>
 </head>
@@ -30,10 +28,10 @@
                         <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#inspiration-section">Discover</a>
+                        <a class="nav-link" href="index.html#inspiration-section">Discover</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#nutritional-info">Nutritional Value</a>
+                        <a class="nav-link" href="index.html#nutritional-info">Nutritional Value</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -94,12 +92,12 @@
                             <div class="form-group">
                                 <p>Would you like to hear from us?</p>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
-                                    <label class="custom-control-label" for="customRadio1">Yes, I'd like to receive recipe ideas and nutrition tips.</label>
+                                    <input type="radio" id="optin" name="optin" class="custom-control-input" checked>
+                                    <label class="custom-control-label" id="label-radio" for="optin">Yes, I'd like to receive recipe ideas and nutrition tips.</label>
                                   </div>
                                   <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio2">No, I'm not interested in becoming more healthy.</label>
+                                    <input type="radio" id="optout" name="optout" class="custom-control-input">
+                                    <label class="custom-control-label" id="label-radio" for="optout">No, I'm not interested in becoming more healthy.</label>
                                   </div>
                             </div>
                             <div class="form-group">
@@ -164,13 +162,13 @@
                     <h4>Navigate</h4>
                     <ul>
                         <li class="footer-container__nav-item">
-                            <a href="#main-container">Home</a>
+                            <a href="index.html">Home</a>
                         </li>
                         <li class="footer-container__nav-item">
-                            <a href="#inspiration-section">Discover</a>
+                            <a href="index.html#inspiration-section">Discover</a>
                         </li>
                         <li class="footer-container__nav-item">
-                            <a href="#nutritional-info">Nutritional Value</a>
+                            <a href="index.html#nutritional-info">Nutritional Value</a>
                         </li>
                         <li class="footer-container__nav-item">
                             <a href="contact.html">Contact</a>
@@ -190,9 +188,6 @@
         </div>
     </footer>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/onload.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/js/swiper.js"></script>
 
     <!-- JS Bootstrap links -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
