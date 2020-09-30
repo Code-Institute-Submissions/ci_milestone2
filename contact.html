@@ -67,51 +67,51 @@
             <div class="container contact-form-container">
                 <div class="row">
                     <div class="col">
-                        <form>
+                        <form id="contact-form" name="contact-form">
                             <div class="form-group">
                                 <div class="form-row">
                                     <div class="col-12">
                                         <label for="fname">Name</label>
-                                        <input type="text" class="form-control" placeholder="John" id="fname">
+                                        <input type="text" class="form-control" placeholder="John" id="fname" name="fname">
                                     </div>
                                     <div class="col-12">
                                         <label for="lname">Surname</label>
-                                        <input type="text" class="form-control" placeholder="Doe" id="lname">
+                                        <input type="text" class="form-control" placeholder="Doe" id="lname" name="lname">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="emailaddress">Email address</label>
-                                <input type="email" class="form-control" id="emailaddress"
-                                    placeholder="name@example.com">
+                                <input type="email" class="form-control" id="emailaddress" name="email"
+                                    placeholder="youremail@example.com">
                             </div>
                             <div class="form-group">
-                                <label for="contacttext">What do you have in mind?</label>
-                                <textarea class="form-control" id="contacttext" rows="3"></textarea>
+                                <label for="message">What do you have in mind?</label>
+                                <textarea class="form-control" id="message" rows="3" name="message"></textarea>
                             </div>
                             <div class="form-group">
                                 <p>Would you like to hear from us?</p>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="optin" name="optin" class="custom-control-input" checked>
-                                    <label class="custom-control-label" id="label-radio" for="optin">Yes, I'd like to receive recipe ideas and nutrition tips.</label>
+                                    <input type="radio" id="yes" name="yes" class="custom-control-input" checked>
+                                    <label class="custom-control-label" id="yes" for="yes">Yes, I'd like to receive recipe ideas and nutrition tips.</label>
                                   </div>
                                   <div class="custom-control custom-radio">
-                                    <input type="radio" id="optout" name="optout" class="custom-control-input">
-                                    <label class="custom-control-label" id="label-radio" for="optout">No, I'm not interested in becoming more healthy.</label>
+                                    <input type="radio" id="no" name="no" class="custom-control-input">
+                                    <label class="custom-control-label" id="no" for="no">No, I'm not interested in becoming more healthy.</label>
                                   </div>
                             </div>
                             <div class="form-group">
                                 <p>What are you interested in?</p>
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="recipe">
+                                    <input type="checkbox" class="custom-control-input" id="recipe" name="recipe">
                                     <label class="custom-control-label" for="recipe">Recipe ideas</label>
                                 </div>
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="nutrition">
+                                    <input type="checkbox" class="custom-control-input" id="nutrition" name="nutrition">
                                     <label class="custom-control-label" for="nutrition">Nutrition tips</label>
                                 </div>
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="health">
+                                    <input type="checkbox" class="custom-control-input" id="health" name="health">
                                     <label class="custom-control-label" for="health">Health advice</label>
                                 </div>
                             </div>
@@ -189,6 +189,10 @@
     </footer>
     <script src="assets/js/main.js"></script>
 
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="assets/js/email.js"></script>
+    
     <!-- JS Bootstrap links -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

@@ -870,7 +870,8 @@ input:-webkit-autofill:active {
   background-color: white;
 }
 
-#optin:checked ~ #label-radio::before {
+#yes:checked ~ #yes::before,
+#no:checked ~ #no::before {
   color: white;
   border-color: #015a06;
   background-color: #015a06;

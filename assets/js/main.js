@@ -29,7 +29,7 @@ clearIcon.addEventListener("click", () => {
 });
 
 
-// Function to get value from ticked checkbox. 
+// Get value from ticked checkbox
 function checkboxDietLabel() {
     let checkboxDiet = document.forms[0];
     let i;
@@ -43,7 +43,7 @@ function checkboxDietLabel() {
     }
     console.log(checkboxDietValueArray);
 
-    // Checking if there's any checkbox ticked. If yes, append values to the API URL.
+    // Check if any checkbox ticked
     if (checkboxDietValueArray.length === 0) {
         return "";
     }
