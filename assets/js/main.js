@@ -472,5 +472,32 @@ function nutritionalInfoAPIData(data) {
     nutritionalInfoTable.innerHTML = table;
 }
 
+//
+// ----------- Smooth Scroll - source https://www.codegrepper.com/code-examples/javascript/scrolling+link+java+script
+//
 
+// window.scrollTo({ top: 0, behavior: 'smooth' })
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+//
+// ----------- Scroll to top - source https://www.youtube.com/watch?v=Pd71ZZeIhaI
+//
+window.addEventListener('scroll', function() {
+    var scroll = document.querySelector('.scroll-top');
+    scroll.classList.toggle("active", window.scrollY > 500)
+})
+
+document.getElementById("scroll-top").addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })
+});
