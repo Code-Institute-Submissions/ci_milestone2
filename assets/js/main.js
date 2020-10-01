@@ -9,11 +9,6 @@ const errorHandling = document.querySelector("#error-handling");
 const clearIcon = document.querySelector("#recipe-form__clear-icon");
 const searchBar = document.querySelector("#recipe-form__search-bar");
 
-//Event Listener
-searchButton.addEventListener("click", () => {
-    recipeAPI();
-});
-
 //Event listeners for the clear icon to be visible in the search bar. Taken from https://www.mikedane.com/web-development/css/styling-search-bar/
 searchBar.addEventListener("keyup", () => {
     if (searchBar.value && clearIcon.style.visibility != "visible") {
@@ -59,10 +54,10 @@ function checkboxDietLabel() {
 }
 
 // Get data from Recipe API: Search bar
-async function recipeAPI() {
+searchButton.addEventListener("click", () => {
     let searchValue = document.querySelector("#recipe-form__search-bar").value;
     let dietLabels = checkboxDietLabel();
-    let response = await fetch(`https://api.edamam.com/search?app_id=ba5b7a21&app_key=d1d3afcdc37dd030c29294267aaedbc8&q=${searchValue}${dietLabels}`)
+    let response = fetch(`https://api.edamam.com/search?app_id=ba5b7a21&app_key=d1d3afcdc37dd030c29294267aaedbc8&q=${searchValue}${dietLabels}`)
         .then(response => response.json())
         .then(data => {
             console.log(data);
@@ -72,14 +67,15 @@ async function recipeAPI() {
             errorHandling.innerHTML = "<p>Oops something went wrong, try again.</p>"
             console.log(err);
         });
-}
+});
 
 // Recipe API data: Search bar
 function recipeAPIDataSearchBar(data) {
     if (typeof (data.hits[i].recipe) != undefined) {
-        let healthLabels;
-        for (let j = 0; j < data.hits[0].recipe.healthLabels.length; j++)
-            healthLabels += `<span class="badge badge-pill badge-success">${data.hits[i].recipe.healthLabels}</span>                    `
+        //Test to print the healthLabels in pills, didn't work
+        //let healthLabels;
+        //for (let j = 0; j < data.hits[0].recipe.healthLabels.length; j++)
+        //healthLabels += `<span class="badge badge-pill badge-success">${data.hits[i].recipe.healthLabels}</span>                    `
 
         for (let i = 0; i < 8; i++) {
             recipeCards.innerHTML += `
@@ -238,7 +234,7 @@ searchButtonNutrition.addEventListener("click", function () {
 function nutritionalInfoAPIData(data) {
     let quantity, measure, weight, foodMatch, unit;
     let totalCal, FAT, totalDailyFAT, FASAT, totalDailyFASAT, FATRN, CHOLE, totalDailyCHOLE, NA, totalDailyNA, CHOCDF, totalDailyCHOCDF, FIBTG, totalDailyFIBTG, SUGAR, SUGARadded, PROCNT, totalDailyPROCNT, VITD, totalDailyVITD, CA, totalDailyCA, FE, totalDailyFE, K, totalDailyK, err, table;
-    
+
     //Display div that will hold the content returned by the Nutrition API 
     document.getElementById("nutrition-container__tables").style.display = "block";
 
