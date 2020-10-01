@@ -846,6 +846,14 @@ input:-webkit-autofill:active {
   background-color: rgba(1, 90, 6, 0.7);
 }
 
+.contact-form-container__search-wrapper button:focus {
+  color: #fff;
+  background-color: #4a4a4a;
+  border-color: #015a06;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(1, 90, 6, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(1, 90, 6, 0.5);
+}
+
 .contact-form-container .form-group > p {
   padding-top: 1rem;
 }
@@ -875,6 +883,23 @@ input:-webkit-autofill:active {
   color: white;
   border-color: #015a06;
   background-color: #015a06;
+}
+
+.modal .modal-title {
+  color: #015a06;
+  font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
+}
+
+.modal span {
+  font-size: 2rem;
+}
+
+.modal .modal-btn {
+  background-color: #015a06;
+  font-size: 1.6rem;
+  width: 8rem;
+  margin: 0 auto;
 }
 
 * {
