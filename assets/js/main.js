@@ -471,3 +471,6 @@ function nutritionalInfoAPIData(data) {
     nutritionalInfoPerIngr.innerHTML = html;
     nutritionalInfoTable.innerHTML = table;
 }
+
+
+

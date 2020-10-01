@@ -26,6 +26,7 @@
           if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
+            document.getElementById("submit-modal").style.display = "block";
           } else { //send email with emailJS
             event.preventDefault();
             emailjs.sendForm('gmail', 'milestone2', '#contact-form')
