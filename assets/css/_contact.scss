@@ -65,6 +65,10 @@
     .form-group > p {
         padding-top: 1rem;
     }
+
+    .invalid-feedback, .valid-feedback {
+        font-size: 1.4rem;
+    }
 }
 
 @media (min-width: $mobile-width) {
@@ -100,6 +104,7 @@
     background-color: $colour-1;
 }
 
+//Modal
 .modal {
     .modal-title {
         color: $colour-1;

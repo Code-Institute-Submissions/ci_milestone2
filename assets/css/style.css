@@ -858,6 +858,10 @@ input:-webkit-autofill:active {
   padding-top: 1rem;
 }
 
+.contact-form-container .invalid-feedback, .contact-form-container .valid-feedback {
+  font-size: 1.4rem;
+}
+
 @media (min-width: 30rem) {
   .contact-form-lead p {
     max-width: 70%;

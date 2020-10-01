@@ -67,41 +67,55 @@
             <div class="container contact-form-container">
                 <div class="row">
                     <div class="col">
-                        <form id="contact-form" name="contact-form">
+                        <form id="contact-form" name="contact-form" class="needs-validation" novalidate>
                             <div class="form-group">
                                 <div class="form-row">
                                     <div class="col-12">
                                         <label for="fname">Name</label>
                                         <input type="text" class="form-control" placeholder="John" id="fname"
-                                            name="fname">
+                                            name="fname" required>
+                                            <div class="invalid-feedback">
+                                                Please provide a name.
+                                              </div>
                                     </div>
                                     <div class="col-12">
                                         <label for="lname">Surname</label>
                                         <input type="text" class="form-control" placeholder="Doe" id="lname"
-                                            name="lname">
+                                            name="lname" required>
+                                            <div class="invalid-feedback">
+                                                Please provide a surname.
+                                              </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="emailaddress">Email address</label>
                                 <input type="email" class="form-control" id="emailaddress" name="email"
-                                    placeholder="youremail@example.com">
+                                    placeholder="youremail@example.com" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid email address.
+                                      </div>
+                                    
                             </div>
                             <div class="form-group">
                                 <label for="message">What do you have in mind?</label>
-                                <textarea class="form-control" id="message" rows="3" name="message"></textarea>
+                                <textarea class="form-control" id="message" rows="3" name="message" required></textarea>
+                                <div class="invalid-feedback">
+                                    Message cannot be blank.
+                                  </div>
                             </div>
                             <div class="form-group">
                                 <p>Would you like to hear from us?</p>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="yes" name="newsletter" class="custom-control-input" checked>
+                                    <input type="radio" id="yes" name="newsletter" class="custom-control-input" required>
                                     <label class="custom-control-label" id="yes" for="yes">Yes, I'd like to receive
                                         recipe ideas and nutrition tips.</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="no" name="newsletter" class="custom-control-input">
+                                    <input type="radio" id="no" name="newsletter" class="custom-control-input" required>
                                     <label class="custom-control-label" id="no" for="no">No, I'm not interested in
                                         becoming more healthy.</label>
+                                <div class="invalid-feedback">Please select any of the options.</div>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -117,6 +131,9 @@
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="health" name="health">
                                     <label class="custom-control-label" for="health">Health advice</label>
+                                    <div class="valid-feedback">
+                                        Optional.
+                                      </div>
                                 </div>
                             </div>
                             <div class="col-12 contact-form-container__search-wrapper">
