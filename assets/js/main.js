@@ -139,7 +139,15 @@ async function recipeAPIImmunity() {
             recipeAPIDataImmunity(data);
         })
         .catch(err => {
-            errorHandling.innerHTML = "<p>Oops something went wrong, please reload the page.</p>"
+            recipeCardsImmunityError.innerHTML = `
+            <div class="container error-handling">
+                <div class="row">
+                    <div class="col">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>Ops something went wrong, please reload the page.</p>
+                    </div>
+                </div>
+            </div>`
             console.log(err);
         });
 }
@@ -167,7 +175,15 @@ async function recipeAPIBalanced() {
             recipeAPIDataBalanced(data);
         })
         .catch(err => {
-            errorHandling.innerHTML = "<p>Oops something went wrong, please reload the page.</p>"
+            recipeCardsBalancedError.innerHTML = `
+            <div class="container error-handling">
+                <div class="row">
+                    <div class="col">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>Ops something went wrong, please reload the page.</p>
+                    </div>
+                </div>
+            </div>`
             console.log(err);
         });
 }
@@ -196,7 +212,15 @@ async function recipeAPIVeggie() {
             recipeAPIDataVeggie(data);
         })
         .catch(err => {
-            errorHandling.innerHTML = '<p class="error-message">Ops something went wrong, please reload the page.</p>'
+            recipeCardsVeggieError.innerHTML = `
+            <div class="container error-handling">
+                <div class="row">
+                    <div class="col">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>Ops something went wrong, please reload the page.</p>
+                    </div>
+                </div>
+            </div>`
             console.log(err);
         });
 }
