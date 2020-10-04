@@ -248,7 +248,8 @@ function recipeAPIDataVeggie(data) {
 const searchButtonNutrition = document.querySelector("#nutrition-container__search-button");
 const nutritionalInfoPerIngr = document.querySelector("#nutrition-container__ingredient-table");
 const nutritionalInfoTable = document.querySelector("#nutrition-container__nutrition-table");
-const nutritionalInfoError = document.querySelector("#nutrition-container__error-message");
+const nutritionalInfoError = document.querySelector("#nutrition-container__error-handling");
+const nutritionalInfoPerIngrError = document.querySelector("#nutrition-table__error-handling");
 
 //Nutritional info API call
 searchButtonNutrition.addEventListener("click", function () {
@@ -268,7 +269,15 @@ searchButtonNutrition.addEventListener("click", function () {
             nutritionalInfoAPIData(data);
         })
         .catch(err => {
-            nutritionalInfoError.innerHTML = "<p>Nutritional info API call error message. We had a problem analysing this. Please check the ingredient spelling or if you have entered a quantities for the ingredients.</p>"
+            nutritionalInfoError.innerHTML = `
+            <div class="container error-handling">
+                <div class="row">
+                    <div class="col">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>Sorry we couldn't analyse this recipe. Please check the ingredient spelling and make sure you have entered a quantity for the ingredients.</p>
+                    </div>
+                </div>
+            </div>`
             console.log(err);
         });
 });
@@ -328,7 +337,15 @@ function nutritionalInfoAPIData(data) {
                              <th>${Math.round(weight * 10) / 10} g</th>
                           </tr>`;
             } else {
-                err = '<span class="addition-e">We cannot calculate the nutrition for some ingredients. Please check the ingredient spelling or if you have entered a quantities for the ingredients.</span>';
+                nutritionalInfoPerIngrError.innerHTML =    `
+                <div class="container error-handling">
+                    <div class="row">
+                        <div class="col">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p>We cannot calculate the nutrition for some ingredients. Please check the ingredient spelling and make sure you have entered a quantity for the ingredients.</p>
+                        </div>
+                    </div>
+                </div>`    
             }
         }
     }
