@@ -16,7 +16,7 @@
 
 <body>
     <header>
-        <!-- Start Nav -->
+        <!-- Nav -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#"><img src="assets/images/logo/icon-green.png"
                     alt="Icon logo What's for dinner" id="logo"></a>
@@ -42,7 +42,7 @@
             </div>
         </nav>
         <!-- End Nav -->
-        <!-- Start home banner -->
+        <!-- Home banner -->
         <div class="home-banner">
             <figure>
                 <img src="assets/images/img-header-right.png" class="home-banner__img-right"
@@ -56,7 +56,7 @@
         <!-- End home banner -->
     </header>
     <main>
-        <!-- Start Search bar -->
+        <!-- Main search bar -->
         <section id="main-container">
             <div class="container main-container">
                 <div class="row justify-content-center">
@@ -107,7 +107,7 @@
             </div>
         </section>
         <!-- End Search bar -->
-        <!-- Start Recipe Cards -->
+        <!-- Recipe Cards -->
         <section id="recipe-cards">
             <div class="container recipe-cards">
                 <div class="row justify-content-between" id="recipe-cards__main">
@@ -134,10 +134,17 @@
         </section>
         <!-- End Recipe Cards -->
         <!-- JS function searchRecipe() contains the error message displayed if anything goes wrong-->
-        <div id="error-handling"></div>
+        <div id="error-handling" class="container error-handling">
+            <div class="row">
+                <div class="col">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p>Ops something went wrong, please change the search term and try again.</p>
+                </div>
+            </div>
+        </div>
         </section>
         <!-- End main search bar -->
-        <!-- Start inspiration -->
+        <!-- Inspiration section -->
         <section id="inspiration-section">
             <div class="block-divider-image"></div>
             <div class="container inspiration-container">
@@ -147,7 +154,7 @@
                         <p>Stay healthy and strong. Check out the recipe ideas we catered only for you!</p>
                     </div>
                 </div>
-                <!-- Start immuno supportive recipes -->
+                <!-- Immuno supportive recipes -->
                 <article id="immuno-supportive-recipes">
                     <div class="inspiration-container__heading">
                         <h3>Ideas to boost your immune system</h3>
@@ -155,7 +162,7 @@
                             food!
                             In times of infectious diseases, every little helps.</p>
                     </div>
-                    <!-- Start Swiper -->
+                    <!-- Swiper -->
                     <div class="container-fluid inspiration-container__swiper">
                         <div class="row">
                             <div class="col">
@@ -196,7 +203,7 @@
                     <!-- End Swiper -->
                 </article>
                 <!-- End immuno supportive recipes -->
-                <!-- Start well balanced recipes -->
+                <!-- Well balanced recipes -->
                 <article id="balanced-recipes">
                     <div class="inspiration-container__heading">
                         <h3>Well-balanced recipes</h3>
@@ -204,7 +211,7 @@
                             To
                             achieve this, your plate should always contain carbs, protein and fat.</p>
                     </div>
-                    <!-- Start Swiper -->
+                    <!-- Swiper -->
                     <div class="container-fluid inspiration-container__swiper">
                         <div class="row">
                             <div class="col">
@@ -235,7 +242,7 @@
                     <!-- End Swiper -->
                 </article>
                 <!-- End well balanced recipes -->
-                <!-- Start veggie friendly recipes -->
+                <!-- Veggie friendly recipes -->
                 <article id="veggie-recipes">
                     <div class="inspiration-container__heading">
                         <h3>Vegetarian friendly recipes</h3>
@@ -243,7 +250,7 @@
                             that Vegetarians have a more effective immune system than nonvegetarians.</p>
                         <!-- Source: https://www.pcrm.org/news/blog/foods-boost-immune-system -->
                     </div>
-                    <!-- Start Swiper -->
+                    <!-- Swiper -->
                     <div class="container-fluid inspiration-container__swiper">
                         <div class="row">
                             <div class="col">
@@ -273,10 +280,11 @@
                     </div>
                     <!-- End Swiper -->
                 </article>
+                <!-- End veggie friendly recipes -->
             </div>
         </section>
         <!-- End inspiration -->
-        <!-- Start nutritional information -->
+        <!-- Nutritional information -->
         <section id="nutritional-info">
             <div class="container nutrition-container">
                 <div class="row nutrition-container__heading">
@@ -371,7 +379,7 @@
         <!-- End nutritional information -->
         <!-- Arrow scroll to top -->
         <a id="scroll-top" class="scroll-top" style="display: block;" aria-hidden="true">Scroll Top</a>
-        <!-- ./Arrow scroll to top -->
+        <!-- End arrow scroll to top -->
     </main>
     <footer>
         <div class="container-fluid footer-container">

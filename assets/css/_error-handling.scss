@@ -1,0 +1,14 @@
+.error-handling {
+    text-align: center;
+    border: 0.1rem dashed rgba($colour-2,0.5);
+    max-width: 70%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: rgba($colour-2,0.1);
+
+    i {
+        font-size: 2rem;
+        color: $colour-1;
+        padding: 1rem 0;
+    }
+}

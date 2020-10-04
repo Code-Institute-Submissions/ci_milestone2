@@ -64,7 +64,7 @@ searchButton.addEventListener("click", () => {
             recipeAPIDataSearchBar(data);
         })
         .catch(err => {
-            errorHandling.innerHTML = "<p>Oops something went wrong, try again.</p>"
+            errorHandling.innerHTML = "<p>Ops something went wrong, please change the search term and try again.</p>"
             console.log(err);
         });
 });
@@ -177,7 +177,7 @@ async function recipeAPIVeggie() {
             recipeAPIDataVeggie(data);
         })
         .catch(err => {
-            errorHandling.innerHTML = "<p>Oops something went wrong, please reload the page.</p>"
+            errorHandling.innerHTML = '<p class="error-message">Ops something went wrong, please reload the page.</p>'
             console.log(err);
         });
 }
