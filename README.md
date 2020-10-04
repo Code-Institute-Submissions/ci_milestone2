@@ -54,28 +54,28 @@ In terms of styling, this website utilised the framework Bootstrap to support th
 
 ### Programming Languages
 
-- HTML5
+- HTML5  
 Markup language used across the website.
-- CSS3
+- CSS3  
 Page style.
-- Bootstrap v4.5
+- Bootstrap v4.5  
 This project used Bootstrap elements such as navbar, grid & cards.
-- SASS
+- SASS  
 Preprocessor used to make CSS more fun and powerful.
-- JavaScript
+- JavaScript  
 Front end functionalities & API calls.
 
 ### Other Tools
 
-- GitHub
+- GitHub  
 Used to store this project's source code.
-- VS Code
+- VS Code  
 Main IDE.
-- Balsamiq
+- Balsamiq  
 Used to create wireframes for the website.
-- [Swiper.JS](https://swiperjs.com/)
-Swiper used on inspiration section.
-- [Typora](https://typora.io/)
+- [Swiper.JS](https://swiperjs.com/)  
+Swiper for recipe cards on inspiration section.
+- [Typora](https://typora.io/)  
 Markdown editor.
 
 ## Testing
@@ -95,11 +95,8 @@ Markdown editor.
 This project's repository is hosted on GitHub and was coded using the Visual Studio Code IDE. The following extensions were enabled to facilitate the work:
 
 - Live Sass Compiler
-
 - SCSS Formatter
-
 - GitHub Pull Requests and Issues
-
 - Bootstrap 4 CDN Snippet
 
 A clone of this repository was made locally, and the changes were deployed directly in the master branch. The commands used to push the changes were `git add .`, `git commit -m "message"` and `git push`. All the commits can be clearly identified by a concise and meaningful message. 
@@ -132,11 +129,11 @@ There are two options to clone this project to your local machine, using the com
 
 2. Click on 'Code'.
 
-   ![https://github.com/stefcruz/ci_milestone2/blob/master/assets/assets/readme.md/deployment-open-locally.png]()
+   ![https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme.md/deployment-open-locally.png]()
 
 3. First select whether you want to clone this repo using HTTPS, SSH or CLI, then click on the clipboard icon.
 
-   ![https://github.com/stefcruz/ci_milestone2/blob/master/assets/assets/readme.md/deployment-https-icon.png]()
+   ![https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme.md/deployment-https-icon.png]()
 
 4. Open Terminal on your computer or the terminal from your IDE.
 
