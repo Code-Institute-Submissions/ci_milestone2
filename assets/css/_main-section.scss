@@ -25,7 +25,6 @@
     position: relative;
     display: flex;
     min-width: 16rem;
-
 }
 
 #recipe-form {
@@ -204,3 +203,37 @@ input:-webkit-autofill:active {
     -webkit-text-fill-color: $colour-2 !important;
 }
 
+//Recipe cards - main section - search bar
+.card {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    font-family: $normal-text;
+    color: $colour-2;
+
+    &__title {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        color: $colour-1;
+        font-weight: 700;
+        padding-left: 1rem;
+    }
+
+    span {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    li {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        background-color: $colour-1;
+        border-color: $colour-1;
+    }
+}
+
+.card__main {
+    width: 75%;
+}

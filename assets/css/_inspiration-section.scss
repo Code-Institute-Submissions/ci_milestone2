@@ -59,6 +59,7 @@
 .inspiration-container__card {
     text-align: center;
     padding: 0;
+    border: 0;
 
     img {
         border-radius: 50%;
@@ -132,13 +133,9 @@
     left: 0;
 }
 
-//Remove default styles from card 
+//Remove default style from card 
 .card-body {
     padding: 0;
-}
-
-.card {
-    border: 0;
 }
 
 //Arrows at the bottom of the swiper

@@ -79,7 +79,7 @@ searchButton.addEventListener("click", () => {
 
 // Recipe API data: Search bar
 function recipeAPIDataSearchBar(data) {
-    if (typeof (data.hits[i].recipe) != undefined) {
+    if (typeof (data.hits[0].recipe) != undefined) {
         //Test to print the healthLabels in pills, didn't work
         //let healthLabels;
         //for (let j = 0; j < data.hits[0].recipe.healthLabels.length; j++)
@@ -95,9 +95,9 @@ function recipeAPIDataSearchBar(data) {
                     <h5 class="card-title" id="card-title">${data.hits[i].recipe.label}</h5>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Calories: ${parseInt(data.hits[i].recipe.calories)}</li>
-                    <li class="list-group-item">Ingredients used: ${data.hits[i].recipe.ingredients.length}</li>
-                    <li class="list-group-item">Health labels: ${healthLabels}</li>
+                    <li class="list-group-item"><span>Calories: </span>${parseInt(data.hits[i].recipe.calories)}</li>
+                    <li class="list-group-item"><span>Ingredients used: </span>${data.hits[i].recipe.ingredients.length}</li>
+                    <li class="list-group-item"><span>Health labels: </span>${data.hits[i].recipe.healthLabels}</li>
                 </ul>
                 <a href="${data.hits[i].recipe.url}" target="_blank" class="btn btn-primary">See Recipe</a>
                 </div>
