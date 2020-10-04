@@ -111,12 +111,12 @@
         <section id="recipe-cards">
             <div class="container recipe-cards">
                 <div class="row justify-content-between" id="recipe-cards__main">
-                    <div class="col-12 col-md-6 col-xl-3 col-lg-3">
+                    <!-- <div class="col-12 col-md-6 col-xl-3 col-lg-3">
                         <div class="card card__main">
                             <img src="https://www.edamam.com/web-img/611/6115695e2a59b2e9f904846c8d450318.jpg"
                                 class="card-img-top" alt="Recipe image">
                             <div class="card-body">
-                                <h5 class="card-title card__title" id="card-title">Whatever</h5>
+                                <h5 class="card-title card__title">Whatever</h5>
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item"><span>Calories: </span> 856</li>
@@ -128,7 +128,7 @@
                             <a href="http://notwithoutsalt.com/dinner-in-15-harissa-chickpeas-with-spinach/"
                                 target="_blank" class="btn btn-primary">See Recipe</a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -194,8 +194,8 @@
                         </div>
                     </div>
                     <!-- End Swiper -->
-                <!-- JS error container-->
-                <div id="immuno-supportive-recipes__error-handling"></div>
+                    <!-- JS error container-->
+                    <div id="immuno-supportive-recipes__error-handling"></div>
                 </article>
                 <!-- End immuno supportive recipes -->
                 <!-- Well balanced recipes -->
@@ -235,8 +235,8 @@
                         </div>
                     </div>
                     <!-- End Swiper -->
-                <!-- JS error container-->
-                <div id="balanced-recipes__error-handling"></div>
+                    <!-- JS error container-->
+                    <div id="balanced-recipes__error-handling"></div>
                 </article>
                 <!-- End well balanced recipes -->
                 <!-- Veggie friendly recipes -->
@@ -276,8 +276,8 @@
                         </div>
                     </div>
                     <!-- End Swiper -->
-                <!-- JS error container-->
-                <div id="veggie-recipes__error-handling"></div>
+                    <!-- JS error container-->
+                    <div id="veggie-recipes__error-handling"></div>
                 </article>
                 <!-- End veggie friendly recipes -->
             </div>
@@ -348,25 +348,29 @@
                         </form>
                     </div>
                     <div id="nutrition-container__tables">
-                        <div class="col-12">
-                            <div class="nutrition-container__heading-tables">
-                                <img src="/assets/images/icons/icons8-flour-of-rye-50.png" alt="Four of Rye icon"
-                                    aria-hidden="true">
-                                <h4>Nutrional value per ingredient</h4>
-                                <p>This section shows a summary of the nutritional information for the ingredients entered separately</p>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="nutrition-container__heading-tables">
+                                    <img src="/assets/images/icons/icons8-flour-of-rye-50.png" alt="Four of Rye icon"
+                                        aria-hidden="true">
+                                    <h4>Nutrional value per ingredient</h4>
+                                    <p>This section shows a summary of the nutritional information for the ingredients
+                                        entered separately</p>
+                                </div>
+                                <div class="nutrition-container__ingredient-table"
+                                    id="nutrition-container__ingredient-table"></div>
+                                <!-- JS error container-->
+                                <div class="col-12" id="ingredient-table__error-handling"></div>
                             </div>
-                            <div class="nutrition-container__ingredient-table" id="nutrition-container__ingredient-table"></div>
-                            <!-- JS error container-->
-                        <div class="col-12" id="ingredient-table__error-handling"></div>
-                        </div>
-                        <div class="col-12">
-                            <div class="nutrition-container__heading-tables">
-                                <img src="/assets/images/icons/icons8-omlette-50.png" alt="Omelette plate icon"
-                                    aria-hidden="true">
-                                <h4>Nutrional value for the dish</h4>
-                                <p>This section shows nutrional value of the ingredients altogether</p>
+                            <div class="col-12">
+                                <div class="nutrition-container__heading-tables">
+                                    <img src="/assets/images/icons/icons8-omlette-50.png" alt="Omelette plate icon"
+                                        aria-hidden="true">
+                                    <h4>Nutrional value for the dish</h4>
+                                    <p>This section shows nutrional value of the ingredients altogether</p>
+                                </div>
+                                <div id="nutrition-container__nutrition-table"></div>
                             </div>
-                            <div id="nutrition-container__nutrition-table"></div>
                         </div>
                         <!-- JS error container-->
                         <div class="col-12" id="nutrition-container__error-handling"></div>

@@ -92,7 +92,7 @@ function recipeAPIDataSearchBar(data) {
                 <img src="${data.hits[i].recipe.image}"
                     class="card-img-top" alt="Recipe image">
                 <div class="card-body">
-                    <h5 class="card-title" id="card-title">${data.hits[i].recipe.label}</h5>
+                    <h5 class="card-title card__title">${data.hits[i].recipe.label}</h5>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><span>Calories: </span>${parseInt(data.hits[i].recipe.calories)}</li>
