@@ -947,6 +947,12 @@ input:-webkit-autofill:active {
   padding: 1rem 0;
 }
 
+@media (min-width: 30rem) {
+  .error-handling {
+    max-width: 50%;
+  }
+}
+
 * {
   font-size: 10px;
   margin: 0;

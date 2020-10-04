@@ -5,7 +5,7 @@
 //Selectors
 const searchButton = document.querySelector("#search");
 const recipeCards = document.querySelector("#recipe-cards__main");
-const errorHandling = document.querySelector("#error-handling");
+const errorHandling = document.querySelector("#main-container__error-handling");
 const clearIcon = document.querySelector("#recipe-form__clear-icon");
 const searchBar = document.querySelector("#recipe-form__search-bar");
 
@@ -64,7 +64,15 @@ searchButton.addEventListener("click", () => {
             recipeAPIDataSearchBar(data);
         })
         .catch(err => {
-            errorHandling.innerHTML = "<p>Ops something went wrong, please change the search term and try again.</p>"
+            errorHandling.innerHTML = `
+            <div class="container error-handling">
+                <div class="row">
+                    <div class="col">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>Ops something went wrong, please change the search term and try again.</p>
+                    </div>
+                </div>
+            </div>`
             console.log(err);
         });
 });
@@ -98,7 +106,15 @@ function recipeAPIDataSearchBar(data) {
         }
     }
     else {
-        `"<p>We couldn't find any results with this search. Please change the search term.</p>"`
+        errorHandling.innerHTML = 
+        `<div class="container error-handling">
+            <div class="row">
+                <div class="col">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p>Ops something went wrong, please change the search term and try again.</p>
+                </div>
+            </div>
+        </div>`
     }
 }
 
@@ -110,6 +126,9 @@ function recipeAPIDataSearchBar(data) {
 const recipeCardsImmunity = document.querySelectorAll("#recipe-cards__immunity");
 const recipeCardsBalanced = document.querySelectorAll("#recipe-cards__balanced");
 const recipeCardsVeggie = document.querySelectorAll("#recipe-cards__veggie");
+const recipeCardsImmunityError = document.querySelectorAll("#immuno-supportive-recipes__error-handling");
+const recipeCardsBalancedError = document.querySelectorAll("#balanced-recipes__error-handling");
+const recipeCardsVeggieError = document.querySelectorAll("#veggie-recipes__error-handling");
 
 //Get data from Recipe API: Imunno Supportive filter
 async function recipeAPIImmunity() {

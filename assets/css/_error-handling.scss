@@ -12,3 +12,9 @@
         padding: 1rem 0;
     }
 }
+
+@media (min-width: $mobile-width) {
+    .error-handling {
+        max-width: 50%;
+    }
+}
