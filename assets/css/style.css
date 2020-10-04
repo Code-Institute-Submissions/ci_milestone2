@@ -953,6 +953,58 @@ input:-webkit-autofill:active {
   }
 }
 
+.error-page-body {
+  background-color: rgba(74, 74, 74, 0.2);
+}
+
+.error-page-body .error-container {
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.error-page-body .error-container h1 {
+  text-align: center;
+  color: #4a4a4a;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 4rem;
+  margin: 3rem 0;
+}
+
+.error-page-body .error-container button {
+  background-color: #4a4a4a;
+  width: 50%;
+  height: auto;
+  font-size: 1.6rem;
+  border: 0;
+  border-radius: 1rem;
+  outline: 0;
+  color: white;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.error-page-body .error-container button:hover {
+  background-color: rgba(74, 74, 74, 0.8);
+}
+
+.error-page-body .error-container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.error-page-body .error-container i {
+  color: #015a06;
+  font-size: 3rem;
+}
+
 * {
   font-size: 10px;
   margin: 0;
