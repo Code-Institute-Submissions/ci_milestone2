@@ -99,7 +99,7 @@ function recipeAPIDataSearchBar(data) {
                     <li class="list-group-item"><span>Ingredients used: </span>${data.hits[i].recipe.ingredients.length}</li>
                     <li class="list-group-item"><span>Health labels: </span>${data.hits[i].recipe.healthLabels}</li>
                 </ul>
-                <a href="${data.hits[i].recipe.url}" target="_blank" class="btn btn-primary">See Recipe</a>
+                <a href="${data.hits[i].recipe.url}" target="_blank" class="btn btn-primary" rel="noopener">See Recipe</a>
                 </div>
             </div>
                 `
@@ -160,7 +160,7 @@ function recipeAPIDataImmunity(data) {
             <div class="card-body">
                 <img src="${data.hits[i].recipe.image}" class="card-img-top" alt="Recipe image">
                 <h5>${data.hits[i].recipe.label}</h5>
-                <a href="${data.hits[i].recipe.url}" target="_blank">SEE RECIPE</a>
+                <a href="${data.hits[i].recipe.url}" target="_blank" rel="noopener">SEE RECIPE</a>
             </div>
         </div>`
     };
@@ -196,7 +196,7 @@ function recipeAPIDataBalanced(data) {
             <div class="card-body">
                 <img src="${data.hits[i].recipe.image}" class="card-img-top" alt="Recipe image">
                 <h5>${data.hits[i].recipe.label}</h5>
-                <a href="${data.hits[i].recipe.url}" target="_blank">SEE RECIPE</a>
+                <a href="${data.hits[i].recipe.url}" target="_blank" rel="noopener">SEE RECIPE</a>
             </div>
         </div>
         `
@@ -233,7 +233,7 @@ function recipeAPIDataVeggie(data) {
             <div class="card-body">
                 <img src="${data.hits[i].recipe.image}" class="card-img-top" alt="Recipe image">
                 <h5>${data.hits[i].recipe.label}</h5>
-                <a href="${data.hits[i].recipe.url}" target="_blank">SEE RECIPE</a>
+                <a href="${data.hits[i].recipe.url}" target="_blank" rel="noopener">SEE RECIPE</a>
             </div>
         </div>
         `

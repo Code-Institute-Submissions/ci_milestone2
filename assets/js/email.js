@@ -14,7 +14,7 @@
 //     });
 // }
 
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+// Example starter JavaScript for disabling form submissions if there are invalid fields. Source: Bootstrap.
 (function() {
     'use strict';
     window.addEventListener('load', function() {
