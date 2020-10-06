@@ -40,8 +40,6 @@ The wireframes for this project can be seen [here](https://www.figma.com/file/WV
 
 ### Features Left to Implement
 
-
-
 ## Technologies
 
 This project was built using HTML, CSS and JavaScript. An extra effort has been made to use pure Vanilla JavaScript rather than jQuery, with the intention of learning the foundation of the language and becoming more familiar with JavaScript concepts.
@@ -190,6 +188,3 @@ More information can be found [here](https://docs.github.com/en/free-pro-team@la
 - [JS: Smooth scroll](https://www.codegrepper.com/code-examples/javascript/scrolling+link+java+script)
 - [JS: Scroll to top](https://www.youtube.com/watch?v=Pd71ZZeIhaI)
 - [JS: Clear icon in search bar](https://www.mikedane.com/web-development/css/styling-search-bar/)
-
-
-
