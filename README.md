@@ -2,7 +2,7 @@
 
 ## Overview
 
-[What’s for dinner?](https://stefcruz.github.io/ci_milestone2/) is a website that provides recipe ideas and nutritional information. It brings a vast number of recipe ideas based on a keyword entered on the search bar, and also has a section dedicated to inspire the user with preselected recipe ideas. Finally, it allows the user to search for the nutritional information of many different foods by entering the ingredient on the search box.
+[What’s for dinner?](https://stefcruz.github.io/ci_milestone2/) is a website that provides recipe ideas and nutritional information. It brings a vast number of recipe ideas based on a keyword entered on the search bar, and also has a section dedicated to inspire the user with preselected recipe ideas. Finally, it allows the user to search for the nutritional information of many different foods by entering the ingredient on the text box.
 
 The recipes and the nutritional analysis are made available from the API [Edamam](https://www.edamam.com/).
 
@@ -30,13 +30,11 @@ As a website user...
 
 ### Wireframes
 
-#### Main section
+The wireframes for this project can be seen by [clicking here](https://www.figma.com/file/WV2jyXZgXJcOXwP7wLGHQu/milestone_2?node-id=0%3A1).
 
-#### Inspiration section 
+![https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme.md/wireframe/wireframes.png]()
 
-#### Nutritional information section
 
-#### Contact
 
 ## Features
 
@@ -68,15 +66,22 @@ Front end functionalities & API calls.
 ### Other Tools
 
 - GitHub  
-Used to store this project's source code.
+  Used to store this project's source code.
+
 - VS Code  
-Main IDE.
+  Main IDE.
+
 - Balsamiq  
-Used to create wireframes for the website.
+  Used to create wireframes for the website.
+
 - [Swiper.JS](https://swiperjs.com/)  
-Swiper for recipe cards on inspiration section.
+  Swiper for recipe cards on inspiration section.
+
 - [Typora](https://typora.io/)  
-Markdown editor.
+  Markdown editor.
+
+- Fygma  
+  Wireframes
 
 ## Testing
 
@@ -176,6 +181,7 @@ More information can be found [here](https://docs.github.com/en/free-pro-team@la
 - [Swiper design idea](https://themes.getbootstrap.com/preview/?theme_id=55961)
 - [Checkbox style](https://css-tricks.com/the-checkbox-hack/)
 - [Idea for image at the top corners of the page](https://www.yummly.co.uk/)
+- [Check icon svg on nutritional value section](https://themes.getbootstrap.com/preview/?theme_id=55961)
 
 ### Code
 
