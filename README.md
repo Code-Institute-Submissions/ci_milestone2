@@ -32,7 +32,7 @@ As a website user...
 
 The wireframes for this project can be seen by [clicking here](https://www.figma.com/file/WV2jyXZgXJcOXwP7wLGHQu/milestone_2?node-id=0%3A1).
 
-![https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme.md/wireframe/wireframes.png]()
+![https://raw.githubusercontent.com/stefcruz/ci_milestone2/master/assets/readme/wireframes/wireframes.png]()
 
 
 
@@ -80,7 +80,7 @@ Front end functionalities & API calls.
 - [Typora](https://typora.io/)  
   Markdown editor.
 
-- Fygma  
+- Figma  
   Wireframes
 
 ## Testing
@@ -134,11 +134,11 @@ There are two options to clone this project to your local machine, using the com
 
 2. Click on 'Code'.
 
-   ![https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme.md/deployment-open-locally.png]()
+   ![https://raw.githubusercontent.com/stefcruz/ci_milestone2/master/assets/readme/deployment-open-locally.png]()
 
 3. First select whether you want to clone this repo using HTTPS, SSH or CLI, then click on the clipboard icon.
 
-   ![https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme.md/deployment-https-icon.png]()
+   ![https://raw.githubusercontent.com/stefcruz/ci_milestone2/master/assets/readme/deployment-https-icon.png]()
 
 4. Open Terminal on your computer or the terminal from your IDE.
 
