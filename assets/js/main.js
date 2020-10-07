@@ -23,6 +23,17 @@ clearIcon.addEventListener("click", () => {
     clearIcon.style.visibility = "hidden";
 });
 
+//Event listeners
+searchBar.addEventListener("keyup", function (e) {
+    if (e.code === 'Enter') {
+        console.log("enter pressed");
+        getRecipeAPI();
+    }
+});
+
+searchButton.addEventListener("click", () => {
+    getRecipeAPI();
+});
 
 // Get value from ticked checkbox
 function checkboxDietLabel() {
@@ -54,8 +65,9 @@ function checkboxDietLabel() {
 }
 
 // Get data from Recipe API: Search bar
-searchButton.addEventListener("click", () => {
-    let searchValue = document.querySelector("#recipe-form__search-bar").value;
+
+function getRecipeAPI() {
+    let searchValue = searchBar.value;
     let dietLabels = checkboxDietLabel();
     let response = fetch(`https://api.edamam.com/search?app_id=ba5b7a21&app_key=d1d3afcdc37dd030c29294267aaedbc8&q=${searchValue}${dietLabels}`)
         .then(response => response.json())
@@ -75,7 +87,7 @@ searchButton.addEventListener("click", () => {
             </div>`
             console.log(err);
         });
-});
+}
 
 // Recipe API data: Search bar
 function recipeAPIDataSearchBar(data) {
@@ -83,7 +95,10 @@ function recipeAPIDataSearchBar(data) {
         //Test to print the healthLabels in pills, didn't work
         //let healthLabels;
         //for (let j = 0; j < data.hits[0].recipe.healthLabels.length; j++)
-        //healthLabels += `<span class="badge badge-pill badge-success">${data.hits[i].recipe.healthLabels}</span>                    `
+        //healthLabels += `<span class="badge badge-pill badge-success">${data.hits[i].recipe.healthLabels}</span>`
+
+        //Line added to clear results once new search is performed.
+        recipeCards.innerHTML = "";
 
         for (let i = 0; i < 8; i++) {
             recipeCards.innerHTML += `
@@ -106,8 +121,8 @@ function recipeAPIDataSearchBar(data) {
         }
     }
     else {
-        errorHandling.innerHTML = 
-        `<div class="container error-handling">
+        errorHandling.innerHTML =
+            `<div class="container error-handling">
             <div class="row">
                 <div class="col">
                     <i class="fas fa-exclamation-triangle"></i>
@@ -358,7 +373,7 @@ function nutritionalInfoAPIData(data) {
                              <th>${Math.round(weight * 10) / 10} g</th>
                           </tr>`;
             } else {
-                nutritionalInfoPerIngrError.innerHTML =    `
+                nutritionalInfoPerIngrError.innerHTML = `
                 <div class="container error-handling">
                     <div class="row">
                         <div class="col">
@@ -366,7 +381,7 @@ function nutritionalInfoAPIData(data) {
                             <p>We cannot calculate the nutrition for some ingredients. Please check the ingredient spelling and make sure you have entered a quantity for the ingredients.</p>
                         </div>
                     </div>
-                </div>`    
+                </div>`
             }
         }
     }
@@ -569,12 +584,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 //
 // ----------- Scroll to top - source https://www.youtube.com/watch?v=Pd71ZZeIhaI
 //
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     var scroll = document.querySelector('.scroll-top');
     scroll.classList.toggle("active", window.scrollY > 500)
 })
 
-document.getElementById("scroll-top").addEventListener("click", function() {
+document.getElementById("scroll-top").addEventListener("click", function () {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
