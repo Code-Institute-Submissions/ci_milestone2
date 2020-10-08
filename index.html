@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <title>What's for Dinner?</title>
 </head>
@@ -70,9 +71,9 @@
                     <div class="col">
                         <form id="recipe-form">
                             <div class="search-bar-wrapper">
-                                <i class="fas fa-search" id="recipe-form__search-icon"></i>
                                 <input type="text" name="search-bar" id="recipe-form__search-bar"
                                     placeholder="Find a recipe">
+                                <i class="fas fa-search" id="recipe-form__search-icon"></i>
                                 <i class="fas fa-times-circle" id="recipe-form__clear-icon"></i>
                             </div>
                             <div class="row recipe-form-checkbox">
@@ -97,10 +98,10 @@
                                     <label for="low-carb" data-toggle="tooltip"
                                         title="Less than 20% of total calories from carbs">Low carb</label><br>
                                 </div>
-                                <div class="col-12 recipe-form-checkbox__search-wrapper">
-                                    <button type="button" id="search" aria-label="Search recipe"
-                                        class="recipe-form-checkbox__search-button">Search</button>
-                                </div>
+                            </div>
+                            <div class="col-12 recipe-form-checkbox__search-wrapper">
+                                <button type="button" id="search" aria-label="Search recipe"
+                                    class="recipe-form-checkbox__search-button">Search</button>
                             </div>
                         </form>
                     </div>

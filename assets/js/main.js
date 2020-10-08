@@ -9,6 +9,19 @@ const errorHandling = document.querySelector("#main-container__error-handling");
 const clearIcon = document.querySelector("#recipe-form__clear-icon");
 const searchBar = document.querySelector("#recipe-form__search-bar");
 
+//Event listeners
+
+searchBar.addEventListener('keydown', e => {
+    if (e.keyCode === 13) {
+        e.preventDefault();
+        getRecipeAPI();
+      }
+});
+
+searchButton.addEventListener("click", () => {
+    getRecipeAPI();
+});
+
 //Event listeners for the clear icon to be visible in the search bar. Source: https://www.mikedane.com/web-development/css/styling-search-bar/
 searchBar.addEventListener("keyup", () => {
     if (searchBar.value && clearIcon.style.visibility != "visible") {
@@ -21,18 +34,6 @@ searchBar.addEventListener("keyup", () => {
 clearIcon.addEventListener("click", () => {
     searchBar.value = "";
     clearIcon.style.visibility = "hidden";
-});
-
-//Event listeners
-searchBar.addEventListener("keyup", function (e) {
-    if (e.code === 'Enter') {
-        console.log("enter pressed");
-        getRecipeAPI();
-    }
-});
-
-searchButton.addEventListener("click", () => {
-    getRecipeAPI();
 });
 
 // Get value from ticked checkbox
@@ -140,10 +141,6 @@ function recipeAPIDataSearchBar(data) {
 //Selectors
 const recipeCardsImmunity = document.querySelectorAll("#recipe-cards__immunity");
 const recipeCardsImmunityError = document.querySelector("#immuno-supportive-recipes__error-handling");
-const swiperContainerImmunity = document.getElementById("swiper-container__immunity");
-const swiperWrapperImmunity = document.getElementById("swiper-wrapper__immunity");
-const swiperArrowsImmunity = document.getElementById("arrows");
-
 const recipeCardsBalanced = document.querySelectorAll("#recipe-cards__balanced");
 const recipeCardsBalancedError = document.querySelector("#balanced-recipes__error-handling");
 const recipeCardsVeggie = document.querySelectorAll("#recipe-cards__veggie");
@@ -183,24 +180,7 @@ function recipeAPIDataImmunity(data) {
             </div>
         </div>`
     };
-    // part of the attemp 1 below. addSwiperImmunity();
 }
-/*
-Bug: the swiper duplicates the slides, index 8 and 9 are duplicated before data is populated to them so they show empty.
-
-Attempt 1: Tried to add swiper after the data is loaded through JS, but doesn't work. Swiper doesn't load properly.
-function addSwiperImmunity() {
-    swiperContainerImmunity.classList.add("swiper-container");
-    swiperWrapperImmunity.classList.add("swiper-wrapper");
-    recipeCardsImmunity.forEach(el => el.classList.add('swiper-slide'));
-    swiperArrowsImmunity.innerHTML = `
-    <div class="swiper-button-prev" aria-label="Previous slide" aria-disabled="false"><i class="fas fa-long-arrow-alt-left"></i></div>
-    <div class="swiper-button-next" aria-label="Next slide" aria-disabled="false"><i class="fas fa-long-arrow-alt-right"></i></div>`
-}
-
-Attempt 2: Also tried to remove asyn/await from function thinking the swiper would wait for the data to be loaded to start duplicating the slides, 
-but it doesn't.
-*/
 
 // Get data from Recipe API: Balanced filter
 async function recipeAPIBalanced() {
