@@ -76,17 +76,17 @@
                                         <label for="fname">Name</label>
                                         <input type="text" class="form-control" placeholder="John" id="fname"
                                             name="fname" required>
-                                            <div class="invalid-feedback">
-                                                Please provide a name.
-                                              </div>
+                                        <div class="invalid-feedback">
+                                            Please provide a name.
+                                        </div>
                                     </div>
                                     <div class="col-12">
                                         <label for="lname">Surname</label>
                                         <input type="text" class="form-control" placeholder="Doe" id="lname"
                                             name="lname" required>
-                                            <div class="invalid-feedback">
-                                                Please provide a surname.
-                                              </div>
+                                        <div class="invalid-feedback">
+                                            Please provide a surname.
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -94,22 +94,23 @@
                                 <label for="emailaddress">Email address</label>
                                 <input type="email" class="form-control" id="emailaddress" name="email"
                                     placeholder="youremail@example.com" required>
-                                    <div class="invalid-feedback">
-                                        Please provide a valid email address.
-                                      </div>
-                                    
+                                <div class="invalid-feedback">
+                                    Please provide a valid email address.
+                                </div>
+
                             </div>
                             <div class="form-group">
                                 <label for="message">What do you have in mind?</label>
                                 <textarea class="form-control" id="message" rows="3" name="message" required></textarea>
                                 <div class="invalid-feedback">
                                     Message cannot be blank.
-                                  </div>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <p>Would you like to hear from us?</p>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="yes" name="newsletter" class="custom-control-input" required>
+                                    <input type="radio" id="yes" name="newsletter" class="custom-control-input"
+                                        required>
                                     <label class="custom-control-label" id="yes" for="yes">Yes, I'd like to receive
                                         recipe ideas and nutrition tips.</label>
                                 </div>
@@ -117,7 +118,7 @@
                                     <input type="radio" id="no" name="newsletter" class="custom-control-input" required>
                                     <label class="custom-control-label" id="no" for="no">No, I'm not interested in
                                         becoming more healthy.</label>
-                                <div class="invalid-feedback">Please select any of the options.</div>
+                                    <div class="invalid-feedback">Please select any of the options.</div>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -135,15 +136,37 @@
                                     <label class="custom-control-label" for="health">Health advice</label>
                                     <div class="valid-feedback">
                                         Optional.
-                                      </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-12 contact-form-container__search-wrapper">
-                                <button type="submit" class="btn btn-primary" aria-label="Submit" data-toggle="modal" data-target="#submit-modal">Submit</button>
+                                <button type="submit" class="btn btn-primary" aria-label="Submit" data-toggle="modal"
+                                    data-target="#submit-modal">Submit</button>
                             </div>
                         </form>
+                        <div class="container message-sent-container" id="message-sent-container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="message-sent-container__content">
+                                        <i class="far fa-smile"></i>
+                                        <p>Message sent. <br> Thank you! We will be in touch soon.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container message-not-sent-container" id="message-not-sent-container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="message-not-sent-container__content">
+                                        <i class="far fa-frown"></i>
+                                        <p>Try again. <br> Please fill in all the required
+                                            fields.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- Modal -->
-                        <div class="modal fade" id="submit-modal" tabindex="-1" aria-labelledby="ModalLabel"
+                        <!-- <div class="modal fade" id="submit-modal" tabindex="-1" aria-labelledby="ModalLabel"
                             aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -161,7 +184,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- /Modal -->
                     </div>
                 </div>
