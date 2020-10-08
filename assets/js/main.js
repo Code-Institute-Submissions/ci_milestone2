@@ -13,6 +13,7 @@ const searchBar = document.querySelector("#recipe-form__search-bar");
 
 searchBar.addEventListener('keydown', e => {
     if (e.keyCode === 13) {
+        //preventDefault to stop reloading page when event is fired
         e.preventDefault();
         getRecipeAPI();
       }
@@ -262,13 +263,27 @@ function recipeAPIDataVeggie(data) {
 
 //Selectors
 const searchButtonNutrition = document.querySelector("#nutrition-container__search-button");
+const textAreaNutrition = document.querySelector("#nutrition-container__label");
 const nutritionalInfoPerIngr = document.querySelector("#nutrition-container__ingredient-table");
 const nutritionalInfoTable = document.querySelector("#nutrition-container__nutrition-table");
 const nutritionalInfoError = document.querySelector("#nutrition-container__error-handling");
 const nutritionalInfoPerIngrError = document.querySelector("#nutrition-table__error-handling");
 
+//Event listeners
+textAreaNutrition.addEventListener('keydown', e => {
+    if (e.keyCode === 13) {
+        //preventDefault to stop reloading page when event is fired
+        e.preventDefault();
+        getNutritionalInfoAPI();
+      }
+});
+
+searchButtonNutrition.addEventListener("click", () => {
+    getNutritionalInfoAPI();
+});
+
 //Nutritional info API call
-searchButtonNutrition.addEventListener("click", function () {
+function getNutritionalInfoAPI() {
     let arr = {
         "ingr": document.querySelector("#nutrition-container__label").value.split(/\n|\r/)
     };
@@ -296,7 +311,7 @@ searchButtonNutrition.addEventListener("click", function () {
             </div>`
             console.log(err);
         });
-});
+}
 
 //Content inside the following function was taken from https://developer.edamam.com/edamam-nutrition-api-demo, with adaptations (removed jquery).
 function nutritionalInfoAPIData(data) {
