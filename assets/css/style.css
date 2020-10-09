@@ -261,14 +261,23 @@
     margin-top: 3rem;
   }
   #recipe-form__search-icon {
-    left: 12.5rem;
+    left: 10.5rem;
   }
   #recipe-form__clear-icon {
-    right: 12rem;
+    right: 10rem;
     visibility: hidden;
   }
   .recipe-form-checkbox__labels {
     left: 0;
+  }
+}
+
+@media (min-width: 90rem) {
+  #recipe-form__search-icon {
+    left: 11.5rem;
+  }
+  #recipe-form__clear-icon {
+    right: 11rem;
   }
 }
 
@@ -293,7 +302,7 @@ input:-webkit-autofill:active {
   font-size: 1.5rem;
   color: #015a06;
   font-weight: 700;
-  padding-left: 1rem;
+  padding: 0 1rem;
 }
 
 .card span {
@@ -309,6 +318,13 @@ input:-webkit-autofill:active {
   font-size: 1.2rem;
   background-color: #015a06;
   border-color: #015a06;
+}
+
+.card .badge {
+  background-color: rgba(74, 74, 74, 0.3);
+  margin: 0.4rem;
+  color: #4a4a4a;
+  font-size: 1rem;
 }
 
 .card__main {

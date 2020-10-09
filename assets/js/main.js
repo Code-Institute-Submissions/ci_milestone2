@@ -16,7 +16,7 @@ searchBar.addEventListener('keydown', e => {
         //preventDefault to stop reloading page when event is fired
         e.preventDefault();
         getRecipeAPI();
-      }
+    }
 });
 
 searchButton.addEventListener("click", () => {
@@ -49,7 +49,6 @@ function checkboxDietLabel() {
             checkboxDietValueArray.push(checkboxDiet[i].value);
         }
     }
-    console.log(checkboxDietValueArray);
 
     // Check if any checkbox ticked
     if (checkboxDietValueArray.length === 0) {
@@ -94,17 +93,20 @@ function getRecipeAPI() {
 // Recipe API data: Search bar
 function recipeAPIDataSearchBar(data) {
     if (typeof (data.hits[0].recipe) != undefined) {
-        //Test to print the healthLabels in pills, didn't work
-        //let healthLabels;
-        //for (let j = 0; j < data.hits[0].recipe.healthLabels.length; j++)
-        //healthLabels += `<span class="badge badge-pill badge-success">${data.hits[i].recipe.healthLabels}</span>`
+
 
         //Line added to clear results once new search is performed.
         recipeCards.innerHTML = "";
 
         for (let i = 0; i < 8; i++) {
+            //Print health labels in pills
+            let healthLabels = data.hits[i].recipe.healthLabels;
+            let healthLabelsPillsHTML = "";
+            for (let i = 0; i < healthLabels.length; i++) {
+                healthLabelsPillsHTML += `<span class="badge badge-pill badge-success">${healthLabels[i]}</span>`
+            }
             recipeCards.innerHTML += `
-            <div class="col-12 col-md-6 col-xl-3 col-lg-3">
+            <div class="col-12 col-md-6 col-xl-4 col-lg-4">
                 <div class="card card__main">
                 <img src="${data.hits[i].recipe.image}"
                     class="card-img-top" alt="Recipe image">
@@ -114,7 +116,7 @@ function recipeAPIDataSearchBar(data) {
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><span>Calories: </span>${parseInt(data.hits[i].recipe.calories)}</li>
                     <li class="list-group-item"><span>Ingredients used: </span>${data.hits[i].recipe.ingredients.length}</li>
-                    <li class="list-group-item"><span>Health labels: </span>${data.hits[i].recipe.healthLabels}</li>
+                    <li class="list-group-item"><span>Health labels: </span>${healthLabelsPillsHTML}</li>
                 </ul>
                 <a href="${data.hits[i].recipe.url}" target="_blank" class="btn btn-primary" rel="noopener">See Recipe</a>
                 </div>
@@ -275,7 +277,7 @@ textAreaNutrition.addEventListener('keydown', e => {
         //preventDefault to stop reloading page when event is fired
         e.preventDefault();
         getNutritionalInfoAPI();
-      }
+    }
 });
 
 searchButtonNutrition.addEventListener("click", () => {
