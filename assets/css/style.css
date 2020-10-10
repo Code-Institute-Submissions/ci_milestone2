@@ -785,6 +785,12 @@ input:-webkit-autofill:active {
 }
 
 @media (min-width: 30rem) {
+  .footer-container__logo img {
+    width: 40%;
+  }
+}
+
+@media (min-width: 48rem) {
   .footer-container__logo {
     text-align: right;
     padding-right: 5rem;

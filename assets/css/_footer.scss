@@ -73,6 +73,16 @@
 @media (min-width: $mobile-width) {
     .footer-container {
         &__logo {
+            img {
+                width: 40%;
+            }
+        }
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .footer-container {
+        &__logo {
             text-align: right;
             padding-right: 5rem;
         }    
