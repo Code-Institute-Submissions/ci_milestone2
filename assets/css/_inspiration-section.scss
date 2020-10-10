@@ -20,6 +20,10 @@
         p {
             color: $colour-2;
         }
+
+        @include bp(mobile) {
+            max-width: 70%; 
+        }
     }
 
     &__wrapper-title {
@@ -45,14 +49,6 @@
 
     &__swiper {
         margin-bottom: 2rem;
-    }
-}
-
-@media (min-width: $mobile-width) {
-    .inspiration-container {
-        &__wrapper {
-            max-width: 70%; 
-        }
     }
 }
 

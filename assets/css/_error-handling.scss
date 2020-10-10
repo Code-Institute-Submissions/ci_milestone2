@@ -11,10 +11,8 @@
         color: $colour-1;
         padding: 1rem 0;
     }
-}
 
-@media (min-width: $mobile-width) {
-    .error-handling {
+    @include bp(mobile) {
         max-width: 50%;
     }
 }

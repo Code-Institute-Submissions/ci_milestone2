@@ -24,6 +24,7 @@ $tablet-width: 48rem; // 768px
 $desktop-width: 64rem; // 1024px
 $desktop-large-width: 90rem; // 1440px
 
+
 //
 // Mixins
 //
@@ -33,3 +34,27 @@ $desktop-large-width: 90rem; // 1440px
     align-items: center;
     justify-content: center;
 }
+
+//Media queries taken from https://css-tricks.com/conditional-media-query-mixins/
+
+/*
+mobile: 480px
+tablet: 768px
+desktop: 1024px
+desktop-large: 1440px
+*/
+
+@mixin bp($point) {
+    @if $point == mobile {
+      @media (min-width: 30rem) { @content; }
+    }
+    @else if $point == tablet {
+      @media (min-width: 48rem) { @content; } 
+    }
+    @else if $point == desktop {
+      @media (min-width: 64rem)  { @content; }
+    }
+    @else if $point == desktop-large {
+        @media (min-width: 90rem)  { @content; }
+      }
+  }

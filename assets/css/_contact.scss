@@ -15,6 +15,10 @@
         color: $colour-2;
         text-align: center;
         margin: 0 auto;
+
+        @include bp(mobile) {
+            max-width: 70%;
+        }
     }
 }
 
@@ -71,14 +75,8 @@
     }
 }
 
-@media (min-width: $mobile-width) {
-    .contact-form-lead {
-        p {
-            max-width: 70%;
-        }
-    }
-
-    form {
+form {
+    @include bp(mobile) {
         max-width: 90%;
         margin: 0 auto;
     }

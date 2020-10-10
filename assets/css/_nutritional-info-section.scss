@@ -8,6 +8,10 @@
     background-size: cover;
     height: 20rem;
     width: 100%;
+
+    @include bp(tablet) {
+        height: 25rem;
+    }
 }
 
 .nutrition-container {
@@ -29,6 +33,14 @@
             max-width: 20%;
             height: 0.2rem;
             background-color: $colour-1;
+
+            @include bp(desktop) {
+                top: 25%;
+            }
+        }
+
+        @include bp(desktop) {
+            padding-top: 8rem;
         }
     }
 
@@ -105,24 +117,6 @@
     }
 }
 
-@media (min-width: $desktop-width) {
-    .nutrition-container {
-        h2 {
-            padding-top: 8rem;
-
-            &::after {
-                top: 25%;
-            }
-        }
-    }
-}
-
-@media (min-width: $tablet-width) {
-    .nutrition-image {
-        height: 25rem;
-    }
-}
-
 .nutrition-container__heading-tables {
     margin: 2rem 0;
 
@@ -153,11 +147,17 @@
     .table thead th {
         font-weight: 700;
     }
+
+    @include bp(mobile) {
+        max-width: 70%;
+        margin: 0 auto;
+    }
 }
 
 .nutritional-values {
     border: 0.2rem solid rgba($colour-2, 0.1);
     padding: 1rem;
+    margin: 4rem;
 
     h3 {
         font-weight: 500;
@@ -218,15 +218,8 @@
     .thick-row {
         border-top: 0.2rem solid rgba($colour-2, 0.1);
     }
-}
 
-@media (min-width: $mobile-width) {
-    .nutritional-values {
-        max-width: 70%;
-        margin: 0 auto;
-    }
-
-    .nutrition-container__ingredient-table {
+    @include bp(mobile) {
         max-width: 70%;
         margin: 0 auto;
     }

@@ -27,17 +27,16 @@
 #logo {
     height: 3rem;
     margin-bottom: 1rem;
-}
 
-@media (min-width: $mobile-width) {
-    #logo {
+    @include bp(mobile) {
         height: 4rem;
         margin-bottom: 1rem;
     }
 }
 
-@media (min-width: $desktop-width) {
-    .navbar-expand-lg .navbar-collapse {
+.navbar-expand-lg .navbar-collapse {
+    @include bp(desktop) {
         justify-content: flex-end;
     }
+    
 }
