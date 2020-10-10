@@ -18,25 +18,16 @@ $normal-text: "Lato", sans-serif;
 //Font sizes
 $normal-text-size: 1.6rem;
 
-//Screen sizes
-$mobile-width: 30rem; // 480px
-$tablet-width: 48rem; // 768px
-$desktop-width: 64rem; // 1024px
-$desktop-large-width: 90rem; // 1440px
-
-
 //
 // Mixins
 //
-
 @mixin flexbox {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-//Media queries taken from https://css-tricks.com/conditional-media-query-mixins/
-
+//Media queries, source https://css-tricks.com/conditional-media-query-mixins/
 /*
 mobile: 480px
 tablet: 768px

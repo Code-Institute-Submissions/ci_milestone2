@@ -19,6 +19,7 @@
 <body>
     <header>
         <!-- Nav -->
+        Navbar not collapsing after click, solved by adding 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#"><img src="assets/images/logo/icon-green.png"
                     alt="Icon logo What's for dinner" id="logo"></a>
@@ -29,16 +30,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#main-container">Home<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse" href="#main-container">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#inspiration-section">Discover</a>
+                        <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse" href="#inspiration-section">Discover</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#nutritional-info">Nutritional Value</a>
+                        <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse" href="#nutritional-info">Nutritional Value</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse" href="contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
