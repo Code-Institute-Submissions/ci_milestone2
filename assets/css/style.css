@@ -446,7 +446,7 @@ input:-webkit-autofill:active {
 }
 
 .block-divider-image {
-  background: url("/assets/images/anna-pelzer-unsplash.jpg") no-repeat fixed center;
+  background: url("../images/anna-pelzer-unsplash.jpg") no-repeat fixed center;
   min-height: 20rem;
   background-size: cover;
 }
@@ -512,7 +512,7 @@ input:-webkit-autofill:active {
 }
 
 .nutrition-image {
-  background: url("/assets/images/caju-gomes-unsplash.jpg") no-repeat center;
+  background: url("../images/caju-gomes-unsplash.jpg") no-repeat center;
   -o-object-fit: cover;
      object-fit: cover;
   background-size: cover;
@@ -1039,7 +1039,7 @@ input:-webkit-autofill:active {
   height: 3.2rem;
   border-radius: 50%;
   overflow: hidden;
-  background: url("/assets/images/icons/icons8-up-arrow.png");
+  background: url("../images/icons/icons8-up-arrow.png");
   background-size: 3.2rem 3.2rem;
   -webkit-transition: bottom 0.3s ease-out, background 250ms ease-in-out;
   transition: bottom 0.3s ease-out, background 250ms ease-in-out;
