@@ -54,17 +54,18 @@
 
     &__search-icon {
         position: absolute;
-        top: 4.5rem;
+        top: 4.3rem;
         left: 1rem;
         width: 1.6rem;
         color: $colour-1;
+        font-size: $normal-text-size;
 
         @include bp(mobile) {
             left: 8rem;
         }
 
         @include bp(desktop) {
-            left: 10.5rem;
+            left: 10rem;
         }
 
         @include bp(desktop-large) {
@@ -74,12 +75,13 @@
 
     &__clear-icon {
         position: absolute;
-        top: 4.5rem;
-        right: 0.5rem;
+        top: 4.3rem;
+        right: 1rem;
         width: 1.6rem;
         cursor: pointer;
         color: $colour-1;
         visibility: hidden;
+        font-size: $normal-text-size;
 
         @include bp(mobile) {
             right: 7.5rem;
@@ -105,7 +107,7 @@
         color: $colour-1;
         left: 30%;
         margin: 1rem 0;
-        
+
         @include bp(mobile) {
             left: 35%;
         }
