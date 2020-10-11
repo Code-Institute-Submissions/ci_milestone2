@@ -42,7 +42,11 @@ The wireframes for this project can be seen [here](https://www.figma.com/file/WV
 
 The navbar contains links to the different sections of the site and collapses when the user accesses the webiste through mobile.
 
+Nav desktop and tablet:
+
 ![Nav desktop and tablet](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/nav-desktop-tablet.png)
+
+Nav mobile:
 
 ![Nav desktop and mobile](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/nav-mobile.png)
 
@@ -58,7 +62,7 @@ The search box with checkbox allow the user to perform a search, which can be ba
 
 The tooltip on the checkboxes works on desktop only. There is no equivalent for mobile as the page would be too wordy.
 
-![Tooltip](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/hover-over-tick-box.png)
+![Tooltip](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/main-section-hover.png)
 
 The checkboxes are stacked on mobile to make it easier for the user to select the options.
 
@@ -152,7 +156,11 @@ The Bootstrap form validation was used in conjunction with the [Email JS](https:
 
 The footer has links to the sections of the homepage and also social media.
 
+Footer mobile:
+
 ![Footer mobile](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/footer-mobile.png)
+
+Footer desktop and tablet:
 
 ![Footer desktop and tablet](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/footer-desktop.png)
 
@@ -168,9 +176,19 @@ The personalised 404 page was created in case the site does not load.
 
 ### Features Left to Implement
 
+The possibilities are limitless when it comes to implement new features on a webapp. What I would like to have done is:
 
+- Vegetarian/Vegan website  
+The initial idea was to create a website with vegetarian/vegan recipes only. However, the API imposed a few limitations and this goal could not be attained. A simple test was done where the search term was "pork" and the filters vegetarian/vegan were applied, the result still came back where pork is classified as vegetarian. I could not establish whether this is an API error thus decided to change the focus.
 
+- Swiper.js infinite loop  
+Could not make the swiper infinite loop work when the data comes from the API. The swiper achieves the "infinite" effect by duplicating 3 or 4 slides on the HTML. When the data comes from the API, the swiper duplicates the slide however there is no data in it, which results in slides being shown empty in the carousel.  [Demo of what was planned to be implemented](https://swiperjs.com/demos/200-infinite-loop.html).
 
+And the new features that would be nice to have are:
+
+- Sorting and filtering options for the search results
+- Button to "see more" recipes, not only the first 8 presented
+- Registration/Profile page where the user can create a wish list and post recipes
 
 ## Technologies
 
