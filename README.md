@@ -58,7 +58,7 @@ The search box with checkbox allow the user to perform a search, which can be ba
 
 The tooltip on the checkboxes works on desktop only. There is no equivalent for mobile as the page would be too wordy.
 
-![Tooltip](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/hover-over-tickbox.png)
+![Tooltip](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/hover-over-tick-box.png)
 
 The checkboxes are stacked on mobile to make it easier for the user to select the options.
 
@@ -152,9 +152,9 @@ The Bootstrap form validation was used in conjunction with the [Email JS](https:
 
 The footer has links to the sections of the homepage and also social media.
 
-![Footer mobile](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/assets/readme/features/footer-mobile.png)
+![Footer mobile](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/footer-mobile.png)
 
-![Footer desktop and tablet](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/assets/readme/features/footer-desktop.png)
+![Footer desktop and tablet](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/footer-desktop.png)
 
 
 
