@@ -162,8 +162,6 @@ Footer desktop and tablet:
 
 ![Footer desktop and tablet](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/footer-desktop.png)
 
-
-
 ##### 404 Page
 
 The personalised 404 page was created in case the site does not load.
@@ -192,18 +190,27 @@ And the new features that would be nice to have are:
 
 This project was built using HTML, CSS and JavaScript. An extra effort has been made to use pure Vanilla JavaScript rather than jQuery, with the intention of learning the foundation of the language and becoming more familiar with JavaScript concepts.
 
-In terms of styling, this website utilised the framework Bootstrap to support through the implementation of a mobile first approach and the preprocessor SASS. The SASS files were divided into partials according to the sections of the website.
+In terms of styling, this website utilised the framework Bootstrap to support through the implementation of a mobile first approach and the preprocessor SASS. Due to the size of the project, the SASS files were divided into partials according to the sections of the website which makes the directory tidier and easier to locate a specific file. 
+
+![SASS partials](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/sass-partials.png)
+
+Another point to notice is that SASS enables nesting media queries within the block of CSS beside the properties being changed, which again helps the organisation and maintenance of the style sheets. Idea taken from [this blog post](https://css-tricks.com/conditional-media-query-mixins/).
+
 
 ### Programming Languages
 
 - HTML5  
 Markup language used across the website.
+
 - CSS3  
 Page style.
+
 - Bootstrap v4.5  
 This project used Bootstrap elements such as navbar, grid & cards.
+
 - SASS  
 Preprocessor used to make CSS more fun and powerful.
+
 - JavaScript  
 Front end functionalities & API calls.
 

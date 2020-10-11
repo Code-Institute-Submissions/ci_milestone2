@@ -142,11 +142,11 @@ function recipeAPIDataSearchBar(data) {
 //
 
 //Selectors
-const recipeCardsImmunity = document.querySelectorAll("#recipe-cards__immunity");
+const recipeCardsImmunity = document.querySelectorAll(".recipe-cards__immunity");
 const recipeCardsImmunityError = document.querySelector("#immuno-supportive-recipes__error-handling");
-const recipeCardsBalanced = document.querySelectorAll("#recipe-cards__balanced");
+const recipeCardsBalanced = document.querySelectorAll(".recipe-cards__balanced");
 const recipeCardsBalancedError = document.querySelector("#balanced-recipes__error-handling");
-const recipeCardsVeggie = document.querySelectorAll("#recipe-cards__veggie");
+const recipeCardsVeggie = document.querySelectorAll(".recipe-cards__veggie");
 const recipeCardsVeggieError = document.querySelector("#veggie-recipes__error-handling");
 
 //Get data from Recipe API: Imunno Supportive filter
