@@ -241,7 +241,15 @@ Front end functionalities & API calls.
 
 ### W3C HTML Validator
 
+The HTML validator presented a few errors/warnings however they were fixed.
+
+![HTML Validator](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/w3c-html-validator.png)
+
 ### W3C CSS Validator
+
+The CSS also returned no errors.
+
+![CSS Validator](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/w3c-css-validator.png)
 
 ### User Stories Testing
 
