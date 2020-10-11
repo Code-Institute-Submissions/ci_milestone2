@@ -211,6 +211,7 @@ desktop-large: 1440px
 @media (min-width: 30rem) {
   .recipe-form-checkbox label {
     left: 35%;
+    margin: 0.5rem 0;
   }
 }
 

@@ -38,7 +38,139 @@ The wireframes for this project can be seen [here](https://www.figma.com/file/WV
 
 ### Existing Features
 
+#### Navigation bar
+
+The navbar contains links to the different sections of the site and collapses when the user accesses the webiste through mobile.
+
+![Nav desktop and tablet](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/nav-desktop-tablet.png)
+
+![Nav desktop and mobile](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/nav-mobile.png)
+
+Also, the site also presents the favicon with the logo.
+
+![Favicon](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/favicon.png)
+
+#### Main section
+
+The search box with checkbox allow the user to perform a search, which can be based off ingredient or name of the dish. If one or more checkboxes are ticked, the inner text of the ticked checkbox is passed as a parameter to the API URL and this will filter the search. 
+
+![Main section](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/main-section.png)
+
+The tooltip on the checkboxes works on desktop only. There is no equivalent for mobile as the page would be too wordy.
+
+![Tooltip](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/hover-over-tickbox.png)
+
+The checkboxes are stacked on mobile to make it easier for the user to select the options.
+
+![Search box on mobile](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/search-box-mobile.png)
+
+##### Back to top arrow
+
+The arrow comes up after scroll down and was implemented to bring the user back to top.
+
+![Back to top arrow](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/arrow-up.png)
+
+##### Recipe cards
+
+The recipe cards contain an image, recipe title, number of ingredients so the user can judge the level of difficulty and preparation time of the recipe, health labels in case of any allergy and a link to the original recipe for full list of ingredients and instructions. The data comes from the API [Edamam](https://www.edamam.com/).
+
+![Recipe cards](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/recipe-card.png)
+
+##### Error handling
+
+If the API call fails, the error message below is displayed.
+
+![Error handling](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/main-section-error-handling.png)
+
+
+
+#### Inspiration section
+
+The idea of this section is to bring recipe ideas for the user based on preset filters. 
+
+![Inspiration section](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/inspiration-section.png)
+
+Due to the pandemic, the first suggestions are recipes to boost the immune system, followed by well-balanced recipes and vegetarian options. Again the data comes from the API [Edamam](https://www.edamam.com/) and the user can use the arrows right or left to see all the options.
+
+![Recipe ideas Immunity](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/inspiration-section-recipe-cards.png)
+
+##### Error handling
+
+If the API call fails, the error message below is displayed.
+
+![Error handling](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/inspiration-section-error-handling.png)
+
+
+
+#### Nutritional information section
+
+This section provides the user to search for the nutritional value of a recipe by entering the unit, measure and the ingredient on the text area. For example, 1 cup of rice, 10 oz of chickpeas.
+
+![Nutritional information section](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/nutritional-info-section.png)
+
+The API brings back the nutritional value per ingredient, so for the example above, the calorie and weight of the first ingredient 1 cup of rice and separately the calorie and weight for the 10 oz of chickpeas.
+
+![Nutritional information per ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/nutritional-info-table-ingredient.png)
+
+In addition, it also returns the nutritional value for the dish with the detailed number of calories and all the other nutrients present on the dish.
+
+![Nutritional information per dish](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/nutritional-info-table-values.png)
+
+Note the search result by ingredient and for the dish is hidden until API is called, i.e. until user performs a search.
+
+##### Error handling
+
+If the API call fails, the error message below is displayed.
+
+![Error handling](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/nutritional-info-error-handling.png)
+
+
+
+#### Contact page
+
+The contact page has the same heading and style as the home page.
+
+![Contact page header](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/contact-page.png)
+
+And the contact form contains an opt in option for newsletter and the potential topics the user is interested in.
+
+![Contact form](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/contact-form.png)
+
+The contact form contain mandatory fields and provides the user feedback for when these fields are empty. The feedback is not only given in the field but underneath the submit button. Initially a modal was used to give the feedback, however it provided a bad UX on mobile as the user had to click on the X button for the popup to close.
+
+![Negative feedback](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/contact-form-feedback-negative.png)
+
+Likewise, the feedback is positive when the fields are filled in and the message underneath reinforces the positive message.
+
+![Positive feedback](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/contact-form-feedback-positive.png)
+
+The Bootstrap form validation was used in conjunction with the [Email JS](https://www.emailjs.com/) tool to create this feature.
+
+
+
+#### Footer
+
+The footer has links to the sections of the homepage and also social media.
+
+![Footer mobile](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/assets/readme/features/footer-mobile.png)
+
+![Footer desktop and tablet](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/assets/readme/features/footer-desktop.png)
+
+
+
+##### 404 Page
+
+The personalised 404 page was created in case the site does not load.
+
+![Open Locally](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/404-page.png)
+
+
+
 ### Features Left to Implement
+
+
+
+
 
 ## Technologies
 
@@ -73,6 +205,10 @@ Front end functionalities & API calls.
 - [Swiper.JS](https://swiperjs.com/)  
   Swiper for recipe cards on inspiration section.
 
+- [Email JS](https://www.emailjs.com/)
+
+  Tool used to send emails from JS.
+
 - [Typora](https://typora.io/)  
   Markdown editor.
 
@@ -91,7 +227,7 @@ Front end functionalities & API calls.
 
 ### Bugs and Fixes
 
-- Navbar not collapsing after click. Solved by adding `data-toggle="collapse" data-target=".navbar-collapse"` to the <a> tags. [Solution here](https://stackoverflow.com/questions/42401606/how-to-hide-collapsible-bootstrap-4-navbar-on-click).
+- Navbar not collapsing after click when href is an anchor link, it only works when links to another page. Solved by adding `data-toggle="collapse" data-target=".navbar-collapse"` to the <a> tags. [Solution here](https://stackoverflow.com/questions/42401606/how-to-hide-collapsible-bootstrap-4-navbar-on-click).
 
 #### Bugs without fix
 
