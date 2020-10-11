@@ -4,9 +4,7 @@
 
 [What’s for dinner?](https://stefcruz.github.io/ci_milestone2/) is a website that provides recipe ideas and nutritional information. It brings a vast number of recipe ideas based on a keyword entered on the search bar, and also has a section dedicated to inspire the user with preselected recipe ideas. Finally, it allows the user to search for the nutritional information of many different foods by entering the ingredient on the text box.
 
-The recipes and the nutritional analysis are made available from the API [Edamam](https://www.edamam.com/).
-
-
+The recipes and the nutritional analysis are made available from the [Edamam](https://www.edamam.com/) API.
 
 [TOC]
 
@@ -108,11 +106,11 @@ If the API call fails, the error message below is displayed.
 
 #### Nutritional information section
 
-This section provides the user to search for the nutritional value of a recipe by entering the unit, measure and the ingredient on the text area. For example, 1 cup of rice, 10 oz of chickpeas.
+This section provides the user to search for the nutritional value of a recipe by entering the unit, measure and the ingredient on the text area. For example: 1 cup of rice, 10 oz of chickpeas.
 
 ![Nutritional information section](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/nutritional-info-section.png)
 
-The API brings back the nutritional value per ingredient, so for the example above, the calorie and weight of the first ingredient 1 cup of rice and separately the calorie and weight for the 10 oz of chickpeas.
+The API brings back the nutritional value per ingredient. For the example above, the calorie and weight of the first ingredient 1 cup of rice and separately the calorie and weight for the 10 oz of chickpeas.
 
 ![Nutritional information per ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/nutritional-info-table-ingredient.png)
 
@@ -224,14 +222,13 @@ Front end functionalities & API calls.
   Swiper for recipe cards on inspiration section.
 
 - [Email JS](https://www.emailjs.com/)
-
   Tool used to send emails from JS.
 
 - [Typora](https://typora.io/)  
   Markdown editor.
 
 - Figma  
-  Wireframes
+  Creation of wireframes.
 
 ## Testing
 
@@ -246,11 +243,6 @@ Front end functionalities & API calls.
 ### Bugs and Fixes
 
 - Navbar not collapsing after click when href is an anchor link, it only works when links to another page. Solved by adding `data-toggle="collapse" data-target=".navbar-collapse"` to the <a> tags. [Solution here](https://stackoverflow.com/questions/42401606/how-to-hide-collapsible-bootstrap-4-navbar-on-click).
-
-#### Bugs without fix
-
-- Swiper.js infinite loop doesn't work when data comes from the API. This mode makes the swiper "infinite" by duplicating 3 or 4 slides and when the data comes from the API, the slider is duplicated but it is still empty.  [Demo of what I wanted to implement](https://swiperjs.com/demos/200-infinite-loop.html).
-
 
 
 ## Deployment
