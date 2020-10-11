@@ -202,7 +202,8 @@ desktop-large: 1440px
 .recipe-form-checkbox label {
   font-size: 1.6rem;
   color: #015a06;
-  left: 20%;
+  left: 30%;
+  margin: 1rem 0;
 }
 
 @media (min-width: 30rem) {
@@ -675,7 +676,7 @@ input:-webkit-autofill:active {
 .nutritional-values {
   border: 0.2rem solid rgba(74, 74, 74, 0.1);
   padding: 1rem;
-  margin: 4rem;
+  margin-bottom: 4rem;
 }
 
 .nutritional-values h3 {
@@ -742,6 +743,7 @@ input:-webkit-autofill:active {
   .nutritional-values {
     max-width: 70%;
     margin: 0 auto;
+    margin-bottom: 4rem;
   }
 }
 

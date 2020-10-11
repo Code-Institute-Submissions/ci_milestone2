@@ -157,7 +157,7 @@
 .nutritional-values {
     border: 0.2rem solid rgba($colour-2, 0.1);
     padding: 1rem;
-    margin: 4rem;
+    margin-bottom: 4rem;
 
     h3 {
         font-weight: 500;
@@ -222,5 +222,6 @@
     @include bp(mobile) {
         max-width: 70%;
         margin: 0 auto;
+        margin-bottom: 4rem;
     }
 }

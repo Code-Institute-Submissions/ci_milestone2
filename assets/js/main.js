@@ -151,7 +151,7 @@ const recipeCardsVeggieError = document.querySelector("#veggie-recipes__error-ha
 
 //Get data from Recipe API: Imunno Supportive filter
 function recipeAPIImmunity() {
-    let response = fetch(`https://api.edamam.com/search?app_id=ba5b7a21&app_key=d1d3afcdc37dd030c29294267aaedbc8&q=&health=immuno-supportive`)
+    let response = fetch(`https://api.edamam.com/search?app_id=ba5b7a21&app_key=d1d3afcdc37dd030c29294267aaedbc8&q=&health=immuno-supportive&calories=300-1000`)
         .then(response => response.json())
         .then(data => {
             console.log(data);
@@ -187,7 +187,7 @@ function recipeAPIDataImmunity(data) {
 
 // Get data from Recipe API: Balanced filter
 async function recipeAPIBalanced() {
-    let response = await fetch(`https://api.edamam.com/search?app_id=ba5b7a21&app_key=d1d3afcdc37dd030c29294267aaedbc8&q=&diet=balanced`)
+    let response = await fetch(`https://api.edamam.com/search?app_id=ba5b7a21&app_key=d1d3afcdc37dd030c29294267aaedbc8&q=&diet=balanced&calories=400-2000`)
         .then(response => response.json())
         .then(data => {
             console.log(data);

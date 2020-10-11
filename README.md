@@ -91,6 +91,14 @@ Front end functionalities & API calls.
 
 ### Bugs and Fixes
 
+- Navbar not collapsing after click. Solved by adding `data-toggle="collapse" data-target=".navbar-collapse"` to the <a> tags. [Solution here](https://stackoverflow.com/questions/42401606/how-to-hide-collapsible-bootstrap-4-navbar-on-click).
+
+#### Bugs without fix
+
+- Swiper.js infinite loop doesn't work when data comes from the API. This mode makes the swiper "infinite" by duplicating 3 or 4 slides and when the data comes from the API, the slider is duplicated but it is still empty.  [Demo of what I wanted to implement](https://swiperjs.com/demos/200-infinite-loop.html).
+
+
+
 ## Deployment
 
 This project's repository is hosted on GitHub and was coded using the Visual Studio Code IDE. The following extensions were enabled to facilitate the work:
@@ -188,3 +196,4 @@ More information can be found [here](https://docs.github.com/en/free-pro-team@la
 - [JS: Smooth scroll](https://www.codegrepper.com/code-examples/javascript/scrolling+link+java+script)
 - [JS: Scroll to top](https://www.youtube.com/watch?v=Pd71ZZeIhaI)
 - [JS: Clear icon in search bar](https://www.mikedane.com/web-development/css/styling-search-bar/)
+- [SASS: Media query mixins approach](https://css-tricks.com/conditional-media-query-mixins/)
