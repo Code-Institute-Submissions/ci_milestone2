@@ -963,13 +963,6 @@ input:-webkit-autofill:active {
 .custom-control-input:checked ~ .custom-control-label::before {
   color: white;
   border-color: #015a06;
-  background-color: white;
-}
-
-#yes:checked ~ #yes::before,
-#no:checked ~ #no::before {
-  color: white;
-  border-color: #015a06;
   background-color: #015a06;
 }
 

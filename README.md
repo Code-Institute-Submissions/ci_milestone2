@@ -1,7 +1,6 @@
 # What's for dinner?
 
 ## Overview
-
 [What’s for dinner?](https://stefcruz.github.io/ci_milestone2/) is a website that provides recipe ideas and nutritional information. It brings a vast number of recipe ideas based on a keyword entered on the search bar, and also has a section dedicated to inspire the user with preselected recipe ideas. Finally, it allows the user to search for the nutritional information of many different foods by entering the ingredient on the text box.
 
 The recipes and the nutritional analysis are made available from the [Edamam](https://www.edamam.com/) API.
@@ -13,7 +12,6 @@ The recipes and the nutritional analysis are made available from the [Edamam](ht
 ## UX
 
 ### User stories
-
 As a website user...
 
 - I want to be able to search for a recipe
@@ -27,7 +25,6 @@ As a website user...
 - I want to be able to contact the website
 
 ### Wireframes
-
 The wireframes for this project can be seen [here](https://www.figma.com/file/WV2jyXZgXJcOXwP7wLGHQu/milestone_2?node-id=0%3A1).
 
 [![img](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/wireframes/wireframes.png)](https://www.figma.com/file/WV2jyXZgXJcOXwP7wLGHQu/milestone_2?node-id=0%3A1)
@@ -37,7 +34,6 @@ The wireframes for this project can be seen [here](https://www.figma.com/file/WV
 ### Existing Features
 
 #### Navigation bar
-
 The navbar contains links to the different sections of the site and collapses when the user accesses the webiste through mobile.
 
 Nav desktop and tablet:
@@ -53,8 +49,7 @@ Also, the site also presents the favicon with the logo.
 ![Favicon](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/favicon.png)
 
 #### Main section
-
-The search box with checkbox allow the user to perform a search, which can be based off ingredient or name of the dish. If one or more checkboxes are ticked, the inner text of the ticked checkbox is passed as a parameter to the API URL and this will filter the search. 
+The search box allow the user to perform a search, which can be based off an ingredient or name of the dish. If one or more checkboxes are ticked, the inner text of the ticked checkbox is passed as a parameter to the API URL and this will filter the search. 
 
 ![Main section](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/main-section.png)
 
@@ -67,27 +62,21 @@ The checkboxes are stacked on mobile to make it easier for the user to select th
 ![Search box on mobile](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/search-box-mobile.png)
 
 ##### Back to top arrow
-
 The arrow comes up after scroll down and was implemented to bring the user back to top.
 
 ![Back to top arrow](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/arrow-up.png)
 
 ##### Recipe cards
-
 The recipe cards contain an image, recipe title, number of ingredients so the user can judge the level of difficulty and preparation time of the recipe, health labels in case of any allergy and a link to the original recipe for full list of ingredients and instructions. The data comes from the API [Edamam](https://www.edamam.com/).
 
 ![Recipe cards](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/recipe-card.png)
 
 ##### Error handling
-
 If the API call fails, the error message below is displayed.
 
 ![Error handling](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/main-section-error-handling.png)
 
-
-
 #### Inspiration section
-
 The idea of this section is to bring recipe ideas for the user based on preset filters. 
 
 ![Inspiration section](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/inspiration-section.png)
@@ -97,16 +86,12 @@ Due to the pandemic, the first suggestions are recipes to boost the immune syste
 ![Recipe ideas Immunity](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/inspiration-section-recipe-cards.png)
 
 ##### Error handling
-
 If the API call fails, the error message below is displayed.
 
 ![Error handling](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/inspiration-section-error-handling.png)
 
-
-
 #### Nutritional information section
-
-This section provides the user to search for the nutritional value of a recipe by entering the unit, measure and the ingredient on the text area. For example: 1 cup of rice, 10 oz of chickpeas.
+This section provides the user to search for the nutritional value of a recipe by entering the unit, measure and the ingredient in the text area. For example: 1 cup of rice, 10 oz of chickpeas.
 
 ![Nutritional information section](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/nutritional-info-section.png)
 
@@ -114,31 +99,27 @@ The API brings back the nutritional value per ingredient. For the example above,
 
 ![Nutritional information per ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/nutritional-info-table-ingredient.png)
 
-In addition, it also returns the nutritional value for the dish with the detailed number of calories and all the other nutrients present on the dish.
+In addition, it also returns the nutritional value for the dish with the detailed number of calories and all the other nutrients present in the dish.
 
 ![Nutritional information per dish](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/nutritional-info-table-values.png)
 
 Note the search result by ingredient and for the dish is hidden until API is called, i.e. until user performs a search.
 
 ##### Error handling
-
 If the API call fails, the error message below is displayed.
 
 ![Error handling](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/nutritional-info-error-handling.png)
 
-
-
 #### Contact page
-
 The contact page has the same heading and style as the home page.
 
 ![Contact page header](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/contact-page.png)
 
-And the contact form contains an opt in option for newsletter and the potential topics the user is interested in.
+The contact form contains an opt in option for newsletter and the potential topics the user is interested in.
 
 ![Contact form](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/contact-form.png)
 
-The contact form contain mandatory fields and provides the user feedback for when these fields are empty. The feedback is not only given in the field but underneath the submit button. Initially a modal was used to give the feedback, however it provided a bad UX on mobile as the user had to click on the X button for the popup to close.
+It also has mandatory fields and provides the user feedback for when these fields are empty. The feedback is not only given in the field but underneath the submit button.
 
 ![Negative feedback](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/contact-form-feedback-negative.png)
 
@@ -148,10 +129,7 @@ Likewise, the feedback is positive when the fields are filled in and the message
 
 The Bootstrap form validation was used in conjunction with the [Email JS](https://www.emailjs.com/) tool to create this feature.
 
-
-
 #### Footer
-
 The footer has links to the sections of the homepage and also social media.
 
 Footer mobile:
@@ -163,12 +141,9 @@ Footer desktop and tablet:
 ![Footer desktop and tablet](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/footer-desktop.png)
 
 ##### 404 Page
-
 The personalised 404 page was created in case the site does not load.
 
 ![Open Locally](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/404-page.png)
-
-
 
 ### Features Left to Implement
 
@@ -180,14 +155,12 @@ The initial idea was to create a website with vegetarian/vegan recipes only. How
 - Swiper.js infinite loop  
 Could not make the swiper infinite loop work when the data comes from the API. The swiper achieves the "infinite" effect by duplicating 3 or 4 slides on the HTML. When the data comes from the API, the swiper duplicates the slide however there is no data in it, which results in slides being shown empty in the carousel.  [Demo of what was planned to be implemented](https://swiperjs.com/demos/200-infinite-loop.html).
 
-And the new features that would be nice to have are:
-
+The features that would be nice to have are:
 - Sorting and filtering options for the search results
 - Button to "see more" recipes, not only the first 8 presented
 - Registration/Profile page where the user can create a wish list and post recipes
 
 ## Technologies
-
 This project was built using HTML, CSS and JavaScript. An extra effort has been made to use pure Vanilla JavaScript rather than jQuery, with the intention of learning the foundation of the language and becoming more familiar with JavaScript concepts.
 
 In terms of styling, this website utilised the framework Bootstrap to support through the implementation of a mobile first approach and the preprocessor SASS. Due to the size of the project, the SASS files were divided into partials according to the sections of the website which makes the directory tidier and easier to locate a specific file. 
@@ -195,6 +168,8 @@ In terms of styling, this website utilised the framework Bootstrap to support th
 ![SASS partials](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/sass-partials.png)
 
 Another point to notice is that SASS enables nesting media queries within the block of CSS beside the properties being changed, which again helps the organisation and maintenance of the style sheets. Idea taken from [this blog post](https://css-tricks.com/conditional-media-query-mixins/).
+
+![SASS partials](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/media-query-mixin.png)
 
 
 ### Programming Languages
@@ -253,7 +228,50 @@ The CSS also returned no errors.
 
 ### User Stories Testing
 
+This section has the aim to provide the manual testing of user stories and the description of how the users will achieve their goal. 
+
+As a website user...
+
+- I want to be able to search for a recipe  
+Goal achieved: User goes to homepage and enter a recipe, e.g. ragu.
+
+- I want to be able to search for a recipe and filter by diet labels  
+Goal achieved: User goes to homepage and enter a recipe, e.g. ragu, and also has 4 diet labels to filter by: balanced, low fat, low carb, high protein.
+
+- I want to be able to search for a recipe based on an ingredient  
+Goal achieved: User goes to homepage and enter an ingredient. The search results will be recipes that contain the given ingredient.
+
+- I want to be able to search for a recipe based on an ingredient and filter by diet labels
+Goal achieved: User goes to homepage and enter an ingredient e.g. pork, and also has 4 diet labels to filter by: balanced, low fat, low carb, high protein.
+
+- I want to see recipe ideas without having to search for it
+Goal achieved: User goes to inspiration section and can see recipe ideas without having to search for it.
+
+- I want to be able to search for the nutritional information of a recipe with various ingredients
+Goal achieved: User goes to nutritional information section and can enter a list of ingredients.
+
+- I want to see the nutritional information per ingredient
+Goal achieved: User goes to nutritional information section, can enter a list of ingredients and is presented with 2 tables, one with nutritional value for each ingredient and another with nutritiona values for all the ingredients typed.
+
+- I want to see the nutritional information for the entire recipe
+Goal achieved: User goes to nutritional information section, can enter a list of ingredients and is presented with 2 tables, one with nutritional value for each ingredient and another with nutritiona values for all the ingredients typed.
+
+- I want to be able to contact the website
+Goal achieved: User navigates to contact page through the navbar or footer, and can send an email to the site.
+
 ### Manual Testing
+
+For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+
+1. Contact form:
+   1. Go to the "Contact Us" page
+   2. Try to submit the empty form and verify that an error message about the required fields appears
+   3. Try to submit the form with an invalid email address and verify that a relevant error message appears
+   4. Try to submit the form with all inputs valid and verify that a success message appears.
+
+In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+
+You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
 
 ### Bugs and Fixes
 
