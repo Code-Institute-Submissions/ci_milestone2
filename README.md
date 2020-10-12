@@ -71,7 +71,7 @@ The recipe cards contain an image, recipe title, number of ingredients so the us
 
 ![Recipe cards](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/recipe-card.png)
 
-##### Error handling
+##### Error handling main section
 If the API call fails, the error message below is displayed.
 
 ![Error handling](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/main-section-error-handling.png)
@@ -85,7 +85,7 @@ Due to the pandemic, the first suggestions are recipes to boost the immune syste
 
 ![Recipe ideas Immunity](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/inspiration-section-recipe-cards.png)
 
-##### Error handling
+##### Error handling inspiration section
 If the API call fails, the error message below is displayed.
 
 ![Error handling](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/inspiration-section-error-handling.png)
@@ -105,7 +105,7 @@ In addition, it also returns the nutritional value for the dish with the detaile
 
 Note the search result by ingredient and for the dish is hidden until API is called, i.e. until user performs a search.
 
-##### Error handling
+##### Error handling nutritional value
 If the API call fails, the error message below is displayed.
 
 ![Error handling](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/nutritional-info-error-handling.png)
@@ -216,15 +216,25 @@ Front end functionalities & API calls.
 
 ### W3C HTML Validator
 
-The HTML validator presented a few errors/warnings however they were fixed.
+The pages index.html and contact.html passed through the validator and presented a few errors/warnings that were fixed.
 
 ![HTML Validator](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/w3c-html-validator.png)
+
+
 
 ### W3C CSS Validator
 
 The CSS also returned no errors.
 
 ![CSS Validator](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/w3c-css-validator.png)
+
+
+
+### Google Lighthouse
+
+- As per Google Lighthouse suggestion, I added `rel="noopener"` on the external links. Explanation of what it does [here](https://dev.to/gulshansaini/what-is-rel-noopener-1214).
+
+
 
 ### User Stories Testing
 
@@ -233,49 +243,143 @@ This section has the aim to provide the manual testing of user stories and the d
 As a website user...
 
 - I want to be able to search for a recipe  
-Goal achieved: User goes to homepage and enter a recipe, e.g. ragu.
+  Goal achieved: User goes to homepage and enter a recipe, e.g. ragu.
+
+  **Screenshot**
 
 - I want to be able to search for a recipe and filter by diet labels  
-Goal achieved: User goes to homepage and enter a recipe, e.g. ragu, and also has 4 diet labels to filter by: balanced, low fat, low carb, high protein.
+  Goal achieved: User goes to homepage and enter a recipe, e.g. ragu, and also has 4 diet labels to filter by: balanced, low fat, low carb, high protein.
+
+  **Screenshot**
 
 - I want to be able to search for a recipe based on an ingredient  
-Goal achieved: User goes to homepage and enter an ingredient. The search results will be recipes that contain the given ingredient.
+  Goal achieved: User goes to homepage and enter an ingredient. The search results will be recipes that contain the given ingredient.
+
+  **Screenshot**
 
 - I want to be able to search for a recipe based on an ingredient and filter by diet labels
-Goal achieved: User goes to homepage and enter an ingredient e.g. pork, and also has 4 diet labels to filter by: balanced, low fat, low carb, high protein.
+  Goal achieved: User goes to homepage and enter an ingredient e.g. pork, and also has 4 diet labels to filter by: balanced, low fat, low carb, high protein.
+
+  **Screenshot**
 
 - I want to see recipe ideas without having to search for it
-Goal achieved: User goes to inspiration section and can see recipe ideas without having to search for it.
+  Goal achieved: User goes to inspiration section and can see recipe ideas without having to search for it.
+
+  **Screenshot**
 
 - I want to be able to search for the nutritional information of a recipe with various ingredients
-Goal achieved: User goes to nutritional information section and can enter a list of ingredients.
+  Goal achieved: User goes to nutritional information section and can enter a list of ingredients.
+
+  **Screenshot**
 
 - I want to see the nutritional information per ingredient
-Goal achieved: User goes to nutritional information section, can enter a list of ingredients and is presented with 2 tables, one with nutritional value for each ingredient and another with nutritiona values for all the ingredients typed.
+  Goal achieved: User goes to nutritional information section, can enter a list of ingredients and is presented with 2 tables, one with nutritional value for each ingredient and another with nutritional values for all the ingredients typed.
+
+  **Screenshot**
 
 - I want to see the nutritional information for the entire recipe
-Goal achieved: User goes to nutritional information section, can enter a list of ingredients and is presented with 2 tables, one with nutritional value for each ingredient and another with nutritiona values for all the ingredients typed.
+  Goal achieved: User goes to nutritional information section, can enter a list of ingredients and is presented with 2 tables, one with nutritional value for each ingredient and another with nutritional values for all the ingredients typed.
+
+  **Screenshot**
 
 - I want to be able to contact the website
-Goal achieved: User navigates to contact page through the navbar or footer, and can send an email to the site.
+  Goal achieved: User navigates to contact page through the navbar or footer, and can send an email to the site.
+
+  **Screenshot**
 
 ### Manual Testing
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+The manual test was conducted following the test plan below across different browsers and devices.
 
-1. Contact form:
-   1. Go to the "Contact Us" page
-   2. Try to submit the empty form and verify that an error message about the required fields appears
-   3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-   4. Try to submit the form with all inputs valid and verify that a success message appears.
+#### Testing plan
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+Nav:
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+- [ ] Make sure links are not broken and are linking to correct page.
 
-### Bugs and Fixes
+- [ ] Scroll down and see the arrow up coming up on the right hand side of the screen.
+- [ ] Click on arrow up to bring to top.
+
+Main section:
+
+- [ ] Search for an ingredient and dish pressing enter.
+- [ ] Search for an ingredient and dish pressing the search button.
+- [ ] Perform search ticking one, two, three and four checkboxes.
+- [ ] Click on clear icon to clear contents of search bar.
+- [ ] Click on link "See Recipe" on recipe card.
+
+Inspiration section:
+
+- [ ] Use arrows to navigate through the recipe cards.
+- [ ] Click on link "See Recipe" on recipe card.
+
+Nutritional value:
+
+- [ ] Enter ingredient list with expected values and perform search pressing enter.
+- [ ] Enter ingredient list with expected values and perform search pressing search button.
+- [ ] Enter ingredient list missing one of the required search term (either missing the unit or measure). Expect to see the error message mentioned above in the [Existing Features](#error-handling-nutritional-value) section.
+
+Footer:
+
+- [ ] Click on nav links in the footer.
+
+- [ ] Click on social media links.
+
+Contact Form:
+
+- [ ] Try to submit the empty form. Expect to see the error message underneath each required field.
+- [ ] Try to submit the form with an invalid email address and verify that a relevant error message appears.
+- [ ] Try to submit the form with all inputs valid. Expect to see success message.
+
+
+
+#### Browser and Device Testing
+
+The website was tested on the browsers and devices as follows:
+
+| Device | Browser           | OS                   | Compatibility |
+| ------ | ----------------- | -------------------- | ------------- |
+| PC     | Chrome            | Windows              |               |
+| PC     | Firefox           | Windows              |               |
+| PC     | Microsoft Edge    | Windows              |               |
+| PC     | Internet Explorer | Windows              |               |
+| PC     | Chrome            | Linux                |               |
+| PC     | Firefox           | Linux                |               |
+| PC     | Opera             | Linux                |               |
+| PC     | Chrome            | Mac                  |               |
+| PC     | Firefox           | Mac                  |               |
+| PC     | Safari            | Mac                  |               |
+| Mobile | Chrome            | Huawei               |               |
+| Mobile | Chrome            | Samsung S8 Android 9 |               |
+| Mobile | Safari            | iPhone X             |               |
+
+
+
+#### Bugs and Fixes
+
+A few bugs were encountered during the testing, which were addressed accordingly.
+
+##### Nav
 
 - Navbar not collapsing after click when href is an anchor link, it only works when links to another page. Solved by adding `data-toggle="collapse" data-target=".navbar-collapse"` to the <a> tags. [Solution here](https://stackoverflow.com/questions/42401606/how-to-hide-collapsible-bootstrap-4-navbar-on-click).
+
+##### Main section
+
+- Icon of ticked checkbox looked to thin for Android. Solution was to return to the default icon.
+
+![Checkbox mobile](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/mobile-ticked-checkbox.jpg)
+
+
+
+##### Inspiration section
+
+##### Nutritional value
+
+##### Contact page
+
+- Checkboxes and radio buttons were too close to one another on mobile. Solution was to add margin top and bottom.
+
+
 
 
 ## Deployment
