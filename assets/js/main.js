@@ -94,7 +94,6 @@ function getRecipeAPI() {
 function recipeAPIDataSearchBar(data) {
     if (typeof (data.hits[0].recipe) != undefined) {
 
-
         //Line added to clear results once new search is performed.
         recipeCards.innerHTML = "";
 
@@ -270,16 +269,9 @@ const nutritionalInfoPerIngr = document.querySelector("#nutrition-container__ing
 const nutritionalInfoTable = document.querySelector("#nutrition-container__nutrition-table");
 const nutritionalInfoError = document.querySelector("#nutrition-container__error-handling");
 const nutritionalInfoPerIngrError = document.querySelector("#nutrition-table__error-handling");
+const nutritionalInfoContent = document.getElementById("nutrition-container__tables");
 
-//Event listeners
-textAreaNutrition.addEventListener('keydown', e => {
-    if (e.keyCode === 13) {
-        //preventDefault to stop reloading page when event is fired
-        e.preventDefault();
-        getNutritionalInfoAPI();
-    }
-});
-
+//Event listener
 searchButtonNutrition.addEventListener("click", () => {
     getNutritionalInfoAPI();
 });
@@ -302,6 +294,7 @@ function getNutritionalInfoAPI() {
             nutritionalInfoAPIData(data);
         })
         .catch(err => {
+            nutritionalInfoContent.style.display = "none";
             nutritionalInfoError.innerHTML = `
             <div class="container error-handling">
                 <div class="row">
@@ -319,9 +312,12 @@ function getNutritionalInfoAPI() {
 function nutritionalInfoAPIData(data) {
     let quantity, measure, weight, foodMatch, unit;
     let totalCal, FAT, totalDailyFAT, FASAT, totalDailyFASAT, FATRN, CHOLE, totalDailyCHOLE, NA, totalDailyNA, CHOCDF, totalDailyCHOCDF, FIBTG, totalDailyFIBTG, SUGAR, SUGARadded, PROCNT, totalDailyPROCNT, VITD, totalDailyVITD, CA, totalDailyCA, FE, totalDailyFE, K, totalDailyK, err, table;
+    //Line added to clear results once new search is performed.
+    nutritionalInfoPerIngr.innerHTML = "";
+    nutritionalInfoTable.innerHTML = "";
 
     //Display div that will hold the content returned by the Nutrition API 
-    document.getElementById("nutrition-container__tables").style.display = "block";
+    nutritionalInfoContent.style.display = "block";
 
     //Calories per ingredient
     let html = `<div class="table table-hover">
