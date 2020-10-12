@@ -369,6 +369,8 @@ A few bugs were encountered during the testing, which were addressed accordingly
 
 ![Checkbox mobile](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/mobile-ticked-checkbox.jpg)
 
+- Increased clicking area of the clear icon on search bar following [this tutorial](https://ishadeed.com/article/clickable-area/).
+
 
 
 ##### Inspiration section
@@ -377,7 +379,7 @@ A few bugs were encountered during the testing, which were addressed accordingly
 
 ##### Contact page
 
-- Checkboxes and radio buttons were too close to one another on mobile. Solution was to add margin top and bottom.
+- Checkboxes and radio buttons were too close to one another on mobile. Solution was to add margin bottom to all input boxes.
 
 
 
