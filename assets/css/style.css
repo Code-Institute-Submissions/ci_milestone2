@@ -168,13 +168,13 @@ desktop-large: 1440px
 
 #recipe-form__clear-icon {
   position: absolute;
-  top: 4.3rem;
-  right: 1rem;
-  width: 1.6rem;
   cursor: pointer;
   color: #015a06;
   visibility: hidden;
   font-size: 1.6rem;
+  top: 3.3rem;
+  padding: 1rem;
+  right: 0.4rem;
 }
 
 @media (min-width: 30rem) {
