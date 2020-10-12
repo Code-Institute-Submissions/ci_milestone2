@@ -82,10 +82,6 @@ form {
     }
 }
 
-//Remove default check icon from ticked checkbox
-.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
-    background-image: url();
-}
 
 //Change default colour and bg colour of ticked checkbox / radio button
 .custom-control-input:checked ~ .custom-control-label::before {

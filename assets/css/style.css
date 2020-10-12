@@ -287,7 +287,8 @@ desktop-large: 1440px
 /* checked mark aspect */
 [type="checkbox"]:not(:checked) + label:after,
 [type="checkbox"]:checked + label:after {
-  content: "\2713\0020";
+  background: url("../images/icons/check.svg") center no-repeat;
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -954,10 +955,6 @@ input:-webkit-autofill:active {
     max-width: 90%;
     margin: 0 auto;
   }
-}
-
-.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
-  background-image: url();
 }
 
 .custom-control-input:checked ~ .custom-control-label::before {

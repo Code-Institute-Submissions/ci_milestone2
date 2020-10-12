@@ -178,7 +178,8 @@
 /* checked mark aspect */
 [type="checkbox"]:not(:checked) + label:after,
 [type="checkbox"]:checked + label:after {
-    content: "\2713\0020";
+    background: url('../images/icons/check.svg') center no-repeat;
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
