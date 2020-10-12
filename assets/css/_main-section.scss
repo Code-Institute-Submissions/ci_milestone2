@@ -80,24 +80,23 @@
         visibility: hidden;
         font-size: $normal-text-size;
         
-        //test increase clickable area
-        //width: 1.6rem;
+        //increase clickable area
         top: 3.3rem;
         padding: 1rem;
         right: 0.4rem;
 
         @include bp(mobile) {
-            right: 7.5rem;
+            right: 6.8rem;
             visibility: hidden;
         }
 
         @include bp(desktop) {
-            right: 10rem;
+            right: 9rem;
             visibility: hidden;
         }
 
         @include bp(desktop-large) {
-            right: 11rem;
+            right: 10.5rem;
         }
     }
 }
@@ -223,35 +222,41 @@ input:-webkit-autofill:active {
     margin-bottom: 3rem;
     font-family: $normal-text;
     color: $colour-2;
+    font-size: 1.5rem;
 
     &__title {
-        margin-top: 1rem;
-        font-size: 1.5rem;
+        margin: 1.5rem 0;
+        font-size: 1.7rem;
         color: $colour-1;
         font-weight: 700;
         padding: 0 1rem;
     }
 
     span {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-weight: 700;
     }
 
     li {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+    }
+
+    .li-health-labels {
+        margin-bottom: 1.2rem;
     }
 
     .btn {
-        font-size: 1.2rem;
-        background-color: $colour-1;
-        border-color: $colour-1;
+        font-size: 1.5rem;
+        background-color: rgba($colour-2, 0.2);
+        border-color: rgba($colour-2, 0.1);
+        color: $colour-1;
     }
 
     .badge {
-        background-color: rgba($colour-2, 0.3);
+        background-color: rgba($colour-2, 0.6);
         margin: 0.4rem;
-        color: $colour-2;
-        font-size: 1rem;
+        color: $white;
+        font-size: 1.4rem;
     }
 }
 

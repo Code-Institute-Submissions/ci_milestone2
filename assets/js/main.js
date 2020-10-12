@@ -116,7 +116,7 @@ function recipeAPIDataSearchBar(data) {
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><span>Calories: </span>${parseInt(data.hits[i].recipe.calories)}</li>
                     <li class="list-group-item"><span>Ingredients used: </span>${data.hits[i].recipe.ingredients.length}</li>
-                    <li class="list-group-item"><span>Health labels: </span>${healthLabelsPillsHTML}</li>
+                    <li class="list-group-item li-health-labels"><span>Health labels: </span>${healthLabelsPillsHTML}</li>
                 </ul>
                 <a href="${data.hits[i].recipe.url}" target="_blank" class="btn btn-primary" rel="noopener">See Recipe</a>
                 </div>
