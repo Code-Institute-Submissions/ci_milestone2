@@ -243,68 +243,90 @@ This section has the aim to provide the manual testing of user stories and the d
 As a website user...
 
 - I want to be able to search for a recipe  
-  Goal achieved: User goes to homepage and enter a recipe, e.g. lasagna.
-
-![User story search](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-one-desktop.png)
-
-
-
-- I want to be able to search for a recipe and filter by diet labels  
-  Goal achieved: User goes to homepage and enter a recipe, e.g. lasagna, and also has 4 diet labels to filter by: balanced, low fat, low carb, high protein.
+  - Goal achieved: User goes to homepage and enter a recipe, e.g. lasagna.
 
 Desktop:
+![User story search](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-one-desktop.png)
 
+Mobile:
+![User story search](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-one-mobile.jpg)
+
+- I want to be able to search for a recipe and filter by diet labels  
+  - Goal achieved: User goes to homepage and enter a recipe, e.g. lasagna, and also has 4 diet labels to filter by: balanced, low fat, low carb, high protein.
+
+Desktop:
 ![User story search and filter](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-two-desktop.png)
 
 Mobile:
-
-![User story search and filter](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-two-mobile.png)
+![User story search and filter](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-two-mobile.jpg)
 
 
 - I want to be able to search for a recipe based on an ingredient  
-  Goal achieved: User goes to homepage and enter an ingredient. The search results will be recipes that contain the given ingredient.
+  - Goal achieved: User goes to homepage and enter an ingredient. The search results will be recipes that contain the given ingredient.
 
 Desktop:
-
-![User story search and filter](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-three-desktop.png)
+![User story ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-three-desktop.png)
 
 Mobile:
-
-![User story search and filter](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-three-mobile.png)
+![User story ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-three-mobile.jpg)
 
 - I want to be able to search for a recipe based on an ingredient and filter by diet labels
-  Goal achieved: User goes to homepage and enter an ingredient e.g. pork, and also has 4 diet labels to filter by: balanced, low fat, low carb, high protein.
+  - Goal achieved: User goes to homepage and enter an ingredient e.g. pork, and also has 4 diet labels to filter by: balanced, low fat, low carb, high protein.
 
 Desktop:
+![User story ingredient and filter](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-four-desktop.png)
 
-![User story search and filter](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-four-desktop.png)
-
-![User story search and filter](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-four-mobile.png)
+Mobile:
+![User story ingredient and filter](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-four-mobile.jpg)
 
 - I want to see recipe ideas without having to search for it
-  Goal achieved: User goes to inspiration section and can see recipe ideas without having to search for it.
+  - Goal achieved: User goes to inspiration section and can see recipe ideas without having to search for it.
 
-  **Screenshot**
+Desktop:
+![User story inspiration section](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-five-desktop.png)
+
+Mobile:
+![User story inspiration section](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-five-mobile.jpg)
 
 - I want to be able to search for the nutritional information of a recipe with various ingredients
-  Goal achieved: User goes to nutritional information section and can enter a list of ingredients.
+  
+- Goal achieved: User goes to nutritional information section and can enter a list of ingredients.
+  
+Desktop:
+![User story nutritional info section](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-six-desktop.png)
 
-  **Screenshot**
-
+Mobile:
+![User story nutritional info section](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-six-mobile.jpg)
+  
 - I want to see the nutritional information per ingredient
-  Goal achieved: User goes to nutritional information section, can enter a list of ingredients and is presented with 2 tables, one with nutritional value for each ingredient and another with nutritional values for all the ingredients typed.
+  
+- Goal achieved: User goes to nutritional information section, can enter a list of ingredients and is presented with 2 tables, one with nutritional value for each ingredient and another with nutritional values for all the ingredients typed.
+  
+Desktop:
+![User story nutritional info section result per ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-seven-desktop.png)
 
-  **Screenshot**
-
+Mobile:
+![User story nutritional info section result per ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-seven-mobile.jpg)
+  
 - I want to see the nutritional information for the entire recipe
-  Goal achieved: User goes to nutritional information section, can enter a list of ingredients and is presented with 2 tables, one with nutritional value for each ingredient and another with nutritional values for all the ingredients typed.
+  
+- Goal achieved: User goes to nutritional information section, can enter a list of ingredients and is presented with 2 tables, one with nutritional value for each ingredient and another with nutritional values for all the ingredients typed.
+  
+Desktop:
+![User story nutritional info section result for recipe](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-seven-desktop.png)
 
-  **Screenshot**
-
+Mobile:
+![User story nutritional info section result for recipe](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-seven-mobile.jpg)
+  
 - I want to be able to contact the website
-  Goal achieved: User navigates to contact page through the navbar or footer, and can send an email to the site.
+  
+- Goal achieved: User navigates to contact page through the navbar or footer, and can send an email to the site.
+  
+Desktop:
+![User story contact page](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-seven-desktop.png)
 
-  **Screenshot**
+Mobile:
+![User story contact page](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-seven-mobile.jpg)
 
 ### Manual Testing
 
@@ -315,7 +337,6 @@ The manual test was conducted following the test plan below across different bro
 Nav:
 
 - [x] Make sure links are not broken and are linking to correct page.
-
 - [x] Scroll down and see the arrow up coming up on the right hand side of the screen.
 - [x] Click on arrow up to bring to top.
 
@@ -341,20 +362,19 @@ Nutritional value:
 Footer:
 
 - [x] Click on nav links in the footer.
-
 - [x] Click on social media links.
 
 Contact Form:
 
 - [x] Try to submit the empty form. Expect to see the error message underneath each required field.
-- [x] Try to submit the form with an invalid email address and verify that a relevant error message appears.
+- [x] Try to submit the form with an invalid email address. Expect to see an error message.
 - [x] Try to submit the form with all inputs valid. Expect to see success message.
 
 
 
 #### Browser and Device Testing
 
-The website was tested on the browsers and devices as follows. The website was not tested on a mobile as I do not have access to one.
+The website was tested on the browsers and devices as follows. The website was not tested on a tablet as I do not have access to one.
 
 | Device | Browser           | OS                   | Compatibility |
 | ------ | ----------------- | -------------------- | ------------- |
