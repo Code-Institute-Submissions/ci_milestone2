@@ -55,7 +55,7 @@ The search box allow the user to perform a search, which can be based off an ing
 
 The tooltip on the checkboxes works on desktop only. There is no equivalent for mobile as the page would be too wordy.
 
-![Tooltip](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/main-section-hover.png)
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/main-section-hover.png" width="600">
 
 The checkboxes are stacked on mobile to make it easier for the user to select the options.
 
@@ -93,15 +93,15 @@ If the API call fails, the error message below is displayed.
 #### Nutritional information section
 This section provides the user to search for the nutritional value of a recipe by entering the unit, measure and the ingredient in the text area. For example: 1 cup of rice, 10 oz of chickpeas.
 
-![Nutritional information section](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/nutritional-info-section.png)
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/nutritional-info-section.png" width="600">
 
 The API brings back the nutritional value per ingredient. For the example above, the calorie and weight of the first ingredient 1 cup of rice and separately the calorie and weight for the 10 oz of chickpeas.
 
-![Nutritional information per ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/nutritional-info-table-ingredient.png)
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/nutritional-info-table-ingredient.png" width="600">
 
 In addition, it also returns the nutritional value for the dish with the detailed number of calories and all the other nutrients present in the dish.
 
-![Nutritional information per dish](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/nutritional-info-table-values.png)
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/nutritional-info-table-values.png" width="600">
 
 Note the search result by ingredient and for the dish is hidden until API is called, i.e. until user performs a search.
 
@@ -113,7 +113,7 @@ If the API call fails, the error message below is displayed.
 #### Contact page
 The contact page has the same heading and style as the home page.
 
-![Contact page header](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/contact-page.png)
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/contact-page.png" width="600">
 
 The contact form contains an opt in option for newsletter and the potential topics the user is interested in.
 
@@ -134,7 +134,7 @@ The footer has links to the sections of the homepage and also social media.
 
 Footer mobile:
 
-![Footer mobile](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/footer-mobile.png)
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/footer-mobile.png" width="200">
 
 Footer desktop and tablet:
 
@@ -143,7 +143,7 @@ Footer desktop and tablet:
 ##### 404 Page
 The personalised 404 page was created in case the site does not load.
 
-![Open Locally](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/404-page.png)
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/404-page.png" width="600">
 
 ### Features Left to Implement
 
@@ -242,95 +242,91 @@ This section has the aim to provide the manual testing of user stories and the d
 
 As a website user...
 
-- I want to be able to search for a recipe  
+- I want to be able to search for a recipe.
   - Goal achieved: User goes to homepage and enter a recipe, e.g. lasagna.
 
 Desktop:
-![User story search](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-one-desktop.png)
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-one-desktop.png" width="600">
 
 Mobile:
-![User story search](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-one-mobile.jpg)
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-one-mobile.jpg" width="250">
 
-- I want to be able to search for a recipe and filter by diet labels  
+- I want to be able to search for a recipe and filter by diet labels.
   - Goal achieved: User goes to homepage and enter a recipe, e.g. lasagna, and also has 4 diet labels to filter by: balanced, low fat, low carb, high protein.
 
 Desktop:
-![User story search and filter](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-two-desktop.png)
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-two-desktop.png" width="600">
 
 Mobile:
-![User story search and filter](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-two-mobile.jpg)
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-two-mobile.jpg" width="250">
 
 
-- I want to be able to search for a recipe based on an ingredient  
+- I want to be able to search for a recipe based on an ingredient.
   - Goal achieved: User goes to homepage and enter an ingredient. The search results will be recipes that contain the given ingredient.
 
 Desktop:
-![User story ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-three-desktop.png)
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-three-desktop.png" width="600">
 
 Mobile:
-![User story ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-three-mobile.jpg)
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-three-mobile.jpg" width="250">
 
-- I want to be able to search for a recipe based on an ingredient and filter by diet labels
+- I want to be able to search for a recipe based on an ingredient and filter by diet labels.
   - Goal achieved: User goes to homepage and enter an ingredient e.g. pork, and also has 4 diet labels to filter by: balanced, low fat, low carb, high protein.
 
 Desktop:
-![User story ingredient and filter](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-four-desktop.png)
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-four-desktop.png" width="600">
 
 Mobile:
-![User story ingredient and filter](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-four-mobile.jpg)
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-four-mobile.jpg" width="250">
 
-- I want to see recipe ideas without having to search for it
+- I want to see recipe ideas without having to search for it.
   - Goal achieved: User goes to inspiration section and can see recipe ideas without having to search for it.
 
 Desktop:
-![User story inspiration section](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-five-desktop.png)
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-five-desktop.png" width="600">
 
 Mobile:
 ![User story inspiration section](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-five-mobile.png)
 
-- I want to be able to search for the nutritional information of a recipe with various ingredients
-  
-- Goal achieved: User goes to nutritional information section and can enter a list of ingredients.
+- I want to be able to search for the nutritional information of a recipe with various ingredients.
+  - Goal achieved: User goes to nutritional information section and can enter a list of ingredients.
   
 
 Desktop:
 ![User story nutritional info section](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-six-desktop.png)
 
-Mobile:
+Mobile:  
 ![User story nutritional info section](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-six-mobile.png)
 
-- I want to see the nutritional information per ingredient
-  
-- Goal achieved: User goes to nutritional information section, can enter a list of ingredients and is presented with 2 tables, one with nutritional value for each ingredient and another with nutritional values for all the ingredients typed.
+- I want to see the nutritional information per ingredient.
+  - Goal achieved: User goes to nutritional information section, can enter a list of ingredients and is presented with 2 tables, one with nutritional value for each ingredient and another with nutritional values for all the ingredients typed.
   
 
 Desktop:
 ![User story nutritional info section result per ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-seven-desktop.png)
 
-Mobile:
+Mobile:  
 ![User story nutritional info section result per ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-seven-mobile.png)
 
 - I want to see the nutritional information for the entire recipe
-  
-- Goal achieved: User goes to nutritional information section, can enter a list of ingredients and is presented with 2 tables, one with nutritional value for each ingredient and another with nutritional values for all the ingredients typed.
+  - Goal achieved: User goes to nutritional information section, can enter a list of ingredients and is presented with 2 tables, one with nutritional value for each ingredient and another with nutritional values for all the ingredients typed.
   
 
 Desktop:
 ![User story nutritional info section result for recipe](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-eight-desktop.png)
 
-Mobile:
-![User story nutritional info section result for recipe](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-eight-mobile.png)
+Mobile:  
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-eight-mobile.png" width="300">
 
 - I want to be able to contact the website
-  
-- Goal achieved: User navigates to contact page through the navbar or footer, and can send an email to the site.
+  - Goal achieved: User navigates to contact page through the navbar or footer, and can send an email to the site.
   
 
 Desktop:
-![User story contact page](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-nine-desktop.png)
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-nine-desktop.png" width="600">
 
-Mobile:
-![User story contact page](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-nine-mobile.png)
+Mobile:  
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-nine-mobile.png" width="300">
 
 ### Manual Testing
 
