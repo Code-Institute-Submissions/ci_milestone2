@@ -245,84 +245,80 @@ As a website user...
 - I want to be able to search for a recipe.
   - Goal achieved: User goes to homepage and enter a recipe, e.g. lasagna.
 
-Desktop:
+Desktop:  
 <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-one-desktop.png" width="600">
 
-Mobile:
+Mobile:  
 <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-one-mobile.jpg" width="250">
 
 - I want to be able to search for a recipe and filter by diet labels.
   - Goal achieved: User goes to homepage and enter a recipe, e.g. lasagna, and also has 4 diet labels to filter by: balanced, low fat, low carb, high protein.
 
-Desktop:
-<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-two-desktop.png" width="600">
+Desktop:  
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-two-desktop.png" width="500">
 
-Mobile:
+Mobile:  
 <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-two-mobile.jpg" width="250">
 
 
 - I want to be able to search for a recipe based on an ingredient.
   - Goal achieved: User goes to homepage and enter an ingredient. The search results will be recipes that contain the given ingredient.
 
-Desktop:
-<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-three-desktop.png" width="600">
+Desktop:  
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-three-desktop.png" width="500">
 
-Mobile:
+Mobile:  
 <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-three-mobile.jpg" width="250">
 
 - I want to be able to search for a recipe based on an ingredient and filter by diet labels.
   - Goal achieved: User goes to homepage and enter an ingredient e.g. pork, and also has 4 diet labels to filter by: balanced, low fat, low carb, high protein.
 
-Desktop:
-<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-four-desktop.png" width="600">
+Desktop:  
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-four-desktop.png" width="500">
 
-Mobile:
+Mobile:  
 <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-four-mobile.jpg" width="250">
 
 - I want to see recipe ideas without having to search for it.
   - Goal achieved: User goes to inspiration section and can see recipe ideas without having to search for it.
 
-Desktop:
+Desktop:  
 <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-five-desktop.png" width="600">
 
-Mobile:
-![User story inspiration section](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-five-mobile.png)
+Mobile:  
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-five-mobile.png" width="250">
 
 - I want to be able to search for the nutritional information of a recipe with various ingredients.
   - Goal achieved: User goes to nutritional information section and can enter a list of ingredients.
-  
 
-Desktop:
-![User story nutritional info section](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-six-desktop.png)
+Desktop:  
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-six-desktop.png" width="500">
 
 Mobile:  
-![User story nutritional info section](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-six-mobile.png)
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-six-mobile.png" width="250">
 
 - I want to see the nutritional information per ingredient.
   - Goal achieved: User goes to nutritional information section, can enter a list of ingredients and is presented with 2 tables, one with nutritional value for each ingredient and another with nutritional values for all the ingredients typed.
-  
 
-Desktop:
-![User story nutritional info section result per ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-seven-desktop.png)
+Desktop:  
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-seven-desktop.png" width="500">
 
 Mobile:  
-![User story nutritional info section result per ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-seven-mobile.png)
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-seven-mobile.png" width="250">
 
 - I want to see the nutritional information for the entire recipe
   - Goal achieved: User goes to nutritional information section, can enter a list of ingredients and is presented with 2 tables, one with nutritional value for each ingredient and another with nutritional values for all the ingredients typed.
-  
 
-Desktop:
-![User story nutritional info section result for recipe](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-eight-desktop.png)
+Desktop:  
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-eight-desktop.png" width="500">
 
 Mobile:  
 <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-eight-mobile.png" width="300">
 
 - I want to be able to contact the website
   - Goal achieved: User navigates to contact page through the navbar or footer, and can send an email to the site.
-  
 
-Desktop:
+Desktop:  
 <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-nine-desktop.png" width="600">
 
 Mobile:  
@@ -376,52 +372,72 @@ Contact Form:
 
 The website was tested on the browsers and devices as follows. The website was not tested on a tablet as I do not have access to one.
 
-| Device | Browser           | OS                   | Compatibility |
-| ------ | ----------------- | -------------------- | ------------- |
-| PC     | Chrome            | Windows              |               |
-| PC     | Firefox           | Windows              |               |
-| PC     | Microsoft Edge    | Windows              |               |
-| PC     | Internet Explorer | Windows              |               |
-| PC     | Chrome            | Linux                |               |
-| PC     | Firefox           | Linux                |               |
-| PC     | Opera             | Linux                |               |
-| PC     | Chrome            | Mac                  |               |
-| PC     | Firefox           | Mac                  |               |
-| PC     | Safari            | Mac                  |               |
-| Mobile | Chrome            | Huawei               |               |
-| Mobile | Chrome            | Samsung S8 Android 9 | Excellent     |
-| Mobile | Safari            | iPhone X             |               |
+| ID              | Device  | Browser                | OS                   | Compatibility |
+| --------------- | ------- | ---------------------- | -------------------- | ------------- |
+| D_Chrome_Win    | Desktop | Chrome 86.0            | Windows              | Excellent     |
+| D_Firefox_Win   | Desktop | Firefox 79.0           | Windows              | Excellent     |
+| D_Edge_Win      | Desktop | Microsoft Edge 44      | Windows              | Good          |
+| D_IE_Win        | Desktop | Internet Explorer 11.1 | Windows              | Bad           |
+| D_Chrome_Linux  | Desktop | Chrome                 | Linux                |               |
+| D_Firefox_Linux | Desktop | Firefox                | Linux                |               |
+| D_Opera_Linux   | Desktop | Opera                  | Linux                |               |
+| D_Chrome_Mac    | Desktop | Chrome                 | Mac                  |               |
+| D_Firefox_Mac   | Desktop | Firefox                | Mac                  |               |
+| D_Safari_Mac    | Desktop | Safari                 | Mac                  |               |
+| M_Chrome_Huawei | Mobile  | Chrome                 | Huawei               |               |
+| M_Chrome_Sams   | Mobile  | Chrome                 | Samsung S8 Android 9 | Excellent     |
+| M_Chrome_iPhone | Mobile  | Safari                 | iPhone X             |               |
 
 
 
 #### Bugs and Fixes
 
-A few bugs were encountered during the testing, which were addressed accordingly.
+A few bugs were encountered during the testing, which were addressed accordingly where possible.
 
-##### Nav
+##### Browser bugs
+
+This section only highlights the browsers and devices in which compatibility are either Good or Bad and reference the ID as per table above.
+
+- D_Edge_Win
+  - Smooth scroll doesn't work
+  - Clear form icon displayed by default on the top of the style one
+
+
+
+- D_IE_Win
+  - Nav: anchor links do not bring user to appropriate section, only to contact page. The click causes the nav to flicker. However, the links do work on footer and contact page.
+  - Main section: clear icon on search bar is replaced with a default one. 
+  - Main section: after typing an ingredient and recipe on search bar, clicking on button or pressing enter does not trigger any action.
+
+
+
+
+
+
+
+##### General bugs
+
+###### Nav
 
 - Navbar not collapsing after click when href is an anchor link, it only works when links to another page. Solved by adding `data-toggle="collapse" data-target=".navbar-collapse"` to the <a> tags. [Solution here](https://stackoverflow.com/questions/42401606/how-to-hide-collapsible-bootstrap-4-navbar-on-click).
 
-##### Main section
+###### Main section
 
 - Icon of ticked checkbox looked to thin for Android. Solution: return to the default icon.
 
-![Checkbox mobile](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/mobile-ticked-checkbox.jpg)
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/mobile-ticked-checkbox.jpg)" width="250">
 
 - Clicking area of the clear icon on search bar too narrow. Solution: increased it following [this tutorial](https://ishadeed.com/article/clickable-area/).
 - Font too small in recipe cards. Solution: Increased font size to 1rem (16px).
 - The API will throw an error if there are no results for the combination of the dish or ingredient + diet label. For example, search for lasagna with diet label low-fat. Understandably enough, there is no low-fat lasagna due to the nature of the dish. Solution: another if statement considering this scenario however it was not implemented this time due to time constraints.
 
-##### Nutritional value
+###### Nutritional value
 
 - Removed event listener to perform search pressing enter. This was required as the text area requires pressing enter to skip line to enter the ingredients, not to call the API.
 
-##### Contact page
+###### Contact page
 
 - Checkboxes and radio buttons were too close to one another on mobile. Solution was to add margin bottom to all input boxes.
-
-
-
 
 ## Deployment
 
