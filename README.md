@@ -243,24 +243,43 @@ This section has the aim to provide the manual testing of user stories and the d
 As a website user...
 
 - I want to be able to search for a recipe  
-  Goal achieved: User goes to homepage and enter a recipe, e.g. ragu.
+  Goal achieved: User goes to homepage and enter a recipe, e.g. lasagna.
 
-  **Screenshot**
+![User story search](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-one-desktop.png)
+
+
 
 - I want to be able to search for a recipe and filter by diet labels  
-  Goal achieved: User goes to homepage and enter a recipe, e.g. ragu, and also has 4 diet labels to filter by: balanced, low fat, low carb, high protein.
+  Goal achieved: User goes to homepage and enter a recipe, e.g. lasagna, and also has 4 diet labels to filter by: balanced, low fat, low carb, high protein.
 
-  **Screenshot**
+Desktop:
+
+![User story search and filter](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-two-desktop.png)
+
+Mobile:
+
+![User story search and filter](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-two-mobile.png)
+
 
 - I want to be able to search for a recipe based on an ingredient  
   Goal achieved: User goes to homepage and enter an ingredient. The search results will be recipes that contain the given ingredient.
 
-  **Screenshot**
+Desktop:
+
+![User story search and filter](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-three-desktop.png)
+
+Mobile:
+
+![User story search and filter](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-three-mobile.png)
 
 - I want to be able to search for a recipe based on an ingredient and filter by diet labels
   Goal achieved: User goes to homepage and enter an ingredient e.g. pork, and also has 4 diet labels to filter by: balanced, low fat, low carb, high protein.
 
-  **Screenshot**
+Desktop:
+
+![User story search and filter](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-four-desktop.png)
+
+![User story search and filter](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-four-mobile.png)
 
 - I want to see recipe ideas without having to search for it
   Goal achieved: User goes to inspiration section and can see recipe ideas without having to search for it.
@@ -295,47 +314,47 @@ The manual test was conducted following the test plan below across different bro
 
 Nav:
 
-- [ ] Make sure links are not broken and are linking to correct page.
+- [x] Make sure links are not broken and are linking to correct page.
 
-- [ ] Scroll down and see the arrow up coming up on the right hand side of the screen.
-- [ ] Click on arrow up to bring to top.
+- [x] Scroll down and see the arrow up coming up on the right hand side of the screen.
+- [x] Click on arrow up to bring to top.
 
 Main section:
 
-- [ ] Search for an ingredient and dish pressing enter.
-- [ ] Search for an ingredient and dish pressing the search button.
-- [ ] Perform search ticking one, two, three and four checkboxes.
-- [ ] Click on clear icon to clear contents of search bar.
-- [ ] Click on link "See Recipe" on recipe card.
+- [x] Search for an ingredient and dish pressing enter.
+- [x] Search for an ingredient and dish pressing the search button.
+- [x] Perform search ticking one, two, three and four checkboxes.
+- [x] Click on clear icon to clear contents of search bar.
+- [x] Click on link "See Recipe" on recipe card.
 
 Inspiration section:
 
-- [ ] Use arrows to navigate through the recipe cards.
-- [ ] Click on link "See Recipe" on recipe card.
+- [x] Use arrows to navigate through the recipe cards.
+- [x] Click on link "See Recipe" on recipe card.
 
 Nutritional value:
 
-- [ ] Enter ingredient list with expected values and perform search pressing enter.
-- [ ] Enter ingredient list with expected values and perform search pressing search button.
-- [ ] Enter ingredient list missing one of the required search term (either missing the unit or measure). Expect to see the error message mentioned above in the [Existing Features](#error-handling-nutritional-value) section.
+- [x] Enter ingredient list with expected values and perform search pressing enter.
+- [x] Enter ingredient list with expected values and perform search pressing search button.
+- [x] Enter ingredient list missing one of the required search term (either missing the unit or measure). Expect to see the error message mentioned above in the [Existing Features](#error-handling-nutritional-value) section.
 
 Footer:
 
-- [ ] Click on nav links in the footer.
+- [x] Click on nav links in the footer.
 
-- [ ] Click on social media links.
+- [x] Click on social media links.
 
 Contact Form:
 
-- [ ] Try to submit the empty form. Expect to see the error message underneath each required field.
-- [ ] Try to submit the form with an invalid email address and verify that a relevant error message appears.
-- [ ] Try to submit the form with all inputs valid. Expect to see success message.
+- [x] Try to submit the empty form. Expect to see the error message underneath each required field.
+- [x] Try to submit the form with an invalid email address and verify that a relevant error message appears.
+- [x] Try to submit the form with all inputs valid. Expect to see success message.
 
 
 
 #### Browser and Device Testing
 
-The website was tested on the browsers and devices as follows:
+The website was tested on the browsers and devices as follows. The website was not tested on a mobile as I do not have access to one.
 
 | Device | Browser           | OS                   | Compatibility |
 | ------ | ----------------- | -------------------- | ------------- |
@@ -350,7 +369,7 @@ The website was tested on the browsers and devices as follows:
 | PC     | Firefox           | Mac                  |               |
 | PC     | Safari            | Mac                  |               |
 | Mobile | Chrome            | Huawei               |               |
-| Mobile | Chrome            | Samsung S8 Android 9 |               |
+| Mobile | Chrome            | Samsung S8 Android 9 | Excellent     |
 | Mobile | Safari            | iPhone X             |               |
 
 
@@ -365,17 +384,17 @@ A few bugs were encountered during the testing, which were addressed accordingly
 
 ##### Main section
 
-- Icon of ticked checkbox looked to thin for Android. Solution was to return to the default icon.
+- Icon of ticked checkbox looked to thin for Android. Solution: return to the default icon.
 
 ![Checkbox mobile](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/mobile-ticked-checkbox.jpg)
 
-- Increased clicking area of the clear icon on search bar following [this tutorial](https://ishadeed.com/article/clickable-area/).
-
-
-
-##### Inspiration section
+- Clicking area of the clear icon on search bar too narrow. Solution: increased it following [this tutorial](https://ishadeed.com/article/clickable-area/).
+- Font too small in recipe cards. Solution: Increased font size to 1rem (16px).
+- The API will throw an error if there are no results for the combination of the dish or ingredient + diet label. For example, search for lasagna with diet label low-fat. Understandably enough, there is no low-fat lasagna due to the nature of the dish. Solution: another if statement considering this scenario however it was not implemented this time due to time constraints.
 
 ##### Nutritional value
+
+- Removed event listener to perform search pressing enter. This was required as the text area requires pressing enter to skip line to enter the ingredients, not to call the API.
 
 ##### Contact page
 

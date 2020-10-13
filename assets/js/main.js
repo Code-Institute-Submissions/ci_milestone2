@@ -77,6 +77,7 @@ function getRecipeAPI() {
             recipeAPIDataSearchBar(data);
         })
         .catch(err => {
+            recipeCards.innerHTML = "";
             errorHandling.innerHTML = `
             <div class="container error-handling">
                 <div class="row">
@@ -94,8 +95,10 @@ function getRecipeAPI() {
 function recipeAPIDataSearchBar(data) {
     if (typeof (data.hits[0].recipe) != undefined) {
 
-        //Line added to clear results once new search is performed.
+        //Clear results once new search is performed.
         recipeCards.innerHTML = "";
+        //Clear error message in case it has been displayed before.
+        errorHandling.innerHTML = "";
 
         for (let i = 0; i < 8; i++) {
             //Print health labels in pills
@@ -124,12 +127,13 @@ function recipeAPIDataSearchBar(data) {
         }
     }
     else {
+        recipeCards.innerHTML = "";
         errorHandling.innerHTML =
             `<div class="container error-handling">
             <div class="row">
                 <div class="col">
                     <i class="fas fa-exclamation-triangle"></i>
-                    <p>Ops something went wrong, please change the search term and try again.</p>
+                    <p>Ops something went wrong, please change the search term or the filters and try again.</p>
                 </div>
             </div>
         </div>`
@@ -279,7 +283,7 @@ searchButtonNutrition.addEventListener("click", () => {
 //Nutritional info API call
 function getNutritionalInfoAPI() {
     let arr = {
-        "ingr": document.querySelector("#nutrition-container__label").value.split(/\n|\r/)
+        "ingr": textAreaNutrition.value.split(/\n|\r/)
     };
     fetch('https://api.edamam.com/api/nutrition-details?app_id=57fbc896&app_key=83257937fbf237c98e94e34056ea7388', {
         method: 'post',
