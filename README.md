@@ -27,7 +27,7 @@ As a website user...
 ### Wireframes
 The wireframes for this project can be seen [here](https://www.figma.com/file/WV2jyXZgXJcOXwP7wLGHQu/milestone_2?node-id=0%3A1).
 
-[![img](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/wireframes/wireframes.png)](https://www.figma.com/file/WV2jyXZgXJcOXwP7wLGHQu/milestone_2?node-id=0%3A1)
+[![img](https://github.com/stefcruz/ci_milestone2/blob/master/readme/wireframes/wireframes.png)](https://www.figma.com/file/WV2jyXZgXJcOXwP7wLGHQu/milestone_2?node-id=0%3A1)
 
 ## Features
 
@@ -38,94 +38,94 @@ The navbar contains links to the different sections of the site and collapses wh
 
 Nav desktop and tablet:
 
-![Nav desktop and tablet](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/nav-desktop-tablet.png)
+![Nav desktop and tablet](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/nav-desktop-tablet.png)
 
 Nav mobile:
 
-![Nav desktop and mobile](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/nav-mobile.png)
+![Nav desktop and mobile](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/nav-mobile.png)
 
 Also, the site also presents the favicon with the logo.
 
-![Favicon](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/favicon.png)
+![Favicon](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/favicon.png)
 
 #### Main section
 The search box allow the user to perform a search, which can be based off an ingredient or name of the dish. If one or more checkboxes are ticked, the inner text of the ticked checkbox is passed as a parameter to the API URL and this will filter the search. 
 
-![Main section](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/main-section.png)
+![Main section](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/main-section.png)
 
 The tooltip on the checkboxes works on desktop only. There is no equivalent for mobile as the page would be too wordy.
 
-![Tooltip](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/main-section-hover.png)
+![Tooltip](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/main-section-hover.png)
 
 The checkboxes are stacked on mobile to make it easier for the user to select the options.
 
-![Search box on mobile](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/search-box-mobile.png)
+![Search box on mobile](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/search-box-mobile.png)
 
 ##### Back to top arrow
 The arrow comes up after scroll down and was implemented to bring the user back to top.
 
-![Back to top arrow](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/arrow-up.png)
+![Back to top arrow](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/arrow-up.png)
 
 ##### Recipe cards
 The recipe cards contain an image, recipe title, number of ingredients so the user can judge the level of difficulty and preparation time of the recipe, health labels in case of any allergy and a link to the original recipe for full list of ingredients and instructions. The data comes from the API [Edamam](https://www.edamam.com/).
 
-![Recipe cards](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/recipe-card.png)
+![Recipe cards](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/recipe-card.png)
 
 ##### Error handling main section
 If the API call fails, the error message below is displayed.
 
-![Error handling](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/main-section-error-handling.png)
+![Error handling](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/main-section-error-handling.png)
 
 #### Inspiration section
 The idea of this section is to bring recipe ideas for the user based on preset filters. 
 
-![Inspiration section](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/inspiration-section.png)
+![Inspiration section](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/inspiration-section.png)
 
 Due to the pandemic, the first suggestions are recipes to boost the immune system, followed by well-balanced recipes and vegetarian options. Again the data comes from the API [Edamam](https://www.edamam.com/) and the user can use the arrows right or left to see all the options.
 
-![Recipe ideas Immunity](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/inspiration-section-recipe-cards.png)
+![Recipe ideas Immunity](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/inspiration-section-recipe-cards.png)
 
 ##### Error handling inspiration section
 If the API call fails, the error message below is displayed.
 
-![Error handling](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/inspiration-section-error-handling.png)
+![Error handling](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/inspiration-section-error-handling.png)
 
 #### Nutritional information section
 This section provides the user to search for the nutritional value of a recipe by entering the unit, measure and the ingredient in the text area. For example: 1 cup of rice, 10 oz of chickpeas.
 
-![Nutritional information section](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/nutritional-info-section.png)
+![Nutritional information section](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/nutritional-info-section.png)
 
 The API brings back the nutritional value per ingredient. For the example above, the calorie and weight of the first ingredient 1 cup of rice and separately the calorie and weight for the 10 oz of chickpeas.
 
-![Nutritional information per ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/nutritional-info-table-ingredient.png)
+![Nutritional information per ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/nutritional-info-table-ingredient.png)
 
 In addition, it also returns the nutritional value for the dish with the detailed number of calories and all the other nutrients present in the dish.
 
-![Nutritional information per dish](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/nutritional-info-table-values.png)
+![Nutritional information per dish](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/nutritional-info-table-values.png)
 
 Note the search result by ingredient and for the dish is hidden until API is called, i.e. until user performs a search.
 
 ##### Error handling nutritional value
 If the API call fails, the error message below is displayed.
 
-![Error handling](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/nutritional-info-error-handling.png)
+![Error handling](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/nutritional-info-error-handling.png)
 
 #### Contact page
 The contact page has the same heading and style as the home page.
 
-![Contact page header](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/contact-page.png)
+![Contact page header](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/contact-page.png)
 
 The contact form contains an opt in option for newsletter and the potential topics the user is interested in.
 
-![Contact form](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/contact-form.png)
+![Contact form](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/contact-form.png)
 
 It also has mandatory fields and provides the user feedback for when these fields are empty. The feedback is not only given in the field but underneath the submit button.
 
-![Negative feedback](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/contact-form-feedback-negative.png)
+![Negative feedback](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/contact-form-feedback-negative.png)
 
 Likewise, the feedback is positive when the fields are filled in and the message underneath reinforces the positive message.
 
-![Positive feedback](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/contact-form-feedback-positive.png)
+![Positive feedback](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/contact-form-feedback-positive.png)
 
 The Bootstrap form validation was used in conjunction with the [Email JS](https://www.emailjs.com/) tool to create this feature.
 
@@ -134,16 +134,16 @@ The footer has links to the sections of the homepage and also social media.
 
 Footer mobile:
 
-![Footer mobile](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/footer-mobile.png)
+![Footer mobile](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/footer-mobile.png)
 
 Footer desktop and tablet:
 
-![Footer desktop and tablet](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/footer-desktop.png)
+![Footer desktop and tablet](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/footer-desktop.png)
 
 ##### 404 Page
 The personalised 404 page was created in case the site does not load.
 
-![Open Locally](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/features/404-page.png)
+![Open Locally](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/404-page.png)
 
 ### Features Left to Implement
 
@@ -165,11 +165,11 @@ This project was built using HTML, CSS and JavaScript. An extra effort has been 
 
 In terms of styling, this website utilised the framework Bootstrap to support through the implementation of a mobile first approach and the preprocessor SASS. Due to the size of the project, the SASS files were divided into partials according to the sections of the website which makes the directory tidier and easier to locate a specific file. 
 
-![SASS partials](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/sass-partials.png)
+![SASS partials](https://github.com/stefcruz/ci_milestone2/blob/master/readme/sass-partials.png)
 
 Another point to notice is that SASS enables nesting media queries within the block of CSS beside the properties being changed, which again helps the organisation and maintenance of the style sheets. Idea taken from [this blog post](https://css-tricks.com/conditional-media-query-mixins/).
 
-![SASS partials](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/media-query-mixin.png)
+![SASS partials](https://github.com/stefcruz/ci_milestone2/blob/master/readme/media-query-mixin.png)
 
 
 ### Programming Languages
@@ -218,7 +218,7 @@ Front end functionalities & API calls.
 
 The pages index.html and contact.html passed through the validator and presented a few errors/warnings that were fixed.
 
-![HTML Validator](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/w3c-html-validator.png)
+![HTML Validator](https://github.com/stefcruz/ci_milestone2/blob/master/readme/w3c-html-validator.png)
 
 
 
@@ -226,7 +226,7 @@ The pages index.html and contact.html passed through the validator and presented
 
 The CSS also returned no errors.
 
-![CSS Validator](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/w3c-css-validator.png)
+![CSS Validator](https://github.com/stefcruz/ci_milestone2/blob/master/readme/w3c-css-validator.png)
 
 
 
@@ -246,87 +246,91 @@ As a website user...
   - Goal achieved: User goes to homepage and enter a recipe, e.g. lasagna.
 
 Desktop:
-![User story search](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-one-desktop.png)
+![User story search](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-one-desktop.png)
 
 Mobile:
-![User story search](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-one-mobile.jpg)
+![User story search](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-one-mobile.jpg)
 
 - I want to be able to search for a recipe and filter by diet labels  
   - Goal achieved: User goes to homepage and enter a recipe, e.g. lasagna, and also has 4 diet labels to filter by: balanced, low fat, low carb, high protein.
 
 Desktop:
-![User story search and filter](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-two-desktop.png)
+![User story search and filter](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-two-desktop.png)
 
 Mobile:
-![User story search and filter](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-two-mobile.jpg)
+![User story search and filter](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-two-mobile.jpg)
 
 
 - I want to be able to search for a recipe based on an ingredient  
   - Goal achieved: User goes to homepage and enter an ingredient. The search results will be recipes that contain the given ingredient.
 
 Desktop:
-![User story ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-three-desktop.png)
+![User story ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-three-desktop.png)
 
 Mobile:
-![User story ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-three-mobile.jpg)
+![User story ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-three-mobile.jpg)
 
 - I want to be able to search for a recipe based on an ingredient and filter by diet labels
   - Goal achieved: User goes to homepage and enter an ingredient e.g. pork, and also has 4 diet labels to filter by: balanced, low fat, low carb, high protein.
 
 Desktop:
-![User story ingredient and filter](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-four-desktop.png)
+![User story ingredient and filter](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-four-desktop.png)
 
 Mobile:
-![User story ingredient and filter](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-four-mobile.jpg)
+![User story ingredient and filter](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-four-mobile.jpg)
 
 - I want to see recipe ideas without having to search for it
   - Goal achieved: User goes to inspiration section and can see recipe ideas without having to search for it.
 
 Desktop:
-![User story inspiration section](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-five-desktop.png)
+![User story inspiration section](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-five-desktop.png)
 
 Mobile:
-![User story inspiration section](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-five-mobile.jpg)
+![User story inspiration section](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-five-mobile.png)
 
 - I want to be able to search for the nutritional information of a recipe with various ingredients
   
 - Goal achieved: User goes to nutritional information section and can enter a list of ingredients.
   
+
 Desktop:
-![User story nutritional info section](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-six-desktop.png)
+![User story nutritional info section](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-six-desktop.png)
 
 Mobile:
-![User story nutritional info section](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-six-mobile.jpg)
-  
+![User story nutritional info section](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-six-mobile.png)
+
 - I want to see the nutritional information per ingredient
   
 - Goal achieved: User goes to nutritional information section, can enter a list of ingredients and is presented with 2 tables, one with nutritional value for each ingredient and another with nutritional values for all the ingredients typed.
   
+
 Desktop:
-![User story nutritional info section result per ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-seven-desktop.png)
+![User story nutritional info section result per ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-seven-desktop.png)
 
 Mobile:
-![User story nutritional info section result per ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-seven-mobile.jpg)
-  
+![User story nutritional info section result per ingredient](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-seven-mobile.png)
+
 - I want to see the nutritional information for the entire recipe
   
 - Goal achieved: User goes to nutritional information section, can enter a list of ingredients and is presented with 2 tables, one with nutritional value for each ingredient and another with nutritional values for all the ingredients typed.
   
+
 Desktop:
-![User story nutritional info section result for recipe](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-seven-desktop.png)
+![User story nutritional info section result for recipe](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-eight-desktop.png)
 
 Mobile:
-![User story nutritional info section result for recipe](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-seven-mobile.jpg)
-  
+![User story nutritional info section result for recipe](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-eight-mobile.png)
+
 - I want to be able to contact the website
   
 - Goal achieved: User navigates to contact page through the navbar or footer, and can send an email to the site.
   
+
 Desktop:
-![User story contact page](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-seven-desktop.png)
+![User story contact page](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-nine-desktop.png)
 
 Mobile:
-![User story contact page](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/user-stories/user-story-seven-mobile.jpg)
+![User story contact page](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-nine-mobile.png)
 
 ### Manual Testing
 
@@ -355,7 +359,7 @@ Inspiration section:
 
 Nutritional value:
 
-- [x] Enter ingredient list with expected values and perform search pressing enter.
+- [x] Enter ingredient list with expected values and perform search pressing enter. It was working as expected however had to remove this feature. Explanation in the Bugs & Fixes section.
 - [x] Enter ingredient list with expected values and perform search pressing search button.
 - [x] Enter ingredient list missing one of the required search term (either missing the unit or measure). Expect to see the error message mentioned above in the [Existing Features](#error-handling-nutritional-value) section.
 
@@ -406,7 +410,7 @@ A few bugs were encountered during the testing, which were addressed accordingly
 
 - Icon of ticked checkbox looked to thin for Android. Solution: return to the default icon.
 
-![Checkbox mobile](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/testing/mobile-ticked-checkbox.jpg)
+![Checkbox mobile](https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/mobile-ticked-checkbox.jpg)
 
 - Clicking area of the clear icon on search bar too narrow. Solution: increased it following [this tutorial](https://ishadeed.com/article/clickable-area/).
 - Font too small in recipe cards. Solution: Increased font size to 1rem (16px).
@@ -462,11 +466,11 @@ There are two options to clone this project to your local machine, using the com
 
 2. Click on 'Code'.
 
-   ![Open Locally](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/deployment-open-locally.png)
+   ![Open Locally](https://github.com/stefcruz/ci_milestone2/blob/master/readme/deployment-open-locally.png)
 
 3. First select whether you want to clone this repo using HTTPS, SSH or CLI, then click on the clipboard icon.
 
-   ![Cloning Repo](https://github.com/stefcruz/ci_milestone2/blob/master/assets/readme/deployment-https-icon.png)
+   ![Cloning Repo](https://github.com/stefcruz/ci_milestone2/blob/master/readme/deployment-https-icon.png)
 
 4. Open Terminal on your computer or the terminal from your IDE.
 
