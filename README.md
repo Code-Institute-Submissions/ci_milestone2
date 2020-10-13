@@ -378,9 +378,9 @@ The website was tested on the browsers and devices as follows. The website was n
 | D_Firefox_Win   | Desktop | Firefox 79.0           | Windows              | Excellent     |
 | D_Edge_Win      | Desktop | Microsoft Edge 44      | Windows              | Good          |
 | D_IE_Win        | Desktop | Internet Explorer 11.1 | Windows              | Bad           |
-| D_Chrome_Linux  | Desktop | Chrome                 | Linux                |               |
-| D_Firefox_Linux | Desktop | Firefox                | Linux                |               |
-| D_Opera_Linux   | Desktop | Opera                  | Linux                |               |
+| D_Chrome_Linux  | Desktop | Chrome                 | Linux                | Excellent     |
+| D_Firefox_Linux | Desktop | Firefox                | Linux                | Excellent     |
+| D_Opera_Linux   | Desktop | Opera                  | Linux                | Excellent     |
 | D_Chrome_Mac    | Desktop | Chrome                 | Mac                  |               |
 | D_Firefox_Mac   | Desktop | Firefox                | Mac                  |               |
 | D_Safari_Mac    | Desktop | Safari                 | Mac                  |               |
@@ -396,22 +396,20 @@ A few bugs were encountered during the testing, which were addressed accordingly
 
 ##### Browser bugs
 
-This section only highlights the browsers and devices in which compatibility are either Good or Bad and reference the ID as per table above.
+This section only highlights the browsers and devices in which compatibility are less than excellent, referencing the ID as per table above.
 
 - D_Edge_Win
   - Smooth scroll doesn't work
-  - Clear form icon displayed by default on the top of the style one
-
-
+  - Clear form icon displayed by default beside the styled one. It happens on search bar and contact form.  
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/edge-bug.png" width="400">
 
 - D_IE_Win
   - Nav: anchor links do not bring user to appropriate section, only to contact page. The click causes the nav to flicker. However, the links do work on footer and contact page.
-  - Main section: clear icon on search bar is replaced with a default one. 
-  - Main section: after typing an ingredient and recipe on search bar, clicking on button or pressing enter does not trigger any action.
+  - Main section: clear icon on search bar is replaced with a default one. It happens on search bar and contact form.  
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/internet-explorer-bug.png" width="400">
 
-
-
-
+  - Inspiration section: content on the 3 headings will not appear.
+  - Nutritional value section: after typing an ingredient and recipe on search bar, clicking on button or pressing enter does not trigger any action.
 
 
 
