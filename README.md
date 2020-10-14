@@ -371,9 +371,9 @@ The website was tested on the browsers and devices as follows. The website was n
 | D_Chrome_Linux  | Desktop | Chrome                 | Linux                | Excellent     |
 | D_Firefox_Linux | Desktop | Firefox                | Linux                | Excellent     |
 | D_Opera_Linux   | Desktop | Opera                  | Linux                | Excellent     |
-| D_Chrome_Mac    | Desktop | Chrome                 | Mac                  |               |
-| D_Firefox_Mac   | Desktop | Firefox                | Mac                  |               |
-| D_Safari_Mac    | Desktop | Safari                 | Mac                  |               |
+| D_Chrome_Mac    | Desktop | Chrome                 | Mac                  | Excellent     |
+| D_Firefox_Mac   | Desktop | Firefox                | Mac                  | Excellent     |
+| D_Safari_Mac    | Desktop | Safari                 | Mac                  | Good          |
 | M_Chrome_Huawei | Mobile  | Chrome                 | Huawei               |               |
 | M_Chrome_Sams   | Mobile  | Chrome                 | Samsung S8 Android 9 | Excellent     |
 | M_Chrome_iPhone | Mobile  | Safari                 | iPhone X             |               |
@@ -389,7 +389,7 @@ A few bugs were encountered during the testing, which were addressed accordingly
 This section only highlights the browsers and devices in which compatibility are less than excellent, referencing the ID as per table above.
 
 - D_Edge_Win
-  - Smooth scroll doesn't work
+  - Smooth scroll does not work
   - Clear form icon displayed by default beside the styled one. It happens on search bar and contact form.  
 <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/edge-bug.png" width="400">
 
@@ -400,6 +400,8 @@ This section only highlights the browsers and devices in which compatibility are
   - Nutritional value section: after typing an ingredient and recipe on search bar, clicking on button or pressing enter does not trigger any action.  
 <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/internet-explorer-bug.png" width="400">
 
+- D_Safari_Mac
+  - Smooth scroll does not work
 
 ##### General bugs
 
