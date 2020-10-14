@@ -79,7 +79,7 @@
         color: $colour-1;
         visibility: hidden;
         font-size: $normal-text-size;
-        
+
         //increase clickable area
         top: 3.3rem;
         padding: 1rem;
@@ -98,6 +98,10 @@
         @include bp(desktop-large) {
             right: 10.5rem;
         }
+    }
+    //Change colour of placeholder input
+    input:focus::-webkit-input-placeholder {
+        outline: 0.1rem solid $colour-2;
     }
 }
 
@@ -134,6 +138,10 @@
         &:hover {
             background-color: rgba($colour-1, 0.8);
         }
+
+        &:focus {
+            outline: 0.2rem auto $colour-2;
+        }
     }
 
     &__search-wrapper {
@@ -142,10 +150,10 @@
     }
 
     &__labels {
-            @include bp(desktop) {
-                left: 0;
-            }
+        @include bp(desktop) {
+            left: 0;
         }
+    }
 }
 
 //Checkbox style from https://css-tricks.com/the-checkbox-hack/
@@ -180,7 +188,7 @@
 /* checked mark aspect */
 [type="checkbox"]:not(:checked) + label:after,
 [type="checkbox"]:checked + label:after {
-    background: url('../images/icons/check.svg') center no-repeat;
+    background: url("../images/icons/check.svg") center no-repeat;
     content: "";
     position: absolute;
     top: 0;

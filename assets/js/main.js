@@ -111,7 +111,7 @@ function recipeAPIDataSearchBar(data) {
             <div class="col-12 col-md-6 col-xl-4 col-lg-4">
                 <div class="card card__main">
                 <img src="${data.hits[i].recipe.image}"
-                    class="card-img-top" alt="Recipe image">
+                    class="card-img-top" alt="Recipe image" tabindex="0">
                 <div class="card-body">
                     <h5 class="card-title card__title">${data.hits[i].recipe.label}</h5>
                 </div>
@@ -120,7 +120,7 @@ function recipeAPIDataSearchBar(data) {
                     <li class="list-group-item"><span>Ingredients used: </span>${data.hits[i].recipe.ingredients.length}</li>
                     <li class="list-group-item li-health-labels"><span>Health labels: </span>${healthLabelsPillsHTML}</li>
                 </ul>
-                <a href="${data.hits[i].recipe.url}" target="_blank" class="btn btn-primary" rel="noopener">See Recipe</a>
+                <a href="${data.hits[i].recipe.url}" target="_blank" class="btn btn-primary" rel="noopener" tabindex="0">See Recipe</a>
                 </div>
             </div>
                 `
@@ -129,7 +129,7 @@ function recipeAPIDataSearchBar(data) {
     else {
         recipeCards.innerHTML = "";
         errorHandling.innerHTML =
-            `<div class="container error-handling">
+            `<div class="container error-handling" tabindex="0">
             <div class="row">
                 <div class="col">
                     <i class="fas fa-exclamation-triangle"></i>
@@ -162,7 +162,7 @@ function recipeAPIImmunity() {
         })
         .catch(err => {
             recipeCardsImmunityError.innerHTML = `
-            <div class="container error-handling">
+            <div class="container error-handling" tabindex="0">
                 <div class="row">
                     <div class="col">
                         <i class="fas fa-exclamation-triangle"></i>
@@ -180,9 +180,9 @@ function recipeAPIDataImmunity(data) {
         recipeCardsImmunity[i].innerHTML += `
         <div class="card inspiration-container__card">
             <div class="card-body">
-                <img src="${data.hits[i].recipe.image}" class="card-img-top" alt="Recipe image">
+                <img src="${data.hits[i].recipe.image}" class="card-img-top" alt="Recipe image" tabindex="0">
                 <h5>${data.hits[i].recipe.label}</h5>
-                <a href="${data.hits[i].recipe.url}" target="_blank" rel="noopener">SEE RECIPE</a>
+                <a href="${data.hits[i].recipe.url}" target="_blank" rel="noopener" tabindex="0">SEE RECIPE</a>
             </div>
         </div>`
     };
@@ -199,7 +199,7 @@ async function recipeAPIBalanced() {
         .catch(err => {
             recipeCardsBalancedError.innerHTML = `
             <div class="container error-handling">
-                <div class="row">
+                <div class="row" tabindex="0">
                     <div class="col">
                         <i class="fas fa-exclamation-triangle"></i>
                         <p>Ops something went wrong, please reload the page.</p>
@@ -216,9 +216,9 @@ function recipeAPIDataBalanced(data) {
         recipeCardsBalanced[i].innerHTML += `
          <div class="card inspiration-container__card">
             <div class="card-body">
-                <img src="${data.hits[i].recipe.image}" class="card-img-top" alt="Recipe image">
+                <img src="${data.hits[i].recipe.image}" class="card-img-top" alt="Recipe image" tabindex="0">
                 <h5>${data.hits[i].recipe.label}</h5>
-                <a href="${data.hits[i].recipe.url}" target="_blank" rel="noopener">SEE RECIPE</a>
+                <a href="${data.hits[i].recipe.url}" target="_blank" rel="noopener" tabindex="0">SEE RECIPE</a>
             </div>
         </div>
         `
@@ -235,7 +235,7 @@ async function recipeAPIVeggie() {
         })
         .catch(err => {
             recipeCardsVeggieError.innerHTML = `
-            <div class="container error-handling">
+            <div class="container error-handling" tabindex="0">
                 <div class="row">
                     <div class="col">
                         <i class="fas fa-exclamation-triangle"></i>
@@ -253,9 +253,9 @@ function recipeAPIDataVeggie(data) {
         recipeCardsVeggie[i].innerHTML += `
         <div class="card inspiration-container__card">
             <div class="card-body">
-                <img src="${data.hits[i].recipe.image}" class="card-img-top" alt="Recipe image">
+                <img src="${data.hits[i].recipe.image}" class="card-img-top" alt="Recipe image" tabindex="0">
                 <h5>${data.hits[i].recipe.label}</h5>
-                <a href="${data.hits[i].recipe.url}" target="_blank" rel="noopener">SEE RECIPE</a>
+                <a href="${data.hits[i].recipe.url}" target="_blank" rel="noopener" tabindex="0">SEE RECIPE</a>
             </div>
         </div>
         `
@@ -300,7 +300,7 @@ function getNutritionalInfoAPI() {
         .catch(err => {
             nutritionalInfoContent.style.display = "none";
             nutritionalInfoError.innerHTML = `
-            <div class="container error-handling">
+            <div class="container error-handling" tabindex="0">
                 <div class="row">
                     <div class="col">
                         <i class="fas fa-exclamation-triangle"></i>
@@ -324,7 +324,7 @@ function nutritionalInfoAPIData(data) {
     nutritionalInfoContent.style.display = "block";
 
     //Calories per ingredient
-    let html = `<div class="table table-hover">
+    let html = `<div class="table table-hover" tabindex="0">
                     <table class="table">
                         <thead>
                             <tr>
@@ -371,7 +371,7 @@ function nutritionalInfoAPIData(data) {
                           </tr>`;
             } else {
                 nutritionalInfoPerIngrError.innerHTML = `
-                <div class="container error-handling">
+                <div class="container error-handling" tabindex="0">
                     <div class="row">
                         <div class="col">
                             <i class="fas fa-exclamation-triangle"></i>
@@ -477,7 +477,7 @@ function nutritionalInfoAPIData(data) {
         totalDailyK = Math.round(data.totalDaily.K.quantity) + ' ' + data.totalDaily.K.unit;
     } else { totalDailyK = '-' };
 
-    table = ` <div class="nutritional-values">
+    table = ` <div class="nutritional-values" tabindex="0">
                     <div class="nutritional-values__header">
                         <h3 class="nutritional-values__title">Nutritional Value</h3>
                     </div>

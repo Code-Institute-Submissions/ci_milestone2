@@ -197,6 +197,10 @@ desktop-large: 1440px
   }
 }
 
+#recipe-form input:focus::-webkit-input-placeholder {
+  outline: 0.1rem solid #4a4a4a;
+}
+
 .recipe-form-checkbox {
   margin-top: 3rem;
 }
@@ -233,6 +237,10 @@ desktop-large: 1440px
 
 .recipe-form-checkbox__search-button:hover {
   background-color: rgba(1, 90, 6, 0.8);
+}
+
+.recipe-form-checkbox__search-button:focus {
+  outline: 0.2rem auto #4a4a4a;
 }
 
 .recipe-form-checkbox__search-wrapper {
@@ -623,6 +631,10 @@ input:-webkit-autofill:active {
 
 .nutrition-container button:hover {
   background-color: #292929;
+}
+
+.nutrition-container button:focus {
+  outline: 0.2rem auto #4a4a4a;
 }
 
 .nutrition-container h3 {

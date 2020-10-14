@@ -150,10 +150,10 @@ The personalised 404 page was created in case the site does not load.
 The possibilities are limitless when it comes to implement new features on a webapp. What I would like to have done is:
 
 - Vegetarian/Vegan website  
-The initial idea was to create a website with vegetarian/vegan recipes only. However, the API imposed a few limitations and this goal could not be attained. A simple test was done where the search term was "pork" and the filters vegetarian/vegan were applied, the result still came back where pork is classified as vegetarian. I could not establish whether this is an API error thus decided to change the focus.
+The initial idea was to create a website with vegetarian/vegan recipes only. However, the API imposed a few limitations and this goal could not be attained. A simple test was done with the search term "pork" applying the filters vegetarian/vegan, the result still came back where pork is classified as vegetarian. I could not establish whether this is an API error thus decided to change the focus.
 
 - Swiper.js infinite loop  
-Could not make the swiper infinite loop work when the data comes from the API. The swiper achieves the "infinite" effect by duplicating 3 or 4 slides on the HTML. When the data comes from the API, the swiper duplicates the slide however there is no data in it, which results in slides being shown empty in the carousel.  [Demo of what was planned to be implemented](https://swiperjs.com/demos/200-infinite-loop.html).
+Could not make the swiper infinite loop work when the data comes from the API. The swiper achieves the "infinite" effect by duplicating 3 or 4 slides in the HTML. When the data comes from the API, the swiper duplicates the slide however there is no data in it, which results in slides being shown empty in the carousel.  [Demo of what was planned to be implemented](https://swiperjs.com/demos/200-infinite-loop.html).
 
 The features that would be nice to have are:
 - Sorting and filtering options for the search results
@@ -193,30 +193,22 @@ Front end functionalities & API calls.
 
 - GitHub  
   Used to store this project's source code.
-
 - VS Code  
   Main IDE.
-
-- Balsamiq  
-  Used to create wireframes for the website.
-
-- [Swiper.JS](https://swiperjs.com/)  
-  Swiper for recipe cards on inspiration section.
-
-- [Email JS](https://www.emailjs.com/)
-  Tool used to send emails from JS.
-
-- [Typora](https://typora.io/)  
-  Markdown editor.
-
 - Figma  
   Creation of wireframes.
+- [Swiper.JS](https://swiperjs.com/)  
+  Swiper for recipe cards on inspiration section.
+- [Email JS](https://www.emailjs.com/)  
+  Tool used to send emails from JS.
+- [Typora](https://typora.io/)  
+  Markdown editor.
 
 ## Testing
 
 ### W3C HTML Validator
 
-The pages index.html and contact.html passed through the validator and presented a few errors/warnings that were fixed.
+Both index.html and contact.html presented a few errors/warnings that were fixed and finally passed the W3C HTML validation. 
 
 ![HTML Validator](https://github.com/stefcruz/ci_milestone2/blob/master/readme/w3c-html-validator.png)
 
@@ -239,8 +231,6 @@ The CSS also returned no errors.
 ### User Stories Testing
 
 This section has the aim to provide the manual testing of user stories and the description of how the users will achieve their goal. 
-
-As a website user...
 
 - I want to be able to search for a recipe.
   - Goal achieved: User goes to homepage and enter a recipe, e.g. lasagna.
@@ -280,7 +270,7 @@ Mobile:
 <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-four-mobile.jpg" width="250">
 
 - I want to see recipe ideas without having to search for it.
-  - Goal achieved: User goes to inspiration section and can see recipe ideas without having to search for it.
+  - Goal achieved: User navigates to inspiration section and can see recipe ideas.
 
 Desktop:  
 <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-five-desktop.png" width="600">
@@ -306,7 +296,7 @@ Desktop:
 Mobile:  
 <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-seven-mobile.png" width="250">
 
-- I want to see the nutritional information for the entire recipe
+- I want to see the nutritional information for the entire recipe.
   - Goal achieved: User goes to nutritional information section, can enter a list of ingredients and is presented with 2 tables, one with nutritional value for each ingredient and another with nutritional values for all the ingredients typed.
 
 Desktop:  
@@ -315,7 +305,7 @@ Desktop:
 Mobile:  
 <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/user-stories/user-story-eight-mobile.png" width="300">
 
-- I want to be able to contact the website
+- I want to be able to contact the website.
   - Goal achieved: User navigates to contact page through the navbar or footer, and can send an email to the site.
 
 Desktop:  
@@ -405,12 +395,10 @@ This section only highlights the browsers and devices in which compatibility are
 
 - D_IE_Win
   - Nav: anchor links do not bring user to appropriate section, only to contact page. The click causes the nav to flicker. However, the links do work on footer and contact page.
-  - Main section: clear icon on search bar is replaced with a default one. It happens on search bar and contact form.  
-<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/internet-explorer-bug.png" width="400">
-
+  - Main section: clear icon on search bar is replaced with a default one. It happens on search bar and contact form. 
   - Inspiration section: content on the 3 headings will not appear.
-  - Nutritional value section: after typing an ingredient and recipe on search bar, clicking on button or pressing enter does not trigger any action.
-
+  - Nutritional value section: after typing an ingredient and recipe on search bar, clicking on button or pressing enter does not trigger any action.  
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/internet-explorer-bug.png" width="400">
 
 
 ##### General bugs
@@ -423,11 +411,11 @@ This section only highlights the browsers and devices in which compatibility are
 
 - Icon of ticked checkbox looked to thin for Android. Solution: return to the default icon.
 
-<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/mobile-ticked-checkbox.jpg)" width="250">
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/mobile-ticked-checkbox.jpg" width="250">
 
 - Clicking area of the clear icon on search bar too narrow. Solution: increased it following [this tutorial](https://ishadeed.com/article/clickable-area/).
 - Font too small in recipe cards. Solution: Increased font size to 1rem (16px).
-- The API will throw an error if there are no results for the combination of the dish or ingredient + diet label. For example, search for lasagna with diet label low-fat. Understandably enough, there is no low-fat lasagna due to the nature of the dish. Solution: another if statement considering this scenario however it was not implemented this time due to time constraints.
+- The API will throw an error if there are no results for the combination of the dish or ingredient + diet label. For example, search for lasagna ticking the checkbox "low-fat". Understandably, there does not exist a low-fat lasagna. Possible solution: add an if statement considering the scenario where if the ingredient typed + diet label combination is null, then show a helpful error message. However it was not implemented due to time constraints.
 
 ###### Nutritional value
 
@@ -435,7 +423,7 @@ This section only highlights the browsers and devices in which compatibility are
 
 ###### Contact page
 
-- Checkboxes and radio buttons were too close to one another on mobile. Solution was to add margin bottom to all input boxes.
+- Checkboxes and radio buttons were too close to one another on mobile. Solution: add margin bottom to all input boxes.
 
 ## Deployment
 
