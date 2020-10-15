@@ -1,13 +1,54 @@
 # What's for dinner?
 
 ## Overview
-[What’s for dinner?](https://stefcruz.github.io/ci_milestone2/) is a website that provides recipe ideas and nutritional information. It brings a vast number of recipe ideas based on a keyword entered on the search bar, and also has a section dedicated to inspire the user with preselected recipe ideas. Finally, it allows the user to search for the nutritional information of many different foods by entering the ingredient on the text box.
+[What’s for dinner?](https://stefcruz.github.io/ci_milestone2/) is a website that provides recipe ideas and nutritional information. It brings a vast number of recipe ideas based on a keyword entered in the search bar, and also has a section dedicated to inspire the user with preselected recipe ideas. Finally, it allows the user to search for the nutritional information of many different foods by entering the ingredients list in the text box.
 
 The recipes and the nutritional analysis are made available from the [Edamam](https://www.edamam.com/) API.
 
-[TOC]
+## Table of Contents
 
-
+- [UX](#ux)
+    - [User stories](#user-stories)
+    - [Wireframes](#wireframes)
+- [Features](#features)
+    - [Existing Features](#existing-features)
+      - [Navigation bar](#navigation-bar)
+      - [Main section](#main-section)
+        - [Back to top arrow](#back-to-top-arrow)
+        - [Recipe cards](#recipe-cards)
+        - [Error handling main section](#error-handling-main-section)
+      - [Inspiration section](#inspiration-section)
+        - [Error handling inspiration section](#error-handling-inspiration-section)
+      - [Nutritional information section](#nutritional-information-section)
+        - [Error handling nutritional value](#error-handling-nutritional-value)
+      - [Contact page](#contact-page)
+      - [Footer](#footer)
+      - [404 page](#404-page)
+    - [Features Left to Implement](#features-left-to-implement)
+- [Technologies](#technologies)
+    - [Programming Languages](#programming-languages)
+    - [Other Tools](#other-tools)
+- [Testing](#testing)
+    - [W3C HTML Validator](#w3c-html-validator)
+    - [W3C CSS Validator](#w3c-css-validator)
+    - [Google Lighthouse](#Google-lighthouse)
+    - [User Stories Testing](#user-stories-testing)
+    - [Manual Testing](#manual-testing)
+      - [Testing plan](#testing-plan)
+      - [Browser and Device Testing](#browser-and-device-testing)
+      - [Bugs and Fixes](#bugs-and-fixes)
+        - [Browser Bugs](#browser-bugs)
+        - [General Bugs](#general-bugs)
+- [Deployment](#deployment)
+    - [How to publish on GitHub Pages](#how-to-publish-on-github-pages)
+    - [How to fork this repository](#how-to-fork-this-repository)
+    - [How to open this project locally](#how-to-open-this-project-locally)
+- [Credits](#credits)
+    - [Content](#content)
+    - [Images](#images)
+- [Acknowledgements](#acknowledgements)
+    - [Design](#design)
+    - [Code](#code)
 
 ## UX
 
@@ -34,7 +75,7 @@ The wireframes for this project can be seen [here](https://www.figma.com/file/WV
 ### Existing Features
 
 #### Navigation bar
-The navbar contains links to the different sections of the site and collapses when the user accesses the webiste through mobile.
+The navbar contains links to the different sections of the site and collapses when the user accesses the website through mobile.
 
 Nav desktop and tablet:
 
@@ -49,11 +90,11 @@ Also, the site also presents the favicon with the logo.
 ![Favicon](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/favicon.png)
 
 #### Main section
-The search box allow the user to perform a search, which can be based off an ingredient or name of the dish. If one or more checkboxes are ticked, the inner text of the ticked checkbox is passed as a parameter to the API URL and this will filter the search. 
+The search box allows the user to perform a search, which can be based off an ingredient or name of the dish. If one or more checkboxes are ticked, the inner text of the ticked checkbox is passed as a parameter to the API URL and this will filter the search result. 
 
 ![Main section](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/main-section.png)
 
-The tooltip on the checkboxes works on desktop only. There is no equivalent for mobile as the page would be too wordy.
+The tooltip over the checkboxes works on desktop only. There is no equivalent for mobile as the page would be too wordy.
 
 <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/main-section-hover.png" width="600">
 
@@ -91,7 +132,7 @@ If the API call fails, the error message below is displayed.
 ![Error handling](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/inspiration-section-error-handling.png)
 
 #### Nutritional information section
-This section provides the user to search for the nutritional value of a recipe by entering the unit, measure and the ingredient in the text area. For example: 1 cup of rice, 10 oz of chickpeas.
+This section provides the user the ability to search for the nutritional value of a recipe by entering the unit, measure and the ingredient in the text area. For example: 1 cup of rice, 10 oz of chickpeas.
 
 <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/nutritional-info-section.png" width="600">
 
@@ -140,7 +181,7 @@ Footer desktop and tablet:
 
 ![Footer desktop and tablet](https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/footer-desktop.png)
 
-##### 404 Page
+#### 404 Page
 The personalised 404 page was created in case the site does not load.
 
 <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/features/404-page.png" width="600">
@@ -163,7 +204,7 @@ The features that would be nice to have are:
 ## Technologies
 This project was built using HTML, CSS and JavaScript. An extra effort has been made to use pure Vanilla JavaScript rather than jQuery, with the intention of learning the foundation of the language and becoming more familiar with JavaScript concepts.
 
-In terms of styling, this website utilised the framework Bootstrap to support through the implementation of a mobile first approach and the preprocessor SASS. Due to the size of the project, the SASS files were divided into partials according to the sections of the website which makes the directory tidier and easier to locate a specific file. 
+In terms of styling, this website utilised the framework Bootstrap to support through the implementation of a mobile first approach and the preprocessor SASS. Due to the size of the project, the SASS files were divided into partials according to the sections of the website which makes the directory tidier and easier to locate specific files. 
 
 ![SASS partials](https://github.com/stefcruz/ci_milestone2/blob/master/readme/sass-partials.png)
 
@@ -184,7 +225,7 @@ Page style.
 This project used Bootstrap elements such as navbar, grid & cards.
 
 - SASS  
-Preprocessor used to make CSS more fun and powerful.
+CSS preprocessor.
 
 - JavaScript  
 Front end functionalities & API calls.
@@ -213,13 +254,11 @@ Both index.html and contact.html presented a few errors/warnings that were fixed
 ![HTML Validator](https://github.com/stefcruz/ci_milestone2/blob/master/readme/w3c-html-validator.png)
 
 
-
 ### W3C CSS Validator
 
 The CSS also returned no errors.
 
 ![CSS Validator](https://github.com/stefcruz/ci_milestone2/blob/master/readme/w3c-css-validator.png)
-
 
 
 ### Google Lighthouse
@@ -357,7 +396,6 @@ Contact Form:
 - [x] Try to submit the form with all inputs valid. Expect to see success message.
 
 
-
 #### Browser and Device Testing
 
 The website was tested on the browsers and devices as follows. The website was not tested on a tablet as I do not have access to one.
@@ -402,26 +440,26 @@ This section only highlights the browsers and devices in which compatibility are
 <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/internet-explorer-bug.png" width="400">
 
 - D_Safari_Mac
-  - Smooth scroll does not work
+  - Smooth scroll does not work.
   
 - M_Safari_iPhone
-  - Smooth scroll does not work
-  - Parallax image in inspiration section doesn't work, image shows static
-  - Issue with alignment of tables in nutritional section
+  - Smooth scroll does not work.
+  - Parallax image in inspiration section doesn't work, image shows static.
+  - Issue with alignment of tables in nutritional section.
 
 - M_Chrome_iPhone
-  - Smooth scroll does not work
-  - Issue with alignment of search icon  
+  - Smooth scroll does not work.
+  - Issue with alignment of search icon.  
   <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/safari-iphone-bug-one.jpg" width="300">
 
-  - Parallax image in inspiration section doesn't work, image is static  
+  - Parallax image in inspiration section doesn't work, image is static.  
   <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/safari-iphone-bug-two.jpg" width="300">
 
-  - Issue with alignment of tables in nutritional section  
+  - Issue with alignment of tables in nutritional section.  
   <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/safari-iphone-bug-three.jpg" width="300">
 
 - M_Chrome_Huawei
-  - Parallax image in inspiration section doesn't work, image is static  
+  - Parallax image in inspiration section doesn't work, image is static.  
 <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/chrome-huawei-bug.jpg" width="300">
 
 ##### General bugs

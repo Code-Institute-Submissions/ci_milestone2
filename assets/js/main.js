@@ -10,7 +10,6 @@ const clearIcon = document.querySelector("#recipe-form__clear-icon");
 const searchBar = document.querySelector("#recipe-form__search-bar");
 
 //Event listeners
-
 searchBar.addEventListener('keydown', e => {
     if (e.keyCode === 13) {
         //preventDefault to stop reloading page when event is fired
@@ -66,7 +65,6 @@ function checkboxDietLabel() {
 }
 
 // Get data from Recipe API: Search bar
-
 function getRecipeAPI() {
     let searchValue = searchBar.value;
     let dietLabels = checkboxDietLabel();
@@ -568,7 +566,6 @@ function nutritionalInfoAPIData(data) {
 //
 // ----------- Smooth Scroll - source https://www.codegrepper.com/code-examples/javascript/scrolling+link+java+script
 //
-
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
