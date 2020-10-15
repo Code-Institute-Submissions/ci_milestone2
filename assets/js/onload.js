@@ -1,7 +1,7 @@
 function start() {
-      // recipeAPIImmunity();
-    //   recipeAPIBalanced();
-    //   recipeAPIVeggie();
+      recipeAPIImmunity();
+      recipeAPIBalanced();
+      recipeAPIVeggie();
   }
   window.onload = start;
   
