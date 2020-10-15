@@ -425,7 +425,7 @@ A few bugs were encountered during the testing, which were addressed accordingly
 
 ##### Browser bugs
 
-This section only highlights the browsers and devices in which compatibility are less than excellent, referencing the ID as per table above.
+This section only highlights the browsers and devices in which compatibility are less than excellent, referencing the ID as per table above. The bugs in this section were not fixed.
 
 - D_Edge_Win
   - Smooth scroll does not work
