@@ -224,9 +224,9 @@ The CSS also returned no errors.
 
 ### Google Lighthouse
 
-- As per Google Lighthouse suggestion, I added `rel="noopener"` on the external links. Explanation of what it does [here](https://dev.to/gulshansaini/what-is-rel-noopener-1214).
+All the scores on Google Lighthouse were high except performance. This section suffered due to the external links at the <head> of the HTML, which references the Bootstrap, Swiper and Font Awesome style sheets. These style sheets could not be removed as they are essential for the project, thus score could not be improved. Also,  I added `rel="noopener"` on the external links to improve the score on best practices. Explanation of what it does [here](https://dev.to/gulshansaini/what-is-rel-noopener-1214).
 
-
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/lighthouse.png" width="400">
 
 ### User Stories Testing
 
@@ -374,9 +374,10 @@ The website was tested on the browsers and devices as follows. The website was n
 | D_Chrome_Mac    | Desktop | Chrome                 | Mac                  | Excellent     |
 | D_Firefox_Mac   | Desktop | Firefox                | Mac                  | Excellent     |
 | D_Safari_Mac    | Desktop | Safari                 | Mac                  | Good          |
-| M_Chrome_Huawei | Mobile  | Chrome                 | Huawei               |               |
 | M_Chrome_Sams   | Mobile  | Chrome                 | Samsung S8 Android 9 | Excellent     |
-| M_Chrome_iPhone | Mobile  | Safari                 | iPhone X             |               |
+| M_Safari_iPhone | Mobile  | Safari                 | iPhone X             | Good          |
+| M_Chrome_iPhone | Mobile  | Chrome                 | iPhone X             | Good          |
+| M_Chrome_Huawei | Mobile  | Chrome                 | Huawei Honor 20 Lite | Good          |
 
 
 
@@ -402,6 +403,26 @@ This section only highlights the browsers and devices in which compatibility are
 
 - D_Safari_Mac
   - Smooth scroll does not work
+  
+- M_Safari_iPhone
+  - Smooth scroll does not work
+  - Parallax image in inspiration section doesn't work, image shows static
+  - Issue with alignment of tables in nutritional section
+
+- M_Chrome_iPhone
+  - Smooth scroll does not work
+  - Issue with alignment of search icon  
+  <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/safari-iphone-bug-one.jpg" width="300">
+
+  - Parallax image in inspiration section doesn't work, image is static  
+  <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/safari-iphone-bug-two.jpg" width="300">
+
+  - Issue with alignment of tables in nutritional section  
+  <img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/safari-iphone-bug-three.jpg" width="300">
+
+- M_Chrome_Huawei
+  - Parallax image in inspiration section doesn't work, image is static  
+<img src="https://github.com/stefcruz/ci_milestone2/blob/master/readme/testing/chrome-huawei-bug.jpg" width="300">
 
 ##### General bugs
 
